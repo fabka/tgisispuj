@@ -1,0 +1,107 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6/11/2014, 03:05:10 PM
+    Author     : estudiante
+*/
+body{
+    /*background:url("Imagenes/JaveBanner.JPG") no-repeat top left fixed;
+    padding-top: 200px;*/
+}
+
+h1{
+    text-align: center;
+    font-family: calibri;
+}
+
+img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#Links{
+    text-align: center;
+    font: 115% calibri;
+}
+
+/* unvisited link */
+a:link {
+    color: #7290ae;
+}
+
+/* visited link */
+a:visited {
+    color: #7290ae;
+}
+
+/* mouse over link */
+a:hover {
+    color: #4f6479;
+}
+
+/* selected link */
+a:active {
+    color: #0000FF;
+}
+
+#buscar{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font: 120% calibri;
+}
+
+input[type = "search"]{
+    width: 800px;
+    height: 50px;
+    text-align: center;
+    font: 110% calibri;
+}
+
+table{
+    border-radius: 3px;
+    border: solid 1px #f1f1f1;
+    box-shadow: 0 0 10px #333;
+    margin: auto;
+    font-family: calibri;
+}
+
+thead{
+    text-align: center;
+    color: #314456;    
+    font-weight: bold;
+    font-size: 20px;
+    min-width: max-content;
+    background: #f1f1f8;
+}
+
+table tbody tr td{
+    text-align: center;
+    min-width: max-content;
+    transition: all 200ms ease-in;
+        -webkit-transition: all 200ms ease-in;
+        -moz-transition: all 200ms ease-in;
+        -o-transition: all 200ms ease-in;
+        -ms-transition: all 200ms ease-in;
+    word-wrap: break-word;
+    border-bottom: solid 1px #fff;
+    border-top: solid 1px #f1f1f1;
+    border-right: solid 1px #f1f1f1;
+}
+
+table tbody tr:nth-child(odd){
+    background-color: #fff;
+}
+
+table tbody tr:nth-child(even){
+    background-color: #ffff89;
+}
+
+table tbody tr:hover td{
+    background: #7290ae;
+    color: #fff;
+}

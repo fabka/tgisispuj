@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Trabajos de grado | Ingeniería de sistemas | Pontificia Universidad Javeriana</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/Tablas.css" media="screen" rel="StyleSheet" type="text/css">
+        <script src="js/TablaScript.js"></script>
+        <script type="text/javascript" src="js/ext/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="js/buscar-en-tabla.js"></script>
+    </head>
+    <body>
+        
+        <div>
+            <div class="divEnLinea">
+                <img src="Imagenes/JaveBanner.jpg" alt="Logo javeriana" >
+            </div>
+            <div class="divEnLinea">
+                <h1>
+                    Trabajos de grado <br>
+                    Ingeniería de sistemas <br>
+                    Pontificia Universidad Javeriana <br>
+                </h1>
+            </div>
+        </div>
+        
+        <div id="Links" >      
+            <label>Filtrar Por año |</label> 
+            <a href="2004.html" > 2004 </a>
+            <label>|</label>
+            <a href="2005.html" > 2005 </a>
+            <label>|</label>
+            <a href="2006.html" > 2006 </a>
+            <label>|</label>
+            <a href="2007.html" > 2007 </a>
+            <label>|</label>
+            <a href="2008.html" > 2008 </a>
+            <label>|</label>
+            <a href="2009.html" > 2009 </a>
+            <label>|</label>
+            <a href="2010.html" > 2010 </a>
+            <label>|</label>
+            <a href="2011.html" > 2011 </a>
+            <label>|</label>
+            <a href="2012.html" > 2012 </a>
+            <label>|</label>
+            <a href="2013.html" > 2013 </a>
+            <label>|</label>
+            <a href="2014.html" > 2014 </a>
+            <br>
+            <a href="MencionDeHonor.html" > Mostrar solo mencion de honor </a>
+            <label>|</label>
+            <a href="Index.html" > Sin filtro </a>
+            <br>
+            <br>
+        </div>
+        
+        <br>
+        <div>
+            
+            <!--
+            <script type="text/javascript">
+                genera_tabla();
+                leer();                
+            </script>
+            -->
+            
+            <div id="buscar">
+                <label for="txtBuscar">Buscar: </label>
+                <input type="search" id="txtBuscar" autofocus
+                placeholder="Digite el texto que desea encontrar y presione la ENTER. Para cancelar la tecla ESCAPE.">
+            </div>
+            
+            <br>
+            <table id="tblTabla" >
+                <thead>
+                    <td> Codigo </td>
+                    <td> Nombre trabajo de grado </td>
+                    <td> Autores </td>
+                    <td> Director </td>
+                    <td> Grupo </td>
+                    <td> Mención </td>
+                    <td> Año entrega </td>
+                    <td> Pagina web </td>
+                </thead>
+               
+                <tbody>
+                    <tr height=68 style='height:51.0pt'>
+                    <td height=68 class=xl74 width=90 style='height:51.0pt;width:68pt'>CIS1310SD03</td>
+                    <td class=xl74 width=491 style='width:368pt'>MODELO DE SEGURIDAD PARA MITIGAR
+                    LOS PROBLEMAS DERIVADOS DE LAS VULNERABILIDADES EN DISPOSITIVOS MOVILES
+                    ANDROID CON RESPECTO A LOS PRINCIPIOS DE INTEGRIDAD, CONFIDENCIALIDAD Y
+                    DISPONIBILIDAD<span style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=188 style='width:141pt'>Calero Asencios, Raúl<span
+                    style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>Juan Pablo Garzón Ruiz</td>
+                    <td class=xl74 width=80 style='width:60pt'>Sin grupo</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl74 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310SD03" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310SD03</a></td>
+                   </tr>
+                   <tr height=34 style='height:25.5pt'>
+                    <td height=34 class=xl74 width=90 style='height:25.5pt;width:68pt'>CIS1310IS05</td>
+                    <td class=xl74 width=491 style='width:368pt'>SERVICIOS DE GENERACIÓN
+                    AUTOMÁTICA DE RESÚMENES POR SUSCRIPCIÓN WEB</td>
+                    <td class=xl74 width=188 style='width:141pt'>Santos Vidales, Nestor Andrés</td>
+                    <td class=xl74 width=80 style='width:60pt'>Efrain Ortiz Pabon</td>
+                    <td class=xl74 width=80 style='width:60pt'>ISTAR</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl74 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310IS05" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310IS05</a></td>
+                   </tr>
+                   <tr height=40 style='height:30.0pt'>
+                    <td height=40 class=xl74 width=90 style='height:30.0pt;width:68pt'>CIS1310SD04</td>
+                    <td class=xl74 width=491 style='width:368pt'>SmartGauge: Aplicación móvil de
+                    toma de medidas volumétricas de productos de consumo para mejorar los
+                    procesos de comercio B2B</td>
+                    <td class=xl74 width=188 style='width:141pt'>Warner White, Daniel<span
+                    style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>Juan Pablo Garzón Ruiz</td>
+                    <td class=xl74 width=80 style='width:60pt'></td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl74 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310SD04" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310SD04</a></td>
+                   </tr>
+                   <tr height=51 style='height:38.25pt'>
+                    <td height=51 class=xl74 width=90 style='height:38.25pt;width:68pt'>CIS1210SD03</td>
+                    <td class=xl74 width=491 style='width:368pt'>Guía metodológica para la
+                    construcción de servicios cooperativos mediados por agentes, Sercoop</td>
+                    <td class=xl74 width=188 style='width:141pt'>Valencia Parada,Daniel Steven</td>
+                    <td class=xl74 width=80 style='width:60pt'>Blanca Elvira Oviedo</td>
+                    <td class=xl74 width=80 style='width:60pt'>SIDRe</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl74 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1210SD03" target="_parent">http://pegasus.javeriana.edu.co/~CIS1210SD03</a></td>
+                   </tr>
+                   <tr height=40 style='height:30.0pt'>
+                    <td height=40 class=xl74 width=90 style='height:30.0pt;width:68pt'>CIS1230NG01</td>
+                    <td class=xl74 width=491 style='width:368pt'>Plan estratégico para gestión
+                    del cambio en empresas colombianas de desarrollo de software que deseen
+                    implementar CMMI-Dev</td>
+                    <td class=xl74 width=188 style='width:141pt'>Eliana Catalina Villamizar</td>
+                    <td class=xl74 width=80 style='width:60pt'>Jaime Garcia<span
+                    style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>ISTAR</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl74 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1230NG01" target="_parent">http://pegasus.javeriana.edu.co/~CIS1230NG01</a></td>
+                   </tr>
+                   <tr height=51 style='height:38.25pt'>
+                    <td height=51 class=xl74 width=90 style='height:38.25pt;width:68pt'>CIS1310IS03</td>
+                    <td class=xl74 width=491 style='width:368pt'>MY SIREASE - Sistema de
+                    Recomendación de Asignaturas</td>
+                    <td class=xl74 width=188 style='width:141pt'>García Chacón, Camilo
+                    Andrés<span style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>Ángela Carrillo Ramos</td>
+                    <td class=xl74 width=80 style='width:60pt'>ISTAR</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl74 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310IS03" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310IS03</a></td>
+                   </tr>
+                   <tr height=51 style='height:38.25pt'>
+                    <td height=51 class=xl74 width=90 style='height:38.25pt;width:68pt'>CIS1310IS12</td>
+                    <td class=xl74 width=491 style='width:368pt'>Sistema de Información para el
+                    ingreso, mantenimiento y salida de estibas</td>
+                    <td class=xl74 width=188 style='width:141pt'>García Rodríguez, Jeyson
+                    Andrés<span style='mso-spacerun:yes'>  </span>y Lancheros Suescún, Mario
+                    Sergio<span style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>María Consuelo Franky</td>
+                    <td class=xl74 width=80 style='width:60pt'>ISTAR</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl74 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310IS12" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310IS12</a></td>
+                   </tr>
+                   <tr height=40 style='height:30.0pt'>
+                    <td height=40 class=xl74 width=90 style='height:30.0pt;width:68pt'>CIS1310TK02</td>
+                    <td class=xl74 width=491 style='width:368pt'>Virtual Reality Laparoscopic
+                    Simulator</td>
+                    <td class=xl74 width=188 style='width:141pt'>Quiñones Garcia, Pablo
+                    Enrique<span style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>Leonardo Flórez</td>
+                    <td class=xl74 width=80 style='width:60pt'>TAKINA</td>
+                    <td class=xl74 width=80 style='width:60pt'>SI</td>
+                    <td class=xl74 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310TK02" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310TK02</a></td>
+                   </tr>
+                   <tr height=40 style='height:30.0pt'>
+                    <td height=40 class=xl74 width=90 style='height:30.0pt;width:68pt'>CIS1310GN01</td>
+                    <td class=xl74 width=491 style='width:368pt'>SIMMA - Diseño y desarrollo de
+                    un sistema automatizado de medición de masas.</td>
+                    <td class=xl74 width=188 style='width:141pt'>Ríos Flores, Mariana<span
+                    style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>Edgar E. González</td>
+                    <td class=xl74 width=80 style='width:60pt'>Gnano</td>
+                    <td class=xl74 width=80 style='width:60pt'>SI</td>
+                    <td class=xl74 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310GN01" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310GN01</a></td>
+                   </tr>
+                   <tr height=40 style='height:30.0pt'>
+                    <td height=40 class=xl74 width=90 style='height:30.0pt;width:68pt'>CIS1310TK03</td>
+                    <td class=xl74 width=491 style='width:368pt'>Simulador de la Gestión Integral
+                    de Residuos Sólidos Domiciliarios</td>
+                    <td class=xl74 width=188 style='width:141pt'>Sanchez Olaya, Stephanie y
+                    Rojas, Sebastian<span style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>Oscar Chavarro</td>
+                    <td class=xl74 width=80 style='width:60pt'>Takina</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl74 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310TK03" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310TK03</a></td>
+                   </tr>
+                   <tr height=34 style='height:25.5pt'>
+                    <td height=34 class=xl74 width=90 style='height:25.5pt;width:68pt'>CIS1310IS01</td>
+                    <td class=xl74 width=491 style='width:368pt'>Enriquecimiento del Sistema de
+                    Egresados de la Facultad de Ingeniería de la Pontificia Universidad Javeriana</td>
+                    <td class=xl74 width=188 style='width:141pt'>Correa Cogua, Lina Maria y
+                    Castelblanco, Katherin</td>
+                    <td class=xl74 width=80 style='width:60pt'>Alexandra Pomares</td>
+                    <td class=xl74 width=80 style='width:60pt'>ISTAR</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl74 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310IS01" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310IS01</a></td>
+                   </tr>
+                   <tr height=68 style='height:51.0pt'>
+                    <td height=68 class=xl74 width=90 style='height:51.0pt;width:68pt'>CIS1310IS09</td>
+                    <td class=xl74 width=491 style='width:368pt'>ATENEA MODELO TECNOLÓGICO PARA
+                    APOYAR LA INTELIGENCIA COMPETITIVA EN LA EMPRESA CODENSA S.A. ESP</td>
+                    <td class=xl74 width=188 style='width:141pt'>Bejarano, Katerin Lorena<span
+                    style='mso-spacerun:yes'>  </span>y Rodríguez, Alisson Fabiana<span
+                    style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>Julio Ernesto Carreno Vargas<span
+                    style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>ISTAR</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl74 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310IS09" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310IS09</a></td>
+                   </tr>
+                   <tr height=40 style='height:30.0pt'>
+                    <td height=40 class=xl74 width=90 style='height:30.0pt;width:68pt'>CIS1230TK01</td>
+                    <td class=xl74 width=491 style='width:368pt'>CreaDevManager - BBTK Project
+                    Manager</td>
+                    <td class=xl74 width=188 style='width:141pt'>Daniel Felipe González Obando</td>
+                    <td class=xl74 width=80 style='width:60pt'>Maciej ORKISZ</td>
+                    <td class=xl74 width=80 style='width:60pt'>TAKINA</td>
+                    <td class=xl74 width=80 style='width:60pt'>SI</td>
+                    <td class=xl74 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1230TK01" target="_parent">http://pegasus.javeriana.edu.co/~CIS1230TK01</a></td>
+                   </tr>
+                   <tr height=68 style='height:51.0pt'>
+                    <td height=68 class=xl74 width=90 style='height:51.0pt;width:68pt'>CIS1310IS04</td>
+                    <td class=xl74 width=491 style='width:368pt'>Herramienta de software para el
+                    IDEAM, que permita reemplazar parcialmente el actual sistema, con el fin de
+                    obtener información necesaria para crear mapas de precipitación y de
+                    anomalías de precipitación de Colombia de manera más rápida y eficiente<span
+                    style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=188 style='width:141pt'>Oliveros Castellanos Andres
+                    Felipe<span style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>Blanca Elvira Oviedo</td>
+                    <td class=xl74 width=80 style='width:60pt'>ISTAR</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 1</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310IS04" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310IS04</a></td>
+                   </tr>
+                   <tr height=34 style='height:25.5pt'>
+                    <td height=34 class=xl74 width=90 style='height:25.5pt;width:68pt'>CIS1330IS07</td>
+                    <td class=xl74 width=491 style='width:368pt'>CALEAN: Servicios de
+                    comunicación en tiempo real entre clientes y comercio</td>
+                    <td class=xl74 width=188 style='width:141pt'>Jonathan Roberto León García</td>
+                    <td class=xl74 width=80 style='width:60pt'>Efraín Ortiz Pabón</td>
+                    <td class=xl74 width=80 style='width:60pt'>Istar</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330IS07" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330IS07</a></td>
+                   </tr>
+                   <tr height=34 style='height:25.5pt'>
+                    <td height=34 class=xl74 width=90 style='height:25.5pt;width:68pt'>CIS1310IS02</td>
+                    <td class=xl74 width=491 style='width:368pt'>Aplicación de Minería de Datos
+                    para la Identificación de Patrones de comportamiento en las organizaciones
+                    enfocado en Prácticas de Impresión</td>
+                    <td class=xl74 width=188 style='width:141pt'>Daniel Augusto Solano Oviedo</td>
+                    <td class=xl74 width=80 style='width:60pt'>Alvaro Quintero</td>
+                    <td class=xl74 width=80 style='width:60pt'>Sin grupo</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310IS02" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310IS02</a></td>
+                   </tr>
+                   <tr height=51 style='height:38.25pt'>
+                    <td height=51 class=xl74 width=90 style='height:38.25pt;width:68pt'>CIS1310SD02</td>
+                    <td class=xl74 width=491 style='width:368pt'>Guía metodológica para la
+                    administración de la seguridad física en las PYMES</td>
+                    <td class=xl74 width=188 style='width:141pt'>Felipe Bayona Borrero</td>
+                    <td class=xl74 width=80 style='width:60pt'>Joshsua González Díaz</td>
+                    <td class=xl74 width=80 style='width:60pt'>SIDRE</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310SD02" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310SD02</a></td>
+                   </tr>
+                   <tr height=51 style='height:38.25pt'>
+                    <td height=51 class=xl74 width=90 style='height:38.25pt;width:68pt'>CIS1310IS13</td>
+                    <td class=xl74 width=491 style='width:368pt'>SIGS: Sistema Integral para la
+                    Gestión de Servicios de consultoría en la empresa A.C.T. Consultores Ltda. de
+                    Bogotá</td>
+                    <td class=xl74 width=188 style='width:141pt'>Yenny Natalia Salamanca Torres</td>
+                    <td class=xl74 width=80 style='width:60pt'>Olimary Gómez Coronell</td>
+                    <td class=xl74 width=80 style='width:60pt'>Istar</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310IS13" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310IS13</a></td>
+                   </tr>
+                   <tr height=68 style='height:51.0pt'>
+                    <td height=68 class=xl74 width=90 style='height:51.0pt;width:68pt'>CIS1330IS03</td>
+                    <td class=xl74 width=491 style='width:368pt'>Extensión del sistema SCLUD para
+                    manejar en la nube el flujo de pedido de la cadena de suministro de pymes</td>
+                    <td class=xl74 width=188 style='width:141pt'>Pablo Sebastian Paez Mateus y
+                    Andrés Felipe Pedraza Infante</td>
+                    <td class=xl74 width=80 style='width:60pt'>Martha Helena Carrillo Ramirez</td>
+                    <td class=xl74 width=80 style='width:60pt'>Istar</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330IS03" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330IS03</a></td>
+                   </tr>
+                   <tr height=68 style='height:51.0pt'>
+                    <td height=68 class=xl74 width=90 style='height:51.0pt;width:68pt'>CIS1330NG01</td>
+                    <td class=xl74 width=491 style='width:368pt'>Seguimiento y realidad aumentada
+                    con un dron teleoperado</td>
+                    <td class=xl74 width=188 style='width:141pt'>Mauricio Armando González
+                    Rodríguez</td>
+                    <td class=xl74 width=80 style='width:60pt'>Pedro Fabián Cárdenas Herrera</td>
+                    <td class=xl74 width=80 style='width:60pt'>Sin grupo</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330NG01" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330NG01</a></td>
+                   </tr>
+                   <tr height=51 style='height:38.25pt'>
+                    <td height=51 class=xl74 width=90 style='height:38.25pt;width:68pt'>CIS1330TK02</td>
+                    <td class=xl74 width=491 style='width:368pt'>Capa de integración para OGRE 3D
+                    en PS3</td>
+                    <td class=xl74 width=188 style='width:141pt'>Darwin Rodríguez Correa</td>
+                    <td class=xl74 width=80 style='width:60pt'>Leonardo Flórez Valencia</td>
+                    <td class=xl74 width=80 style='width:60pt'>Takina</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330TK02" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330TK02</a></td>
+                   </tr>
+                   <tr height=34 style='height:25.5pt'>
+                    <td height=34 class=xl74 width=90 style='height:25.5pt;width:68pt'>CIS1330IS05</td>
+                    <td class=xl74 width=491 style='width:368pt'>Control: Administrador de
+                    finanzas personales</td>
+                    <td class=xl74 width=188 style='width:141pt'>Daniel Gomez Didier</td>
+                    <td class=xl74 width=80 style='width:60pt'>Juan Pablo Garzón Ruiz</td>
+                    <td class=xl74 width=80 style='width:60pt'>Istar</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330IS05" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330IS05</a></td>
+                   </tr>
+                   <tr height=51 style='height:38.25pt'>
+                    <td height=51 class=xl74 width=90 style='height:38.25pt;width:68pt'>CIS1330IS02</td>
+                    <td class=xl74 width=491 style='width:368pt'>Estrategia de Comercio Móvil
+                    integrando Técnicas de Recompensas y Servicios Basados en Localización</td>
+                    <td class=xl74 width=188 style='width:141pt'>Alejandro Ardila Schickler</td>
+                    <td class=xl74 width=80 style='width:60pt'>Javier Francisco López</td>
+                    <td class=xl74 width=80 style='width:60pt'>Istar</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330IS02" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330IS02</a></td>
+                   </tr>
+                   <tr height=40 style='height:30.0pt'>
+                    <td height=40 class=xl74 width=90 style='height:30.0pt;width:68pt'>CIS1330TK01</td>
+                    <td class=xl74 width=491 style='width:368pt'>Video juego para promoción
+                    turística del parque nacional Tayrona.</td>
+                    <td class=xl74 width=188 style='width:141pt'>Ariel Camilo Abreo Ariza</td>
+                    <td class=xl74 width=80 style='width:60pt'>Oscar Chavarro</td>
+                    <td class=xl74 width=80 style='width:60pt'>Takina</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330TK01" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330TK01</a></td>
+                   </tr>
+                   <tr height=40 style='height:30.0pt'>
+                    <td height=40 class=xl74 width=90 style='height:30.0pt;width:68pt'>CIS1310SD01</td>
+                    <td class=xl74 width=491 style='width:368pt'>SIMAPRE - Sistema de
+                    Mantenimiento Preventivo Vehicular</td>
+                    <td class=xl74 width=188 style='width:141pt'>Nicolás Duarte Trujillo</td>
+                    <td class=xl74 width=80 style='width:60pt'>Efrain ortiz Pabon</td>
+                    <td class=xl74 width=80 style='width:60pt'>Istar</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310SD01" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310SD01</a></td>
+                   </tr>
+                   <tr height=51 style='height:38.25pt'>
+                    <td height=51 class=xl74 width=90 style='height:38.25pt;width:68pt'>CIS1330IS01</td>
+                    <td class=xl74 width=491 style='width:368pt'>Logodáctica:<font class="font5">
+                    </font><font class="font0">Software de ayuda didáctica para grupos de niños
+                    sordos de 5 a 10 años,</font><font class="font10"> </font><font class="font0">basado
+                    en logodactica.<span style='mso-spacerun:yes'> </span></font></td>
+                    <td class=xl74 width=188 style='width:141pt'>Héctor Andrés Mantilla Barbosa</td>
+                    <td class=xl74 width=80 style='width:60pt'>Olga Lucia Sarmiento Aguilera</td>
+                    <td class=xl74 width=80 style='width:60pt'>Istar</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330IS01" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330IS01</a></td>
+                   </tr>
+                   <tr height=68 style='height:51.0pt'>
+                    <td height=68 class=xl74 width=90 style='height:51.0pt;width:68pt'>CIS1330NG02</td>
+                    <td class=xl74 width=491 style='width:368pt'>Guía para la adquisición de
+                    herramientas de Software.<span style='mso-spacerun:yes'>  </span>Apoyo a la
+                    emisión de conceptos técnicos enfocados a personas con discapacidad<br>
+                      </td>
+                    <td class=xl74 width=188 style='width:141pt'>Edwin Camilo Penagos Castillo</td>
+                    <td class=xl74 width=80 style='width:60pt'>Hilda Cristina Chaparro López</td>
+                    <td class=xl74 width=80 style='width:60pt'>Sin grupo</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330NG02" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330NG02</a></td>
+                   </tr>
+                   <tr height=51 style='height:38.25pt'>
+                    <td height=51 class=xl74 width=90 style='height:38.25pt;width:68pt'>CIS1330IS04</td>
+                    <td class=xl74 width=491 style='width:368pt'>CLUBMAT 1.1: Extensión de una
+                    aplicación destinada al fortalecimiento de clubes escolares matemáticos</td>
+                    <td class=xl74 width=188 style='width:141pt'>Julián Camilo Ortega Muñoz</td>
+                    <td class=xl74 width=80 style='width:60pt'>Maria Consuelo Franky</td>
+                    <td class=xl74 width=80 style='width:60pt'>Istar</td>
+                    <td class=xl74 width=80 style='width:60pt'>SI</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330IS04" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330IS04</a></td>
+                   </tr>
+                   <tr height=40 style='height:30.0pt'>
+                    <td height=40 class=xl74 width=90 style='height:30.0pt;width:68pt'>CIS1330NG03</td>
+                    <td class=xl74 width=491 style='width:368pt'>Gamificación de encuestas de
+                    satisfacción para los Servicios de Alimentación de la Pontificia Universidad
+                    Javeriana</td>
+                    <td class=xl74 width=188 style='width:141pt'>Alejandro Pérez García</td>
+                    <td class=xl74 width=80 style='width:60pt'>Juan Pablo Garzón Ruiz</td>
+                    <td class=xl74 width=80 style='width:60pt'>Sin grupo</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330NG03" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330NG03</a></td>
+                   </tr>
+                   <tr height=68 style='height:51.0pt'>
+                    <td height=68 class=xl74 width=90 style='height:51.0pt;width:68pt'>CIS1310IS08</td>
+                    <td class=xl74 width=491 style='width:368pt'>iZafiro: Software modo
+                    Video-Juego de apoyo al aprendizaje en Números Fraccionarios en niños de 9 a
+                    10 años mediante la Simulación Dramatizada.</td>
+                    <td class=xl74 width=188 style='width:141pt'>Jhonathan Afranio Córdoba
+                    Castañeda</td>
+                    <td class=xl74 width=80 style='width:60pt'>José Hernando Hurtado Rojas</td>
+                    <td class=xl74 width=80 style='width:60pt'>Istar</td>
+                    <td class=xl74 width=80 style='width:60pt'>SI</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310IS08" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310IS08</a></td>
+                   </tr>
+                   <tr height=51 style='height:38.25pt'>
+                    <td height=51 class=xl74 width=90 style='height:38.25pt;width:68pt'>CIS1330IS11</td>
+                    <td class=xl74 width=491 style='width:368pt'>AlCast sistema de recomendación
+                    de asignaturas</td>
+                    <td class=xl74 width=188 style='width:141pt'>Diego Andrés Gil Castro<span
+                    style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>Ángela Carrillo Ramos</td>
+                    <td class=xl74 width=80 style='width:60pt'>Istar</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330IS11" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330IS11</a></td>
+                   </tr>
+                   <tr height=51 style='height:38.25pt'>
+                    <td height=51 class=xl74 width=90 style='height:38.25pt;width:68pt'>CIS1330IS09</td>
+                    <td class=xl74 width=491 style='width:368pt'>My Sirease II: Sistema
+                    Adaptativo de apoyo al proceso de inscripción de asignaturas</td>
+                    <td class=xl74 width=188 style='width:141pt'>Vanessa Sánchez Artunduaga</td>
+                    <td class=xl74 width=80 style='width:60pt'>Ángela Carrillo Ramos</td>
+                    <td class=xl74 width=80 style='width:60pt'>Istar</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330IS09" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330IS09</a></td>
+                   </tr>
+                   <tr height=51 style='height:38.25pt'>
+                    <td height=51 class=xl74 width=90 style='height:38.25pt;width:68pt'>CIS1330IS13</td>
+                    <td class=xl74 width=491 style='width:368pt'>Miner PC Adviser: software
+                    asesor en la compra de computadores</td>
+                    <td class=xl74 width=188 style='width:141pt'>Antonio Andrés Jiménez
+                    Navas/Simón Santiago Soriano Pérez</td>
+                    <td class=xl74 width=80 style='width:60pt'>Alexandra Pomares Quimbaya<span
+                    style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>Istar</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330IS13" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330IS13</a></td>
+                   </tr>
+                   <tr height=51 style='height:38.25pt'>
+                    <td height=51 class=xl74 width=90 style='height:38.25pt;width:68pt'>CIS1330TK03</td>
+                    <td class=xl74 width=491 style='width:368pt'>CUDAlicious: Filtrado de
+                    imágenes médicas mediante GPU's Nvidia</td>
+                    <td class=xl74 width=188 style='width:141pt'>Daniel David Cárdenas
+                    Velasco<span style='mso-spacerun:yes'> </span></td>
+                    <td class=xl74 width=80 style='width:60pt'>Leonardo Florez Valencia</td>
+                    <td class=xl74 width=80 style='width:60pt'>Takina</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1330TK03" target="_parent">http://pegasus.javeriana.edu.co/~CIS1330TK03</a></td>
+                   </tr>
+                   <tr height=40 style='height:30.0pt'>
+                    <td height=40 class=xl74 width=90 style='height:30.0pt;width:68pt'>CIS1310SD05</td>
+                    <td class=xl74 width=491 style='width:368pt'>Sistema de Información para la
+                    Gestión Integral de Residuos Sólidos</td>
+                    <td class=xl74 width=188 style='width:141pt'>Carlos Eduardo Gomez Lopez</td>
+                    <td class=xl74 width=80 style='width:60pt'>Juan Pablo Garzón Ruiz</td>
+                    <td class=xl74 width=80 style='width:60pt'>Sin grupo</td>
+                    <td class=xl74 width=80 style='width:60pt'>NO</td>
+                    <td class=xl77 width=80 style='width:60pt'>2013 - 3</td>
+                    <td class=xl76 width=298 style='width:224pt'><a
+                    href="http://pegasus.javeriana.edu.co/~CIS1310SD05" target="_parent">http://pegasus.javeriana.edu.co/~CIS1310SD05</a></td>
+                   </tr>
+                </tbody>
+                
+            </table>      
+        </div>
+    </body>
+</html>
