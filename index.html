@@ -8,13 +8,9 @@
       <!-- css -->
         <link rel="stylesheet" href="css/tgisispuj.css"/>
         <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css"/>
-        <link href = "css/Tablas.css" media="screen" rel="StyleSheet" type="text/css">
       <!-- js -->
         <script src = "jquery/jquery-1.11.3.min.js"></script>
         <script src = "bootstrap/js/bootstrap.min.js"></script>
-        <script src = "js/TablaScript.js"></script>
-        <script type = "text/javascript" src="js/buscar-en-tabla.js"></script>
-        <script type = "text/javascript" src="js/FileRead.js"></script>
   </head>
   <body>
 
@@ -97,104 +93,109 @@
           <div class="col-xs-10 col-xs-offset-1 ">
             <div class="input-group filter-comp">
               <span class="input-group-addon">Buscar</span>
-              <input type="text" class="form-control text-center" placeholder="Buscar en la tabla...">
+              <input type="text" id="search-bar" class="form-control text-center search-bar" placeholder="Buscar en la tabla...">
             </div>
           </div>
         </div>
       </div>
       <!-- Tablas -->
       <div>
-        <table>
-          <tr>
-            <th class="col-md-1"><p class="lead text-center">Código</p></th>
-            <th class="col-md-2"><p class="lead text-center">Nombre trabajo de grado</p></th>
-            <th class="col-md-2"><p class="lead text-center">Autores</p></th>
-            <th class="col-md-1"><p class="lead text-center">Director</p></th>
-            <th class="col-md-1"><p class="lead text-center">Grupo</p></th>
-            <th class="col-md-1"><p class="lead text-center">Mención de honor</p></th>
-            <th class="col-md-1"><p class="lead text-center">Año entrega</p></th>
-            <th class="col-md-1"><p class="lead text-center">Periodo</p></th>
-            <th class="col-md-1"><p class="lead text-center">Pagina web</p></th>
-          </tr>
-          <tr>
-            <td><p class="text-center">N/A</td>
-            <td><p class="text-center">Mecanismos de control de acceso en Web services</p></td>
-            <td><p class="text-center">William Vasquez Juan Rojas</p></td>
-            <td><p class="text-center">ALICIA ARENAS</p></td>
-            <td><p class="text-center"></p></td>
-            <td><p class="text-center">NO</p></td>
-            <td><p class="text-center">2004</p></td>
-            <td><p class="text-center">1</p></td>
-            <td><p class="text-center">N/A</p></td>
-          </tr>
-          <tr>
-            <td>CIS1230IS04</td>
-            <td>Mapa de Localización de Predios de origen Ilegal (MALOPI)</span></td>
-            <td>Johan Camilo Moreno Mateus</td>
-            <td>Javier Francisco López Parra</td>
-            <td>Istar</td>
-            <td>NO</td>
-            <td>2012</td>
-            <td>3</td>
-            <td><a href="http://pegasus.javeriana.edu.co/~CIS1230IS04">L</a></td>
-          </tr>
-          <tr>
-           <td>CIS1230IS05</td>
-           <td>SIPROSOFI: Sistema de Información para la Gestión de Proyectos Sociales construido mediante las tecnologías JEE 6, GXT, ERRAI</td>
-           <td>María Camila Posada Charum y Andrés Bustamante</td>
-           <td>María Consuelo Franky</td>
-           <td>Istar</td>
-           <td>NO</td>
-           <td>2012</td>
-           <td>3</td>
-           <td><a href="http://pegasus.javeriana.edu.co/~CIS1230IS05">L</a></td>
-          </tr>
-          <tr>
-           <td>CIS1230IS08</td>
-           <td>Process Quality Improvement</td>
-           <td>Juan Camilo Olaya y Angela Riveros Rodríguez</td>
-           <td>Fabio Aroca Lara</td>
-           <td>Istar</td>
-           <td>NO</td>
-           <td>2012</td>
-           <td>3</td>
-           <td><a href="http://pegasus.javeriana.edu.co/~CIS1230IS08">L</a></td>
-          </tr>
-          <tr>
-           <td>CIS1230IS09</td>
-           <td>Metodología para la implementación de una herramienta de análisis de información soportada en OLAP desde los datos recopilados desde un CRM operacional</td>
-           <td>Stephanie Herrera Bautista</td>
-           <td>Fabio Aroca</td>
-           <td>Istar</td>
-           <td>NO</td>
-           <td>2012</td>
-           <td>3</td>
-           <td><a href="http://pegasus.javeriana.edu.co/~CIS1230IS09">L</a></td>
-          </tr>
-          <tr>
-           <td>CIS1230IS10</td>
-           <td>SCLOUD: MODELO DEL FLUJO DE PEDIDO DE LA CADENA DE SUMINISTRO PARA PYMES COLOMBIANAS E IMPLEMENTACIÓN PARA LA NUBE</td>
-           <td>Camilo Andrés Ruiz Abaunza y Camilo Andrés Méndez Flórez</td>
-           <td>Martha Helena Carrillo Ramírez</td>
-           <td>Istar</td>
-           <td>NO</td>
-           <td>2012</td>
-           <td>3</td>
-           <td><a href="http://pegasus.javeriana.edu.co/~CIS1230IS10">L</a></td>
-          </tr>
-          <tr>
-           <td>CIS1230SI02</td>
-           <td>Computación móvil no intrusiva aplicada a la comunicación entre dispositivos móviles y domóticos a través de Internet</td>
-           <td>Daniel Humberto Novoa Valcárcel</td>
-           <td>Juan Pablo Garzón</td>
-           <td>SiDre</td>
-           <td>NO</td>
-           <td>2012</td>
-           <td>3</td>
-           <td><a href="http://pegasus.javeriana.edu.co/~CIS1230SI02">L</a></td>
-          </tr>
+        <table id="table">
+          <thead>
+            <tr>
+              <th class="col-md-1"><p class="lead text-center">Código</p></th>
+              <th class="col-md-2"><p class="lead text-center">Nombre trabajo de grado</p></th>
+              <th class="col-md-2"><p class="lead text-center">Autores</p></th>
+              <th class="col-md-1"><p class="lead text-center">Director</p></th>
+              <th class="col-md-1"><p class="lead text-center">Grupo</p></th>
+              <th class="col-md-1"><p class="lead text-center">Mención de honor</p></th>
+              <th class="col-md-1"><p class="lead text-center">Año entrega</p></th>
+              <th class="col-md-1"><p class="lead text-center">Periodo</p></th>
+              <th class="col-md-1"><p class="lead text-center">Pagina web</p></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><p class="text-center">N/A</td>
+              <td><p class="text-center">Mecanismos de control de acceso en Web services</p></td>
+              <td><p class="text-center">William Vasquez Juan Rojas</p></td>
+              <td><p class="text-center">ALICIA ARENAS</p></td>
+              <td><p class="text-center"></p></td>
+              <td><p class="text-center">NO</p></td>
+              <td><p class="text-center">2004</p></td>
+              <td><p class="text-center">1</p></td>
+              <td><p class="text-center">N/A</p></td>
+            </tr>
+            <tr>
+              <td>CIS1230IS04</td>
+              <td>Mapa de Localización de Predios de origen Ilegal (MALOPI)</span></td>
+              <td>Johan Camilo Moreno Mateus</td>
+              <td>Javier Francisco López Parra</td>
+              <td>Istar</td>
+              <td>NO</td>
+              <td>2012</td>
+              <td>3</td>
+              <td><a href="http://pegasus.javeriana.edu.co/~CIS1230IS04">L</a></td>
+            </tr>
+            <tr>
+             <td>CIS1230IS05</td>
+             <td>SIPROSOFI: Sistema de Información para la Gestión de Proyectos Sociales construido mediante las tecnologías JEE 6, GXT, ERRAI</td>
+             <td>María Camila Posada Charum y Andrés Bustamante</td>
+             <td>María Consuelo Franky</td>
+             <td>Istar</td>
+             <td>NO</td>
+             <td>2012</td>
+             <td>3</td>
+             <td><a href="http://pegasus.javeriana.edu.co/~CIS1230IS05">L</a></td>
+            </tr>
+            <tr>
+             <td>CIS1230IS08</td>
+             <td>Process Quality Improvement</td>
+             <td>Juan Camilo Olaya y Angela Riveros Rodríguez</td>
+             <td>Fabio Aroca Lara</td>
+             <td>Istar</td>
+             <td>NO</td>
+             <td>2012</td>
+             <td>3</td>
+             <td><a href="http://pegasus.javeriana.edu.co/~CIS1230IS08">L</a></td>
+            </tr>
+            <tr>
+             <td>CIS1230IS09</td>
+             <td>Metodología para la implementación de una herramienta de análisis de información soportada en OLAP desde los datos recopilados desde un CRM operacional</td>
+             <td>Stephanie Herrera Bautista</td>
+             <td>Fabio Aroca</td>
+             <td>Istar</td>
+             <td>NO</td>
+             <td>2012</td>
+             <td>3</td>
+             <td><a href="http://pegasus.javeriana.edu.co/~CIS1230IS09">L</a></td>
+            </tr>
+            <tr>
+             <td>CIS1230IS10</td>
+             <td>SCLOUD: MODELO DEL FLUJO DE PEDIDO DE LA CADENA DE SUMINISTRO PARA PYMES COLOMBIANAS E IMPLEMENTACIÓN PARA LA NUBE</td>
+             <td>Camilo Andrés Ruiz Abaunza y Camilo Andrés Méndez Flórez</td>
+             <td>Martha Helena Carrillo Ramírez</td>
+             <td>Istar</td>
+             <td>NO</td>
+             <td>2012</td>
+             <td>3</td>
+             <td><a href="http://pegasus.javeriana.edu.co/~CIS1230IS10">L</a></td>
+            </tr>
+            <tr>
+             <td>CIS1230SI02</td>
+             <td>Computación móvil no intrusiva aplicada a la comunicación entre dispositivos móviles y domóticos a través de Internet</td>
+             <td>Daniel Humberto Novoa Valcárcel</td>
+             <td>Juan Pablo Garzón</td>
+             <td>SiDre</td>
+             <td>NO</td>
+             <td>2012</td>
+             <td>3</td>
+             <td><a href="http://pegasus.javeriana.edu.co/~CIS1230SI02">L</a></td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
+    <script type = "text/javascript" src="js/tgisispuj.js"></script>
   </body>
 </html>
