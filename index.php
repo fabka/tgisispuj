@@ -1,12 +1,3 @@
-
-<?php header('Content-type: text/html; charset=utf-8');  ?>
-
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -31,9 +22,9 @@ and open the template in the editor.
                 </h1>
             </div>
         </div>
-        
-        <div id="Links" >      
-            <label>Filtrar Por año |</label> 
+
+        <div id="Links" >
+            <label>Filtrar Por año |</label>
             <a href="2004.html" > 2004 </a>
             <label>|</label>
             <a href="2005.html" > 2005 </a>
@@ -62,23 +53,23 @@ and open the template in the editor.
             <br>
             <br>
         </div>
-        
+
         <br>
         <div>
-            
+
             <!--
             <script type="text/javascript">
                 genera_tabla();
-                leer();                
+                leer();
             </script>
             -->
-            
+
             <div id="buscar">
                 <label for="txtBuscar">Buscar: </label>
                 <input type="search" id="txtBuscar" autofocus
                 placeholder="Digite el texto que desea encontrar y presione la ENTER. Para cancelar la tecla ESCAPE.">
             </div>
-            
+
             <br>
             <table id="tblTabla" >
                 <thead>
@@ -92,10 +83,10 @@ and open the template in the editor.
                     <td> Pagina web </td>
                     <td> Modalidad </td>
                 </thead>
-               
+
                 <tbody>
 
-                            
+
         <?php
             header('Content-type: text/html; charset=utf-8');
 
@@ -111,7 +102,7 @@ and open the template in the editor.
             if ($conn->connect_error) {
                 echo "error de coneción";
                 die("Connection failed: " . $conn->connect_error);
-            } 
+            }
 
             $sql = "SELECT * FROM trabajosGrado";
             $result = $conn->query($sql);
