@@ -1,21 +1,23 @@
-//search-bar
-$("#search-bar").keyup(function(){
+//Search by year
+$("#search-by-year-bar").keyup(function(){
     _this = this;
     // Show only matching TR, hide rest of them
-    $.each($("#table tbody").find("tr"), function() {
+    $.each($("#table tbody").find("tr").find(".year"), function() {
+        console.log($(this).text());
         if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) == -1)
-           $(this).hide();
+           $(this).parent().hide();
         else
-           $(this).show();
+           $(this).parent().show();
     });
 });
 
-//Search by year
+//General  search
 $("#search-bar").keyup(function(){
     _this = this;
     // Show only matching TR, hide rest of them
     $.each($("#table tbody").find("tr"), function() {
-        if( $(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) == -1)
+        console.log($(this).text());
+        if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) == -1)
            $(this).hide();
         else
            $(this).show();
