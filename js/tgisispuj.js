@@ -1,4 +1,5 @@
 var period = null;
+var modality = null;
 var researchGroup = null;
 var honorMention = null;
 var year = null;
@@ -41,7 +42,6 @@ $("#search-button").click(function() {
 
 function search(str, clase){
   $.each($("#table tbody").find("tr").find(clase), function() {
-      console.log($(this).text());
       if($(this).text().toLowerCase().indexOf(str.toLowerCase()) == -1)
          $(this).parent().hide();
       else
@@ -58,12 +58,38 @@ $(".research-group-button").click(function() {
     search( researchGroup, ".research-group");
 });
 
+//get modality
+$(".modality-button").click(function() {
+    modality = $(this).text();
+    if( modality == "Sin filtro" )
+      modality = "";
+    search( modality, ".modality");
+});
+
 //get honor mention
 $(".honor-mention-button").click(function() {
     honorMention = $(this).text();
-    if( honorMention == "Sin filtro" )
+    if( honorMention == "Sin filtro" ){
       honorMention = "";
-    search( honorMention, ".honor-mention" );
+      search( honorMention, ".honor-mention" );
+    }else{
+
+      if( honorMention == "No" )
+        clase = ".glyphicon-remove";
+      else
+        clase = ".glyphicon-ok";
+
+      console.log(honorMention + " " + clase);
+      $.each($("#table tbody").find("tr").find(".honor-mention").find("p").find(clase), function() {
+
+           if( !$(this).hasClass(clase) ){
+              console.log(   $(this).closest(".honor-mention") );
+              $(this).closest(".honor-mention").hide();
+          }else
+              $(this).closest(".honor-mention").show();
+
+      });
+    }
 });
 
 //get period
@@ -80,9 +106,6 @@ $("#search-by-year-bar").keyup(function(){
     _this = this;
     // Show only matching TR, hide rest of them
     $.each($("#table tbody").find("tr").find(".year"), function() {
-      console.log("$(this).text() = " + $(this).text());
-      _thisval = $(_this).val();
-      console.log("$(_this).val() = " + $(_this).val());
       if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) == -1)
          $(this).parent().hide();
       else
