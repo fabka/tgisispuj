@@ -43,7 +43,7 @@
             </div>
             <!--Periodo -->
             <div class="col-xs-4 col-xs-offset-4 col-md-3 col-md-offset-0">
-              <div class="btn-group btn-dd filter-comp">
+              <div class="bt  n-group btn-dd filter-comp">
                 <button type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Periodo <span class="caret"></span>
                 </button>
@@ -90,11 +90,19 @@
 
         <!-- Búqueda general -->
         <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 ">
-            <div class="input-group filter-comp">
+          <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+            <div class="input-group filter-comp btn-dd">
               <span class="input-group-addon">Buscar</span>
               <input type="text" id="search-bar" class="form-control text-center search-bar" placeholder="Buscar en la tabla...">
             </div>
+          </div>
+          <div class="col-xs-6 col-xs-offset-4 col-md-6 col-md-offset-5 filter-comp">
+            <button id="search-button" type="button btn-dd" class="btn btn-default btn-lg">
+              <span class="glyphicon glyphicon-search"></span> Buscar
+            </button>
+            <button id="clear-button" type="button btn-dd" class="btn btn-default btn-lg">
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Limpiar
+            </button>
           </div>
         </div>
       </div>

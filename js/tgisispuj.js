@@ -1,6 +1,43 @@
 var period = null;
 var researchGroup = null;
 var honorMention = null;
+var year = null;
+var txt = null;
+var regex_str = null;
+
+//Regex test
+/*
+$("#search-button").click(function() {
+  regex_str = "";
+  year = $('#search-by-year-bar').val();
+  txt = $('#search-bar').val();
+
+  if(period != null)
+    regex_str += '(.*\\b'+period+'\\b)';
+  if(researchGroup != null)
+    regex_str += '(.*\\b'+researchGroup+'\\b)';
+  if(honorMention != null)
+    regex_str += '(.*\\b'+honorMention+'\\b)';
+  if(year != '' )
+    regex_str += '(.*\\b'+year+'\\b)';
+  if(txt != '')
+    regex_str += '(.*\\b'+txt+'\\b)';
+
+  var regex = RegExp(regex_str,"i");
+  $.each($("#table tbody").find("tr"), function() {
+    console
+    if ( regex.test( $(this).text() ) ){
+      console.log("(true) regex = " + regex_str);
+      console.log("(true) $(this).text() = " + $(this).text());
+    }else{
+      console.log("(false) regex = " + regex_str);
+      console.log("(false) $(this).text() = " + $(this).text());
+    }
+
+  });
+});
+*/
+
 
 function search(str, clase){
   $.each($("#table tbody").find("tr").find(clase), function() {
@@ -12,7 +49,8 @@ function search(str, clase){
   });
 }
 
-//search by research group
+
+//get research group
 $(".research-group-button").click(function() {
     researchGroup = $(this).text();
     if( researchGroup == "Sin filtro" )
@@ -20,7 +58,7 @@ $(".research-group-button").click(function() {
     search( researchGroup, ".research-group");
 });
 
-//search by honor mention
+//get honor mention
 $(".honor-mention-button").click(function() {
     honorMention = $(this).text();
     if( honorMention == "Sin filtro" )
@@ -28,13 +66,14 @@ $(".honor-mention-button").click(function() {
     search( honorMention, ".honor-mention" );
 });
 
-//search by period
+//get period
 $(".period-button").click(function() {
     period = $(this).text();
     if( period == "Sin filtro" )
       period = "";
     search( period, ".period" );
 });
+
 
 //Search by year
 $("#search-by-year-bar").keyup(function(){
