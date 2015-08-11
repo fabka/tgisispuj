@@ -76,3 +76,14 @@ tr td{
   white-space: normal;
   width: 100%
 }
+
+.footer-logo{
+  max-width: 240px;
+  max-height: 175px;
+  margin:auto;
+}
+
+.footer-elements{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
