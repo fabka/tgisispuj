@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no">
+      <title>Trabajos de grado | Ingeniería de sistemas | Pontificia Universidad Javeriana</title>
+      <!-- css -->
+        <link rel="stylesheet" href="css/tgisispuj.css"/>
+        <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css"/>
+      <!-- js -->
+        <script src = "jquery/jquery-1.11.3.min.js"></script>
+        <script src = "bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <!-- Presentación -->
+      <div class="row banner">
+        <div class="col-md-6">
+          <div class="banner-img">
+            <img src="Imagenes/JaveBanner.jpg" alt="Logo javeriana" >
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h1 class="text-center">
+              Trabajos de grado <br>
+              Ingeniería de sistemas <br>
+              Pontificia Universidad Javeriana <br>
+          </h1>
+        </div>
+      </div>
+      <!-- Filtros -->
+      <div class="well">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Modalidad -->
+            <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-0">
+              <div class="btn-group btn-dd filter-comp">
+                <button type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                  Modalidad <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="modality-button"><a>Aplicación</a></li>
+                  <li class="modality-button"><a>Investigación</a></li>
+                  <li class="modality-button"><a>Emprendimiento</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="modality-button"><a>Sin filtro</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Mención de honor -->
+            <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-0">
+              <div class="btn-group btn-dd filter-comp">
+                <button type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                  Mención de honor <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="honor-mention-button"><a>Sí</a></li>
+                  <li class="honor-mention-button"><a>No</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="honor-mention-button"><a>Sin filtro</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Grupo de investigación -->
+            <div class="col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-0">
+              <div class="btn-group btn-dd filter-comp">
+                <button type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                  Grupo de investigación <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="research-group-button"><a>SIDRe</a></li>
+                  <li class="research-group-button"><a>Istar</a></li>
+                  <li class="research-group-button"><a>Takina</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="research-group-button"><a>Sin filtro</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Año -->
+            <div class="col-xs-8 col-xs-offset-2 col-md-3 col-md-offset-0">
+              <div class="input-group filter-comp">
+                <span class="input-group-addon">Año</span>
+                <input type="text" id="search-by-year-bar" class="form-control text-center" placeholder="Año">
+              </div>
+            </div>
+            <!--Periodo -->
+            <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-0">
+              <div class="bt  n-group btn-dd filter-comp">
+                <button type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                  Periodo <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="period-button"><a>1</a></li>
+                  <li class="period-button"><a>3</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="period-button"><a>Sin filtro</a></li>
+                </ul>
+              </div>
+            </div>
+          <!-- row end -->
+          </div>
+        </div>
+
+        <!-- Búqueda general -->
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+            <div class="input-group filter-comp btn-dd">
+              <span class="input-group-addon">Buscar</span>
+              <input type="text" id="search-bar" class="form-control text-center search-bar" placeholder="Buscar en la tabla...">
+            </div>
+          </div>
+          <div class="col-xs-6 col-xs-offset-4 col-md-6 col-md-offset-5 filter-comp">
+            <button id="search-button" type="button btn-dd" class="btn btn-default btn-lg">
+              <span class="glyphicon glyphicon-search"></span> Buscar
+            </button>
+            <button id="clear-button" type="button btn-dd" class="btn btn-default btn-lg">
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Limpiar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabla -->
+      <div>
+        <table id="table">
+          <thead>
+            <tr>
+              <th class="col-md-1"><p class="lead text-center">Código</p></th>
+              <th class="col-md-2"><p class="lead text-center">Nombre trabajo de grado</p></th>
+              <th class="col-md-1"><p class="lead text-center">Modalidad</p></th>
+              <th class="col-md-1"><p class="lead text-center">Autores</p></th>
+              <th class="col-md-1"><p class="lead text-center">Director</p></th>
+              <th class="col-md-1"><p class="lead text-center">Grupo</p></th>
+              <th class="col-md-1"><p class="lead text-center">Mención de honor</p></th>
+              <th class="col-md-1"><p class="lead text-center">Año entrega</p></th>
+              <th class="col-md-1"><p class="lead text-center">Periodo</p></th>
+              <th class="col-md-1"><p class="lead text-center">Página web</p></th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+             <td><p class="text-center">CIS1510AP04</p></td>
+             <td><p class="text-center">Sistema de apoyo para identificación y estimación de volumetría de nódulos pulmonares</p></td>
+             <td class="modality"><p class="text-center">Aplicación</p></td>
+             <td><p class="text-center">José Alejandro León Andrade </p></td>
+             <td><p class="text-center">Andrea del Pilar Rueda</p></td>
+             <td class="research-group"><p class="text-center">TAKINA</p></td>
+             <td class="honor-mention"><p class="text-center">                  <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></p></td>
+             <td class="year"><p class="text-center">2015</p></td>
+             <td class="period"><p class="text-center">1</p></td>
+             <td>
+               <p class="text-center">
+                <a href="http://pegasus.javeriana.edu.co/~CIS1510AP04">
+                  <button type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-globe"></span>
+                  </button>
+                </a>
+               </p>
+             </td>
+           </tr>
+            <tr>
+             <td><p class="text-center">CIS1430IS08</p></td>
+             <td><p class="text-center">V2SOFT: GUÍA METODOLÓGICA PARA EL PROCESO DE VALIDACIÓN Y VERIFICACIÓN DE REQUERIMIENTOS PARA EL USUARIO FINAL</p></td>
+             <td class="modality"><p class="text-center">Guía Metodológica</p></td>
+             <td><p class="text-center"> María Ximena Narváez Barrera</p></td>
+             <td><p class="text-center">Miguel E Torres</p></td>
+             <td class="research-group"><p class="text-center">ISTAR</p></td>
+             <td class="honor-mention"><p class="text-center">                  <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></p></td>
+             <td class="year"><p class="text-center">2015</p></td>
+             <td class="period"><p class="text-center">1</p></td>
+             <td>
+               <p class="text-center">
+                <a href="http://pegasus.javeriana.edu.co/~CIS1430IS08">
+                  <button type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-globe"></span>
+                  </button>
+                </a>
+               </p>
+             </td>
+           </tr>
+            <tr>
+             <td><p class="text-center">CIS1430IS02</p></td>
+             <td><p class="text-center">Way Pulling</p></td>
+             <td class="modality"><p class="text-center">Aplicación</p></td>
+             <td><p class="text-center">Alicia Beltran </p></td>
+             <td><p class="text-center">Luis Guillermo Torres</p></td>
+             <td class="research-group"><p class="text-center">ISTAR</p></td>
+             <td class="honor-mention"><p class="text-center">                  <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></p></td>
+             <td class="year"><p class="text-center">2015</p></td>
+             <td class="period"><p class="text-center">1</p></td>
+             <td>
+               <p class="text-center">
+                <a href="http://pegasus.javeriana.edu.co/~CIS1430IS02">
+                  <button type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-globe"></span>
+                  </button>
+                </a>
+               </p>
+             </td>
+           </tr>
+            <tr>
+             <td><p class="text-center">CIS1510AP01</p></td>
+             <td><p class="text-center">ZOOMTI: Framework para visualizar modelos de software mediante Zoomable User Interfaces y tecNología Multi-Touch.</p></td>
+             <td class="modality"><p class="text-center">Aplicación</p></td>
+             <td><p class="text-center">Eduardo Montenegro León y Daniel Rico Hernandez </p></td>
+             <td><p class="text-center">Ing. Jaime Pavlich.</p></td>
+             <td class="research-group"><p class="text-center">ISTAR</p></td>
+             <td class="honor-mention"><p class="text-center">                  <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></p></td>
+             <td class="year"><p class="text-center">2015</p></td>
+             <td class="period"><p class="text-center">1</p></td>
+             <td>
+               <p class="text-center">
+                <a href="http://pegasus.javeriana.edu.co/~CIS1510AP01">
+                  <button type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-globe"></span>
+                  </button>
+                </a>
+               </p>
+             </td>
+           </tr>
+
+         </tbody>
+       </table> <!-- table -->
+     </div>
+   </div><!-- Container -->
+   <script type = "text/javascript" src="js/tgisispuj.js"></script>
+ </body>
+</html>

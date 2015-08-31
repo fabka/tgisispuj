@@ -11,6 +11,7 @@
       <!-- js -->
         <script src = "jquery/jquery-1.11.3.min.js"></script>
         <script src = "bootstrap/js/bootstrap.min.js"></script>
+        <script src = "js/tgisispuj.js"></script>
   </head>
   <body>
 
@@ -37,44 +38,39 @@
             <!-- Modalidad -->
             <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-0">
               <div class="btn-group btn-dd filter-comp">
-                <button type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                <button id='modality-button' type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
                   Modalidad <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                  <li class="modality-button"><a>Aplicación</a></li>
-                  <li class="modality-button"><a>Investigación</a></li>
-                  <li class="modality-button"><a>Emprendimiento</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="modality-button"><a>Sin filtro</a></li>
+                  <li class="modality-button-item"><a>Aplicación</a></li>
+                  <li class="modality-button-item"><a>Investigación</a></li>
+                  <li class="modality-button-item"><a>Emprendimiento</a></li>
                 </ul>
               </div>
             </div>
+
             <!-- Mención de honor -->
             <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-0">
               <div class="btn-group btn-dd filter-comp">
-                <button type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                <button id="honor-mention-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
                   Mención de honor <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                  <li class="honor-mention-button"><a>Sí</a></li>
-                  <li class="honor-mention-button"><a>No</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="honor-mention-button"><a>Sin filtro</a></li>
+                  <li class="honor-mention-button-item"><a>Sí</a></li>
+                  <li class="honor-mention-button-item"><a>No</a></li>
                 </ul>
               </div>
             </div>
             <!-- Grupo de investigación -->
             <div class="col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-0">
               <div class="btn-group btn-dd filter-comp">
-                <button type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                <button id="research-group-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
                   Grupo de investigación <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                  <li class="research-group-button"><a>SIDRe</a></li>
-                  <li class="research-group-button"><a>Istar</a></li>
-                  <li class="research-group-button"><a>Takina</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="research-group-button"><a>Sin filtro</a></li>
+                  <li class="research-group-button-item"><a>SIDRe</a></li>
+                  <li class="research-group-button-item"><a>Istar</a></li>
+                  <li class="research-group-button-item"><a>Takina</a></li>
                 </ul>
               </div>
             </div>
@@ -87,15 +83,13 @@
             </div>
             <!--Periodo -->
             <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-0">
-              <div class="bt  n-group btn-dd filter-comp">
-                <button type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+              <div class="btn-group btn-dd filter-comp">
+                <button id="period-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
                   Periodo <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                  <li class="period-button"><a>1</a></li>
-                  <li class="period-button"><a>3</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="period-button"><a>Sin filtro</a></li>
+                  <li class="period-button-item"><a>1</a></li>
+                  <li class="period-button-item"><a>3</a></li>
                 </ul>
               </div>
             </div>
@@ -121,7 +115,8 @@
           </div>
         </div>
       </div>
-      <!-- Tablas -->
+
+      <!-- Tabla -->
       <div>
         <table id="table">
           <thead>
