@@ -91,3 +91,17 @@ tr td{
 .advanced-search{
   background-color: #7290ae;
 }
+
+.cabeza{
+  align-items: center;
+  align-content: center;
+  background-color: #7290ae;
+  display: table;
+  height: 100px;
+}
+
+.item{
+  position: relative;
+  top: 50%;
+  background-color: #000;
+}

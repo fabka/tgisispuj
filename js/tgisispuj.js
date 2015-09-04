@@ -102,17 +102,9 @@ $("#clear-button").click(function() {
   clearAttributes();
 });
 
-var isShown = false;
 //Botón de búsqueda avanzada
 $("#advanced-search-button").click(function() {
-
-  if( !isShown ){
-    $(".advanced-search").slideDown();
-    isShown = true;
-  }else {
-    $(".advanced-search").slideUp();
-    isShown = false;
-  }
+  $(".advanced-search").slideToggle();
 });
 
 //Búsquda general
