@@ -86,7 +86,7 @@ function getRegex(){
 $("#search-button").click(function() {
   regex  = getRegex();
     $.each($("#table tbody").find("tr"), function() {
-      var regularExp = new RegExp( regex );
+      var regularExp = new RegExp( regex , 'i' );
       var arrow = $(this).text();
       if( regularExp.test( arrow ) ){
         $(this).show();
@@ -99,4 +99,21 @@ $("#search-button").click(function() {
 //clean button
 $("#clear-button").click(function() {
   clearAttributes();
+});
+
+//Botón de búsqueda avanzada
+$("#advanced-search-button").click(function() {
+  $(".advanced-search").toggle("slow");
+});
+
+//Búsquda general
+$("#search-bar").keyup(function(){
+    _this = this;
+    // Show only matching TR, hide rest of them
+    $.each($("#table tbody").find("tr"), function() {
+        if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) == -1)
+           $(this).hide();
+        else
+           $(this).show();
+    });
 });
