@@ -5,6 +5,7 @@ var honorMention = null;
 var year = null;
 var general = null;
 var regex = null;
+$(".advanced-search").hide();
 
 function clearAttributes(){
   $("#period-button").text("Periodo");
@@ -101,9 +102,17 @@ $("#clear-button").click(function() {
   clearAttributes();
 });
 
+var isShown = false;
 //Botón de búsqueda avanzada
 $("#advanced-search-button").click(function() {
-  $(".advanced-search").toggle("slow");
+
+  if( !isShown ){
+    $(".advanced-search").slideDown();
+    isShown = true;
+  }else {
+    $(".advanced-search").slideUp();
+    isShown = false;
+  }
 });
 
 //Búsquda general
