@@ -104,7 +104,7 @@ public class Tgisispuj {
         if( !str[5].equals("-") )
             str[5] = "" +
 "                  <a href=\"http://"+ str[5] +"\">\n" +
-"                    <button type=\"button\" class=\"btn btn-default btn-lg\">\n" +
+"                    <button type=\"button\" class=\"btn btn-default btn-lg btn-dd\">\n" +
 "                      <span class=\"glyphicon glyphicon-globe\"></span>\n" +
 "                    </button>\n" +
 "                  </a>";
