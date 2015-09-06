@@ -1,4 +1,5 @@
 var period = null;
+var code = null;
 var modality = null;
 var researchGroup = null;
 var honorMention = null;
@@ -78,21 +79,53 @@ function getRegex(){
     regex += "(\\b"+year+"\\b).*[\\s\\S]*";
   if( period != null )
     regex += "(\\b"+period+"\\b).*[\\s\\S]*";
-
   return regex;
 }
 
+function attributesToArray(){
+  colectAttributes();
+  var array = [];
+  array.push(modality);
+  array.push(honorMention);
+  array.push(code);
+  array.push(researchGroup);
+  array.push(period);
+  array.push(year);
+  return array;
+}
+
+function arrayToString( array ){
+  var cadena  = "";
+  console.log(array.length);
+  for( var i=0; i<array.length; i++ ){
+    console.log("i:"+i+" "+array[i]);
+    if( array[i] != null ){
+      cadena += array[i];
+    }
+  }
+  return cadena;
+}
+
+function evalRow( cadena ){
+  var array = attributesToArray();
+  for( var i=0; i<array.length; i++ ){
+    if( array[i] != null )
+      if( cadena.indexOf(array[i]) < 0 )
+        return false;
+  }
+  return true;
+}
+
 // search button
+var splitted;
 $("#search-button").click(function() {
-  regex  = getRegex();
-    $.each($("#table tbody").find("tr"), function() {
-      var regularExp = new RegExp( regex , 'i' );
-      var arrow = $(this).text();
-      if( regularExp.test( arrow ) ){
-        $(this).show();
-      }else{
-        $(this).hide();
-      }
+  var splittedString;
+  $.each($(".cuerpo"), function() {
+    splitted = $(this).text().split("\n" , -1)
+    splitted = deleteEmpty( splitted );
+    splittedString = arrayToString( splitted );
+    if( !evalRow( splittedString ) )
+      $(this).hide();
   });
 });
 
@@ -120,8 +153,25 @@ $("#search-bar").keyup(function(){
     });
 });
 
+$(".cabeza .secondary").hide();
+//Mostrar ocultar información secundaria
+$(".cabeza").click(function() {
+  $(this).find(".secondary").slideToggle();
+});
+
 $(".item .secondary").hide();
 //Mostrar ocultar información secundaria
 $(".item").click(function() {
   $(this).find(".secondary").slideToggle();
 });
+
+function deleteEmpty( array ) {
+  for (var i = 0; i < array.length; i++) {
+    array[i] = array[i].replace(/ /g,"");
+    if (array[i] == " " || array[i] == "") {
+      array.splice(i, 1);
+      i--;
+    }
+  }
+  return array;
+}

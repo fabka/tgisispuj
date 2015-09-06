@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,7 +19,7 @@
       <div class="row banner">
         <div class="col-md-6">
           <div class="banner-img">
-            <img src="Imagenes/JaveBanner.jpg" alt="Logo javeriana" >
+            <img class="img-responsive" src="Imagenes/JaveBanner.jpg" alt="Logo javeriana" >
           </div>
         </div>
         <div class="col-md-6">
@@ -32,160 +31,156 @@
         </div>
       </div>
       <!-- Filtros -->
-      <div class="well">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="col-xs-12">
-              <h3 class="text-center">Búsqueda general</h3>
-            </div>
-            <!-- Búsqueda general -->
-            <div class="col-xs-12">
-              <div class="input-group filter-comp btn-dd">
-                <span class="input-group-addon">Buscar</span>
-                <input type="text" id="search-bar" class="form-control text-center search-bar" placeholder="Buscar en la tabla...">
-              </div>
-            </div><!-- Búsqueda general -->
-            <div class="col-xs-12">
-              <button id="advanced-search-button" type="button" class="btn btn-default btn-md btn-dd">
-                <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Búsqueda avanzada
+      <div class="col-xs-12 filter">
+      <!-- Botón de búsqueda avanzada -->
+      <div class="col-xs-12 col-md-4">
+        <button id="advanced-search-button" type="button" class="btn btn-default btn-md btn-dd">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Búsqueda avanzada
+        </button>
+      </div>
+      <!-- Botón de Búsqueda general -->
+      <div class="col-xs-12 col-md-8">
+        <div class="input-group btn-dd">
+          <span class="input-group-addon">Buscar</span>
+          <input type="text" id="search-bar" class="form-control text-center search-bar" placeholder="Buscar en la tabla...">
+        </div>
+      </div><!-- Búsqueda general -->
+      <!-- Bloque de búsqueda avanzada -->
+      <div class="col-xs-12">
+        <div class="col-xs-12 advanced-search">
+          <!-- Modalidad -->
+          <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-0 col-lg-2">
+            <div class="btn-group btn-dd component">
+              <button id='modality-button' type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                Modalidad <span class="caret"></span>
               </button>
+              <ul class="dropdown-menu">
+                <li class="modality-button-item"><a>Aplicación</a></li>
+                <li class="modality-button-item"><a>Investigación</a></li>
+                <li class="modality-button-item"><a>Emprendimiento</a></li>
+              </ul>
             </div>
-            <!-- bloque de búsqueda avanzada -->
-            <div class="col-xs-12">
-              <div class="col-xs-12 advanced-search">
-                <!-- Modalidad -->
-                <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-0 col-lg-2">
-                  <div class="btn-group btn-dd filter-comp">
-                    <button id='modality-button' type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
-                      Modalidad <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li class="modality-button-item"><a>Aplicación</a></li>
-                      <li class="modality-button-item"><a>Investigación</a></li>
-                      <li class="modality-button-item"><a>Emprendimiento</a></li>
-                    </ul>
-                  </div>
-                </div><!-- Modalidad -->
-                <!-- Grupo de investigación -->
-                <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-0 col-lg-3">
-                  <div class="btn-group btn-dd filter-comp">
-                    <button id="research-group-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
-                      Grupo de investigación <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li class="research-group-button-item"><a>SIDRe</a></li>
-                      <li class="research-group-button-item"><a>Istar</a></li>
-                      <li class="research-group-button-item"><a>Takina</a></li>
-                    </ul>
-                  </div>
-                </div><!-- Grupo de investigación -->
-                <!-- Mención de honor -->
-                <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-0 col-lg-3">
-                  <div class="btn-group btn-dd filter-comp">
-                    <button id="honor-mention-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
-                      Mención de honor <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li class="honor-mention-button-item"><a>Sí</a></li>
-                      <li class="honor-mention-button-item"><a>No</a></li>
-                    </ul>
-                  </div>
-                </div><!-- Mención de honor -->
-                <!-- Año -->
-                <div class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-0 col-lg-2">
-                  <div class="input-group filter-comp">
-                    <span class="input-group-addon">Año</span>
-                    <input type="text" id="search-by-year-bar" class="form-control text-center" placeholder="Año">
-                  </div>
-                </div> <!-- Año -->
+          </div><!-- Modalidad -->
+          <!-- Grupo de investigación -->
+          <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-0 col-lg-3">
+            <div class="btn-group btn-dd component">
+              <button id="research-group-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                Grupo de investigación <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="research-group-button-item"><a>SIDRe</a></li>
+                <li class="research-group-button-item"><a>Istar</a></li>
+                <li class="research-group-button-item"><a>Takina</a></li>
+              </ul>
+            </div>
+          </div><!-- Grupo de investigación -->
+          <!-- Mención de honor -->
+          <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-0 col-lg-3">
+            <div class="btn-group btn-dd component">
+              <button id="honor-mention-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                Mención de honor <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="honor-mention-button-item"><a>Sí</a></li>
+                <li class="honor-mention-button-item"><a>No</a></li>
+              </ul>
+            </div>
+          </div><!-- Mención de honor -->
+          <!-- Año -->
+          <div class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-0 col-lg-2">
+            <div class="input-group component">
+              <span class="input-group-addon">Año</span>
+              <input type="text" id="search-by-year-bar" class="form-control text-center" placeholder="Año">
+            </div>
+          </div> <!-- Año -->
 
-                <!--Periodo -->
-                <div class="col-xs-4 col-xs-offset-4 col-md-6 col-md-offset-0 col-lg-2">
-                  <div class="btn-group btn-dd filter-comp">
-                    <button id="period-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
-                      Periodo <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li class="period-button-item"><a>1</a></li>
-                      <li class="period-button-item"><a>3</a></li>
-                    </ul>
-                  </div>
-                </div> <!-- Periodo -->
+          <!--Periodo -->
+          <div class="col-xs-4 col-xs-offset-4 col-md-6 col-md-offset-0 col-lg-2">
+            <div class="btn-group btn-dd component">
+              <button id="period-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                Periodo <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="period-button-item"><a>1</a></li>
+                <li class="period-button-item"><a>3</a></li>
+              </ul>
+            </div>
+          </div> <!-- Periodo -->
 
-                <!-- buscar y limpiar -->
-                <div class="col-xs-6 col-xs-offset-4 col-md-6 col-md-offset-5 filter-comp">
-                  <button id="search-button" type="button btn-dd" class="btn btn-default btn-lg">
-                    <span class="glyphicon glyphicon-search"></span> Buscar
-                  </button>
-                  <button id="clear-button" type="button btn-dd" class="btn btn-default btn-lg">
-                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Limpiar
-                  </button>
-                </div> <!-- buscar y limpiar -->
-              </div>
-            </div><!-- Bloque de búsqueda avanzada-->
-
+          <!-- buscar y limpiar -->
+          <div class="col-xs-12 col-md-4 col-md-offset-2 component">
+            <button id="search-button" type="button" class="btn btn-default btn-md btn-dd">
+              <span class="glyphicon glyphicon-search"></span> Buscar
+            </button>
           </div>
-        </div><!-- row -->
-      </div><!-- well -->
-
+          <div class="col-xs-12 col-md-4 component">
+            <button id="clear-button" type="button" class="btn btn-default btn-md btn-dd">
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Limpiar
+            </button>
+          </div> <!-- buscar y limpiar -->
+        </div>
+      </div><!-- Bloque de búsqueda avanzada-->
+      </div>
       <!-- Nueva tabla -->
       <div class="col-xs-12 cabeza">
         <div class="col-xs-12 main">
-          <div class="col-xs-5 celda">
-            <h3 class="text-center ">Nombre TG</h3>
+          <div class="col-xs-12 col-md-5">
+            <h3 class="text-center">Nombre del trabajo de grado</h3>
           </div>
-          <div class="col-xs-3 celda">
-            <h3 class="text-center lead">Autores</h3>
+          <div class="col-xs-12 col-md-3">
+            <h3 class="text-center">Autores</h3>
           </div>
-          <div class="col-xs-2 celda">
-            <h3 class="text-center lead">Director</h3>
+          <div class="col-xs-4 col-md-2">
+            <h3 class="text-center">Director</h3>
           </div>
-          <div class="col-xs-1 celda">
-            <h3 class="text-center lead">Año-periodo</h3>
+          <div class="col-xs-4 col-md-1">
+            <h4 class="text-center">Año-periodo</h4>
           </div>
-          <div class="col-xs-1 celda">
-            <h3 class="text-center lead">Website</h3>
+          <div class="col-xs-4 col-md-1">
+            <h3 class="text-center">Website</h3>
           </div>
         </div>
+
         <div class="col-xs-12 secondary">
-          <div class="col-xs-5 celda">
+          <div class="col-xs-4">
             <h3 class="text-center"><small>Grupo de investigación</small></h3>
           </div>
-          <div class="col-xs-3 celda">
+          <div class="col-xs-3">
             <h3 class="text-center"><small>Código</small></h3>
           </div>
-          <div class="col-xs-3 celda">
+          <div class="col-xs-3">
             <h3 class="text-center"><small>Modalidad</small></h3>
           </div>
-          <div class="col-xs-1 celda">
+          <div class="col-xs-2">
             <h3 class="text-center"><small>Mención de honor</small></h3>
           </div>
         </div>
       </div>
+      <div class="cuerpo">
       <div class="col-xs-12 item">
         <div class="col-xs-12 main">
-          <div class="col-xs-5">
+          <div class="col-xs-12 col-md-5">
             <p class="text-center">MAGIS: SiSTEMA DE ORIENTACION VOCACIONAL BASADO EN CARACTERISTICAS DEL INDIVIDUO ASi COMO DE SU CONTEXTO.</p>
           </div>
-          <div class="col-xs-3">
+          <div class="col-xs-12 col-md-3">
             <p class="text-center">Juan Camilo González Vargas  y Parra Laguna Javier Leonardo</p>
           </div>
-          <div class="col-xs-2">
+          <div class="col-xs-4 col-md-2">
             <p class="text-center">Ángela Cristina Carrillo Ramos</p>
           </div>
-          <div class="col-xs-1">
-            <td class="year"><p class="text-center">2014 - 3</p></td>
+          <div class="col-xs-4 col-md-1">
+            <td class="year"><p class="text-center">2014 - 3</p>
           </div>
-          <div class="col-xs-1">
+          <div class="col-xs-4 col-md-1">
             <a href="http://pegasus.javeriana.edu.co/~CIS1430IS11">
-              <button type="button" class="btn btn-default btn-lg">
+              <button type="button" class="btn btn-default btn-lg btn-dd">
                 <span class="glyphicon glyphicon-globe"></span>
               </button>
             </a>
           </div>
         </div>
         <div class="col-xs-12 secondary">
-          <div class="col-xs-5">
+          <div class="col-xs-4">
             <p class="text-center">SiDre</p>
           </div>
           <div class="col-xs-3">
@@ -194,168 +189,41 @@
           <div class="col-xs-3">
             <p class="text-center">Investigación</p>
           </div>
-          <div class="col-xs-1">
-            <p class="text-center"><span class="glyphicon glyphicon-ok"></span></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 item">
-        <div class="col-xs-12 main">
-          <div class="col-xs-5">
-            <p class="text-center">MAGIS: SiSTEMA DE ORIENTACION VOCACIONAL BASADO EN CARACTERISTICAS DEL INDIVIDUO ASi COMO DE SU CONTEXTO.</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="text-center">Juan Camilo González Vargas  y Parra Laguna Javier Leonardo</p>
-          </div>
           <div class="col-xs-2">
-            <p class="text-center">Ángela Cristina Carrillo Ramos</p>
-          </div>
-          <div class="col-xs-1">
-            <td class="year"><p class="text-center">2014 - 3</p></td>
-          </div>
-          <div class="col-xs-1">
-            <a href="http://pegasus.javeriana.edu.co/~CIS1430IS11">
-              <button type="button" class="btn btn-default btn-lg">
-                <span class="glyphicon glyphicon-globe"></span>
-              </button>
-            </a>
-          </div>
-        </div>
-        <div class="col-xs-12 secondary">
-          <div class="col-xs-5">
-            <p class="text-center">SiDre</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="text-center">CIS1430IS07</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="text-center">Investigación</p>
-          </div>
-          <div class="col-xs-1">
             <p class="text-center"><span class="glyphicon glyphicon-ok"></span></p>
           </div>
-
-
         </div>
       </div>
-      <div class="col-xs-12 item">
-        <div class="col-xs-12 main">
-          <div class="col-xs-5">
-            <p class="text-center">MAGIS: SiSTEMA DE ORIENTACION VOCACIONAL BASADO EN CARACTERISTICAS DEL INDIVIDUO ASi COMO DE SU CONTEXTO.</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="text-center">Juan Camilo González Vargas  y Parra Laguna Javier Leonardo</p>
-          </div>
-          <div class="col-xs-2">
-            <p class="text-center">Ángela Cristina Carrillo Ramos</p>
-          </div>
-          <div class="col-xs-1">
-            <td class="year"><p class="text-center">2014 - 3</p></td>
-          </div>
-          <div class="col-xs-1">
-            <a href="http://pegasus.javeriana.edu.co/~CIS1430IS11">
-              <button type="button" class="btn btn-default btn-lg">
-                <span class="glyphicon glyphicon-globe"></span>
-              </button>
-            </a>
-          </div>
-        </div>
-        <div class="col-xs-12 secondary">
-          <div class="col-xs-5">
-            <p class="text-center">SiDre</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="text-center">CIS1430IS07</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="text-center">Investigación</p>
-          </div>
-          <div class="col-xs-1">
-            <p class="text-center"><span class="glyphicon glyphicon-ok"></span></p>
-          </div>
-
-
-        </div>
       </div>
-      <div class="col-xs-12 item">
-        <div class="col-xs-12 main">
-          <div class="col-xs-5">
-            <p class="text-center">MAGIS: SiSTEMA DE ORIENTACION VOCACIONAL BASADO EN CARACTERISTICAS DEL INDIVIDUO ASi COMO DE SU CONTEXTO.</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="text-center">Juan Camilo González Vargas  y Parra Laguna Javier Leonardo</p>
-          </div>
-          <div class="col-xs-2">
-            <p class="text-center">Ángela Cristina Carrillo Ramos</p>
-          </div>
-          <div class="col-xs-1">
-            <td class="year"><p class="text-center">2014 - 3</p></td>
-          </div>
-          <div class="col-xs-1">
-            <a href="http://pegasus.javeriana.edu.co/~CIS1430IS11">
-              <button type="button" class="btn btn-default btn-lg">
-                <span class="glyphicon glyphicon-globe"></span>
-              </button>
-            </a>
-          </div>
-        </div>
-        <div class="col-xs-12 secondary">
-          <div class="col-xs-5">
-            <p class="text-center">SiDre</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="text-center">CIS1430IS07</p>
-          </div>
-          <div class="col-xs-3">
-            <p class="text-center">Investigación</p>
-          </div>
-          <div class="col-xs-1">
-            <p class="text-center"><span class="glyphicon glyphicon-ok"></span></p>
-          </div>
-
-
-        </div>
-      </div>
-
       <!-- Footer -->
-      <div class="well">
-        <div class="row">
-          <!-- Fabián Merchan -->
-          <div class="col-md-3 footer-elements">
-            <div class="col-md-12">
-              <p class="text-center">Realizada y mantenida por Fabián Merchán</p>
-            </div>
-            <div class="col-md-12">
-              <button type="button" class="btn btn-default btn-dd">
-                <span class="glyphicon glyphicon-envelope text-center" aria-hidden="true"></span>&nbsp;&nbsp;merchanf@javeriana.edu.co
-              </button>
-            </div>
+      <div class="col-xs-12 footer">
+        <!-- Fabián Merchan -->
+        <div class="col-xs-12 element">
+          <div class="col-xs-12 col-md-6">
+            <p class="text-center">Realizada y mantenida por Fabián Merchán</p>
           </div>
-          <!-- Luisa Barrera -->
-          <div class="col-md-4 footer-elements">
-            <div class="col-md-12">
-              <p class="text-center">Supervisada por la ing. Luisa Barrera</p>
-            </div>
-            <div class="col-md-12">
-              <button type="button" class="btn btn-default btn-dd">
-                <span class="glyphicon glyphicon-envelope text-center" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;&nbsp;luisa.barrera@javeriana.edu.co
-              </button>
-            </div>
-          </div>
-          <!-- Logo javeriana -->
-          <div class="col-md-2 footer-elements">
-            <div class="footer-logo">
-              <img class="footer-logo" src="Imagenes/PUJ.jpg" alt="Logo javeriana" >
-            </div>
-          </div>
-          <!-- Logo isis -->
-          <div class="col-md-3 footer-elements">
-            <div class="footer-logo">
-              <img class="footer-logo" src="Imagenes/isis.png" alt="Logo javeriana" >
-            </div>
+          <div class="col-xs-12 col-md-6">
+            <p class="text-center"><span class="glyphicon glyphicon-envelope text-center" aria-hidden="true"></span>&nbsp;&nbsp;merchanf@javeriana.edu.co</p>
           </div>
         </div>
-      </div><!-- Footer -->
+        <!-- Luisa Barrera -->
+        <div class="col-xs-12 element">
+          <div class="col-xs-12 col-md-6">
+            <p class="text-center">Supervisada por la ing. Luisa Barrera</p>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <p class="text-center"><span class="glyphicon glyphicon-envelope text-center" aria-hidden="true"></span>&nbsp;&nbsp;luisa.barrera@javeriana.edu.co</p>
+          </div>
+        </div>
+        <!-- Logo javeriana -->
+        <div class="col-xs-12 col-md-6 element">
+            <img class="img-responsive logo" src="Imagenes/PUJ.jpg" alt="Logo javeriana" >
+        </div>
+        <!-- Logo isis -->
+        <div class="col-xs-12 col-md-6 element">
+          <img class="img-responsive logo" src="Imagenes/isis.png" alt="Logo javeriana" >
+        </div>
+      </div>
     </div>
     <script type = "text/javascript" src="js/tgisispuj.js"></script>
   </body>

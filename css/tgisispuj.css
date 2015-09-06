@@ -9,7 +9,13 @@
   margin-right: auto;
 }
 
-.filter-comp{
+.filter{
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  background-color: #BDBDBD;
+}
+
+.filter .component{
   margin-top: 0.75em;
   margin-bottom: 0.75em;
 }
@@ -20,29 +26,24 @@
   margin-right: auto;
 }
 
-/*
- nuevo diseño
-*/
-
-.filter-button{
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  white-space: normal;
-  width: 100%
+.footer{
+  background-color: #BDBDBD;
 }
 
-.footer-logo{
+.footer .logo{
   max-width: 240px;
   max-height: 175px;
-  margin:auto;
+  margin: auto;
 }
 
-.footer-elements{
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+.footer .element{
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .advanced-search{
+  padding-top: 3em;
+  padding-bottom: 3em;
   background-color: #7290ae;
 }
 
@@ -50,13 +51,13 @@
   background-color: #BDBDBD;
   border: 2px solid #BDBDBD;
 }
+
 .cabeza .main{
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #BDBDBD;
 }
-.cabeza .main .celda h3{
-}
+
 .cabeza .secondary{
   padding-top: 10px;
   padding-bottom: 10px;
@@ -86,8 +87,6 @@
 .item .main{
   padding-top: 10px;
   padding-bottom: 10px;
-  display:flex;
-  align-items: center;
   transition: all 0.2s ease-in;
       -webkit-transition: all 0.2s ease-in;
       -moz-transition: all 0.2s ease-in;
