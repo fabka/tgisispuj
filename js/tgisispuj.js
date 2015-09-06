@@ -138,7 +138,7 @@ $("#clear-button").click(function() {
 $(".advanced-search").hide();
 //Botón de búsqueda avanzada
 $("#advanced-search-button").click(function() {
-  $(".advanced-search").slideToggle();
+  $(".advanced-search").toggle("slow");
 });
 
 //Búsquda general

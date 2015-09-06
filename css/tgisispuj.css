@@ -106,11 +106,19 @@
 .item:nth-child(even) .main{
   background-color: #FFF;
 }
+.item:nth-child(even) .secondary{
+  background-color: #ffff89 ;
+  margin-bottom: 1em;
+}
 .item:nth-child(even){
   background-color: #FFF;
 }
 .item:nth-child(odd) .main{
   background-color: #ffff89;
+}
+.item:nth-child(odd) .secondary{
+  background-color: #FFF;
+  margin-bottom: 1em;
 }
 .item:nth-child(odd){
   background-color: #ffff89;
