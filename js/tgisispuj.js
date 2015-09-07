@@ -85,33 +85,43 @@ function getRegex(){
 function attributesToArray(){
   colectAttributes();
   var array = [];
+  if( year != null && period !=null)
+    array.push(year+"-"+period);
+  else if (year == null && period == null) {
+    array.push(null);
+  }else if (year == null) {
+    array.push("-"+period);
+  }else if (period == null) {
+      array.push(year+"-");
+  }
+  array.push(researchGroup);
+  array.push(code);
   array.push(modality);
   array.push(honorMention);
-  array.push(code);
-  array.push(researchGroup);
-  array.push(period);
-  array.push(year);
   return array;
 }
 
-function arrayToString( array ){
-  var cadena  = "";
-  console.log(array.length);
-  for( var i=0; i<array.length; i++ ){
-    console.log("i:"+i+" "+array[i]);
-    if( array[i] != null ){
-      cadena += array[i];
+function deleteEmpty( array ) {
+  for (var i = 0; i < array.length; i++) {
+    array[i] = array[i].replace(/ /g,"");
+    if (array[i] == " " || array[i] == "") {
+      array.splice(i, 1);
+      i--;
     }
   }
-  return cadena;
+  return array;
 }
 
-function evalRow( cadena ){
-  var array = attributesToArray();
-  for( var i=0; i<array.length; i++ ){
-    if( array[i] != null )
-      if( cadena.indexOf(array[i]) < 0 )
+function evalRow( row, searchFor ){
+  for( var i=0; i<searchFor.length; i++ ){
+    if( searchFor[i] != null ){
+      if( row[i+3] == null )
         return false;
+      row[i+3] = row[i+3].toLowerCase();
+      console.log("if("+searchFor[i]+"=="+row[i+3]+ ")");
+      if( row[i+3].indexOf(searchFor[i].toLowerCase()) < 0 )
+        return false;
+    }
   }
   return true;
 }
@@ -119,13 +129,16 @@ function evalRow( cadena ){
 // search button
 var splitted;
 $("#search-button").click(function() {
-  var splittedString;
-  $.each($(".cuerpo"), function() {
+  $.each($(".item"), function() {
     splitted = $(this).text().split("\n" , -1)
     splitted = deleteEmpty( splitted );
-    splittedString = arrayToString( splitted );
-    if( !evalRow( splittedString ) )
+    if( !evalRow( splitted, attributesToArray() ) ){
+      console.log("entró true");
       $(this).hide();
+    }else{
+      console.log("entró false");
+      $(this).show();
+    }
   });
 });
 
@@ -133,7 +146,6 @@ $("#search-button").click(function() {
 $("#clear-button").click(function() {
   clearAttributes();
 });
-
 
 $(".advanced-search").hide();
 //Botón de búsqueda avanzada
@@ -145,7 +157,7 @@ $("#advanced-search-button").click(function() {
 $("#search-bar").keyup(function(){
     _this = this;
     // Show only matching TR, hide rest of them
-    $.each($("#table tbody").find("tr"), function() {
+    $.each($(".item"), function() {
         if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) == -1)
            $(this).hide();
         else
@@ -164,14 +176,3 @@ $(".item .secondary").hide();
 $(".item").click(function() {
   $(this).find(".secondary").slideToggle();
 });
-
-function deleteEmpty( array ) {
-  for (var i = 0; i < array.length; i++) {
-    array[i] = array[i].replace(/ /g,"");
-    if (array[i] == " " || array[i] == "") {
-      array.splice(i, 1);
-      i--;
-    }
-  }
-  return array;
-}
