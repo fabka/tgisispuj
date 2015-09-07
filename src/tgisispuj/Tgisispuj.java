@@ -103,11 +103,11 @@ public class Tgisispuj {
         //Organizando websites
         if( !str[5].equals("-") )
             str[5] = "" +
-"                  <a href=\"http://"+ str[5] +"\">\n" +
-"                    <button type=\"button\" class=\"btn btn-default btn-lg btn-dd\">\n" +
-"                      <span class=\"glyphicon glyphicon-globe\"></span>\n" +
-"                    </button>\n" +
-"                  </a>";
+"            <a href=\"http://"+ str[5] +"\">\n" +
+"              <button type=\"button\" class=\"btn btn-default btn-lg btn-dd\">\n" +
+"                <span class=\"glyphicon glyphicon-globe\"></span>\n" +
+"              </button>\n" +
+"            </a>";
                 
         //General
         for( int i=0; i<str.length; i++ )
@@ -130,7 +130,7 @@ public class Tgisispuj {
 "            <td class=\"year\"><p class=\"text-center\">"+str[3]+"-"+str[4]+"</p>\n" + //año-periodo
 "          </div>\n" +
 "          <div class=\"col-xs-4 col-md-1\">\n" +
-"            "+str[5]+"\n" + //Website
+""+str[5]+"\n" + //Website
 "          </div>\n" +
 "        </div>\n" +
 "        <div class=\"col-xs-12 secondary\">\n" +
