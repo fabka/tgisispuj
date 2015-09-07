@@ -112,7 +112,7 @@ public class Tgisispuj {
         //General
         for( int i=0; i<str.length; i++ )
             if( str[i].equals("-") )
-                str[i] = "<span class=\"glyphicon glyphicon-minus\" aria-hidden=\"true\"></span>";
+                str[i] = "<span class=\"glyphicon glyphicon-minus\" aria-hidden=\"true\"></span>-";
         
         String s = ""+
 "      <div class=\"col-xs-12 item\">\n" +
