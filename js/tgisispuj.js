@@ -113,6 +113,8 @@ function deleteEmpty( array ) {
 }
 
 function evalRow( row, searchFor ){
+  console.log(row);
+  console.log(searchFor);
   for( var i=0; i<searchFor.length; i++ ){
     if( searchFor[i] != null ){
       if( row[i+3] == null )
@@ -133,10 +135,8 @@ $("#search-button").click(function() {
     splitted = $(this).text().split("\n" , -1)
     splitted = deleteEmpty( splitted );
     if( !evalRow( splitted, attributesToArray() ) ){
-      console.log("entró true");
       $(this).hide();
     }else{
-      console.log("entró false");
       $(this).show();
     }
   });
