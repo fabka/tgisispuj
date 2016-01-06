@@ -3,7 +3,7 @@
 }
 
 .banner-img{
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -121,4 +121,12 @@
 }
 .item:nth-child(odd){
   background-color: #ffff89;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100vw;
+        max-width: 100%;
+        padding: 0px;
+    }
 }
