@@ -1,11 +1,60 @@
-.banner{
-  margin-bottom: 3em;
+body{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 100vw;
+    max-width: 100%;
+}
+header{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    margin-top: 5vh;
+}
+header .logo{
+    max-width: 40%;
+}
+header .logo img{
+    width: 100%;
+}
+header .titulo{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 40%;
+    padding-left: 2vw;
+    font-family: "Times New Roman", Times, serif;
+    color: #0062A2;
+}
+header .titulo h1{
+    margin: 0;
+}
+header .titulo h3{
+    margin: 0;
 }
 
-.banner-img{
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+@media only screen and (max-width: 768px) {
+    header {
+        flex-flow: column nowrap;
+    }
+    header .logo{
+        max-width: 60%;
+    }
+    header .titulo {
+        text-align: center;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
 }
 
 .filter{
