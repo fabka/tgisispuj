@@ -21,7 +21,74 @@
     </header>
 
     <div class="busqueda">
-    <div>
+        <div class="input-group btn-dd barra-busqueda">
+            <span class="input-group-addon">Buscar</span>
+            <input type="text" id="search-bar" class="form-control text-center search-bar" placeholder="Buscar en la tabla...">
+        </div>
+        <button id="advanced-search-button" type="button" class="btn btn-default btn-md btn-dd">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Búsqueda avanzada
+        </button>
+        <div class="filtros">
+            <div class="btn-group btn-dd component">
+              <button id='modality-button' type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                Modalidad <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="modality-button-item"><a>Aplicación</a></li>
+                <li class="modality-button-item"><a>Investigación</a></li>
+                <li class="modality-button-item"><a>Emprendimiento</a></li>
+              </ul>
+            </div>
+            <div class="btn-group btn-dd component">
+              <button id="research-group-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                Grupo de investigación <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="research-group-button-item"><a>SIDRe</a></li>
+                <li class="research-group-button-item"><a>Istar</a></li>
+                <li class="research-group-button-item"><a>Takina</a></li>
+              </ul>
+            </div>
+            <div class="btn-group btn-dd component">
+              <button id="honor-mention-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                Mención de honor <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="honor-mention-button-item"><a>Si</a></li>
+                <li class="honor-mention-button-item"><a>No</a></li>
+              </ul>
+            </div>
+            <div class="input-group component">
+              <span class="input-group-addon">Año</span>
+              <input type="text" id="search-by-year-bar" class="form-control text-center" placeholder="Año">
+            </div>
+            <div class="btn-group btn-dd component">
+              <button id="period-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                Periodo <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="period-button-item"><a>1</a></li>
+                <li class="period-button-item"><a>3</a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="botones">
+            <button id="search-button" type="button" class="btn btn-default btn-md btn-dd">
+              <span class="glyphicon glyphicon-search"></span> Buscar
+            </button>
+
+            <button id="clear-button" type="button" class="btn btn-default btn-md btn-dd">
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Limpiar
+            </button>
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+
 
     <div class="container">
 
