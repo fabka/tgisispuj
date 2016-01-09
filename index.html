@@ -15,77 +15,122 @@
         </div>
         <div class="titulo">
             <h1>Trabajos de Grado</h1>
-            <h3>Ingeniería de Sistemas</h3>
-            <h3>Facultad de Ingeniería</h3>
+            <h2>Ingeniería de Sistemas</h2>
+            <h2>Facultad de Ingeniería</h2>
         </div>
     </header>
 
     <div class="busqueda">
-        <div class="input-group btn-dd barra-busqueda">
-            <span class="input-group-addon">Buscar</span>
-            <input type="text" id="search-bar" class="form-control text-center search-bar" placeholder="Buscar en la tabla...">
-        </div>
-        <button id="advanced-search-button" type="button" class="btn btn-default btn-md btn-dd">
-          <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Búsqueda avanzada
-        </button>
-        <div class="filtros">
-            <div class="btn-group btn-dd component">
-              <button id='modality-button' type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
-                Modalidad <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li class="modality-button-item"><a>Aplicación</a></li>
-                <li class="modality-button-item"><a>Investigación</a></li>
-                <li class="modality-button-item"><a>Emprendimiento</a></li>
-              </ul>
+        <div class="busqueda-general">
+            <div class="input-group btn-dd barra-busqueda">
+                <span class="input-group-addon">Buscar</span>
+                <input type="text" id="search-bar" class="form-control text-center search-bar" placeholder="Buscar en la tabla...">
             </div>
-            <div class="btn-group btn-dd component">
-              <button id="research-group-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
-                Grupo de investigación <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li class="research-group-button-item"><a>SIDRe</a></li>
-                <li class="research-group-button-item"><a>Istar</a></li>
-                <li class="research-group-button-item"><a>Takina</a></li>
-              </ul>
-            </div>
-            <div class="btn-group btn-dd component">
-              <button id="honor-mention-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
-                Mención de honor <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li class="honor-mention-button-item"><a>Si</a></li>
-                <li class="honor-mention-button-item"><a>No</a></li>
-              </ul>
-            </div>
-            <div class="input-group component">
-              <span class="input-group-addon">Año</span>
-              <input type="text" id="search-by-year-bar" class="form-control text-center" placeholder="Año">
-            </div>
-            <div class="btn-group btn-dd component">
-              <button id="period-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
-                Periodo <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li class="period-button-item"><a>1</a></li>
-                <li class="period-button-item"><a>3</a></li>
-              </ul>
-            </div>
-        </div>
-        <div class="botones">
-            <button id="search-button" type="button" class="btn btn-default btn-md btn-dd">
-              <span class="glyphicon glyphicon-search"></span> Buscar
+            <button id="advanced-search-button" type="button" class="btn btn-default btn-md btn-dd">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Búsqueda avanzada
             </button>
-
-            <button id="clear-button" type="button" class="btn btn-default btn-md btn-dd">
-              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Limpiar
-            </button>
+        </div>
+        <div class="busqueda-avanzada">
+            <div class="filtros">
+                <div class="btn-group btn-dd component modalidad">
+                  <button id='modality-button' type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                    Modalidad <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li class="modality-button-item"><a>Aplicación</a></li>
+                    <li class="modality-button-item"><a>Investigación</a></li>
+                    <li class="modality-button-item"><a>Emprendimiento</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group btn-dd component grupo-investigacion">
+                  <button id="research-group-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                    Grupo de investigación <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li class="research-group-button-item"><a>SIDRe</a></li>
+                    <li class="research-group-button-item"><a>Istar</a></li>
+                    <li class="research-group-button-item"><a>Takina</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group btn-dd component mencion-honor">
+                  <button id="honor-mention-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                    Mención de honor <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li class="honor-mention-button-item"><a>Si</a></li>
+                    <li class="honor-mention-button-item"><a>No</a></li>
+                  </ul>
+                </div>
+                <div class="input-group component buscar-por-ano">
+                  <span class="input-group-addon">Año</span>
+                  <input type="text" id="search-by-year-bar" class="form-control text-center" placeholder="Año">
+                </div>
+                <div class="btn-group btn-dd component periodo">
+                  <button id="period-button" type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                    Periodo <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li class="period-button-item"><a>1</a></li>
+                    <li class="period-button-item"><a>3</a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="botones">
+                <div class="buscar">
+                    <button id="clear-button" type="button" class="btn btn-default btn-md btn-dd">
+                      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Limpiar
+                    </button>
+                </div>
+                <div class="limpiar">
+                    <button id="search-button" type="button" class="btn btn-default btn-md btn-dd">
+                      <span class="glyphicon glyphicon-search"></span> Buscar
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
-
-
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th class="nombre">Nombre</th>
+                <th class="autor">Autor</th>
+                <th class="director"> Director</th>
+                <th class="detalles">Detalles</th>
+                <th class="website">Website</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-th="Nombre" class="nombre">Sistema de localizacion de centros de atención de emergencias para Bogotá</td>
+                <td data-th="Autor" class="autor">Erish Perez Andres Reyes Gomez</td>
+                <td data-th="Director" class="director">Javier Francisco López Parra</td>
+                <td class="detalles"><button type="button" name="detalles">+</button></td>
+                <td class="website">-</td>
+            </tr>
+            <tr>
+                <td data-th="Nombre" class="nombre">Sistema de localizacion de centros de atención de emergencias para Bogotá</td>
+                <td data-th="Autor" class="autor">Erish Perez Andres Reyes Gomez</td>
+                <td data-th="Director" class="director">Javier Francisco López Parra</td>
+                <td class="detalles"><button type="button" name="detalles">+</button></td>
+                <td class="website">-</td>
+            </tr>
+            <tr>
+                <td data-th="Nombre" class="nombre">Sistema de localizacion de centros de atención de emergencias para Bogotá</td>
+                <td data-th="Autor" class="autor">Erish Perez Andres Reyes Gomez</td>
+                <td data-th="Director" class="director">Javier Francisco López Parra</td>
+                <td class="detalles"><button type="button" name="detalles">+</button></td>
+                <td class="website"><button type="button" name="website"><img src="img/globe.png" alt="tierra" /></button></td>
+            </tr>
+            <tr>
+                <td data-th="Nombre" class="nombre">Sistema de localizacion de centros de atención de emergencias para Bogotá</td>
+                <td data-th="Autor" class="autor">Erish Perez Andres Reyes Gomez</td>
+                <td data-th="Director" class="director">Javier Francisco López Parra</td>
+                <td class="detalles"><button type="button" name="detalles">+</button></td>
+                <td class="website"><button type="button" name="website"><img src="img/globe.png" alt="tierra" /></button></td>
+            </tr>
+        </tbody>
+    </table>
 
 
 

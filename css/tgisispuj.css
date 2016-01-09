@@ -4,6 +4,7 @@ body{
     display: -ms-flexbox;
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
     justify-content: center;
     width: 100vw;
     max-width: 100%;
@@ -14,23 +15,25 @@ header{
     display: -ms-flexbox;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items:center;
-    margin: 3vh 0 3vh 0;
+    margin: 5vh 0 5vh 0;
 }
 header .logo{
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items:center;
-    max-width: 40%;
+    width: 40%;
+    max-width: 50%;
 }
 header .logo img{
-    width: 100%;
+    max-height: 15vmin;
+    max-width: 100%;
 }
+
 header .titulo{
     display: -webkit-box;
     display: -moz-box;
@@ -38,54 +41,265 @@ header .titulo{
     display: flex;
     flex-flow: column nowrap;
     width: 40%;
-    padding-left: 2vw;
+    padding-left: 3vw;
     font-family: "Times New Roman", Times, serif;
     color: #0062A2;
 }
 header .titulo h1{
     margin: 0;
+    font-size: 3vmin;
 }
-header .titulo h3{
+header .titulo h2{
     margin: 0;
+    font-size: 3vmin;
 }
 
 .busqueda{
-    background-color: #7290ae;
+    background-color: #FAFAFA;
     margin: auto;
-    width: 80%;
-    padding: 2vh 0 2vh 0;
+    width: 90%;
+    padding: 2vmin 2vmin 2vmin 2vmin;
 }
 
-.busqueda .barra-busqueda{
-    margin: 0 20% 0 20%;
-    width: 60%;
+.busqueda .busqueda-general{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
 }
 
-.busqueda #advanced-search-button{
-    margin: 0 20% 0 20%;
-    width: 60%;
+.busqueda .busqueda-general .barra-busqueda{
+    width: 70%;
+    padding-right: 1vmin;
 }
 
-.busqueda .filtros{
+.busqueda .busqueda-general #advanced-search-button{
+    width: 30%;
+    padding-left: 1vmin;
+}
+
+.busqueda .busqueda-avanzada{
+    background-color: #EEE;
+}
+
+.busqueda .busqueda-avanzada .filtros{
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     flex-flow: row;
     justify-content: center;
+    width: 100%;
+    margin: 0vmin 0 1.5vmin 0;
+    padding: 3vmin 0 0.5vmin 0;
 }
 
-.busqueda .filtros{
-    
+.busqueda .busqueda-avanzada .filtros .modalidad{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    padding: 0 2vw 0 2vw;
 }
 
-.busqueda .botones{
+.busqueda .busqueda-avanzada .filtros .grupo-investigacion{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    padding: 0 1vw 0 1vw;
+}
+
+.busqueda .busqueda-avanzada .filtros .mencion-honor{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    padding: 0 2vw 0 2vw;
+}
+
+.busqueda .busqueda-avanzada .filtros .buscar-por-ano{
+    width: 20%;
+}
+
+.busqueda .busqueda-avanzada .filtros .periodo{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    padding: 0 3vw 0 3vw;
+}
+
+.busqueda .busqueda-avanzada .botones{
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     flex-flow: row;
     justify-content: center;
+    width: 100%;
+    padding: 1vmin 0 3vmin 0;
+}
+
+.busqueda .busqueda-avanzada .botones .buscar{
+    width: 20%;
+    margin: 0 2vmin 0 2vmin;
+}
+.busqueda .busqueda-avanzada .botones .limpiar{
+    width: 20%;
+    margin: 0 2vmin 0 2vmin;
+}
+
+.btn-dd{
+    white-space: normal;
+    width: 100%;
+}
+
+table{
+    width: 90%;
+}
+
+table thead{
+    background-color: #7290ae;
+    color: #fff;
+    font-family: "calibri", sans-serif;
+    font-style: normal;
+
+}
+
+table thead th{
+    height: 9vmin;
+    font-size: 4vmin;
+    font-weight: lighter;
+}
+
+table thead .nombre{
+    width: 30%;
+    padding-left: 2vmin;
+}
+
+table thead .autor{
+    width: 20%;
+    padding-left: 2vmin;
+}
+
+table thead .director{
+    width: 20%;
+    padding-left: 2vmin;
+}
+
+table thead .detalles{
+    width: 15%;
+    padding-left: 2vmin;
+}
+
+table thead .website{
+    width: 15%;
+    padding-left: 2vmin;
+    border-left: 1vmin;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: #fff;
+}
+
+table tbody{
+
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #FAFAFA;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #ffff89;
+}
+
+table tbody tr .detalles{
+    font-size: 5vmin;
+    font-weight: bold;
+}
+
+table tbody tr .detalles button{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+}
+
+table tbody tr:nth-child(even) .detalles button{
+    background: #F0F081;
+}
+
+table tbody tr:nth-child(odd) .detalles button{
+    background: #F1F1F1;
+}
+
+table tbody tr .website{
+    font-size: 5vmin;
+    font-weight: bold;
+    border-left: 1vmin;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: #fff;
+}
+
+table tbody tr:nth-child(even) .website {
+    background-color: #F0F081;
+}
+
+table tbody tr:nth-child(odd) .website {
+    background-color: #F1F1F1;
+}
+
+table tbody tr .website button{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+}
+
+table tbody tr:nth-child(even) .website button{
+    background: #F0F081;
+}
+
+table tbody tr:nth-child(odd) .website button{
+    background: #F1F1F1;
+}
+
+table tbody tr .nombre{
+    padding: 2vmin 2vmin 2vmin 2vmin;
+
+}
+
+table tbody tr .autor{
+    padding: 2vmin 2vmin 2vmin 2vmin;
+}
+
+table tbody tr .director{
+    padding: 2vmin 2vmin 2vmin 2vmin;
+}
+
+table tbody tr .detalles{
+    text-align: center;
+    background-color: #
+}
+
+table tbody tr .website{
+    text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -93,19 +307,81 @@ header .titulo h3{
         flex-flow: column nowrap;
     }
     header .logo{
+        justify-content: center;
         min-width: 80%;
     }
     header .logo img{
-        min-height: 15vw;
-        height: 15vh;
-        width: auto;
-        max-width: 100%;
+        max-height: none;
+        height: 25vmin;
     }
     header .titulo {
         text-align: center;
         padding-left: 0;
-        margin: 2vh 0 5vh 0;
+        margin: 2vh 0 0 0;
         width: 100%;
+    }
+    header .titulo h1{
+        font-size: 5vmin;
+    }
+    header .titulo h2{
+        font-size: 5vmin;
+    }
+
+    .busqueda{
+        width: 100%;
+    }
+    .busqueda .busqueda-general{
+        flex-direction: column;
+    }
+
+    .busqueda .busqueda-general .barra-busqueda{
+        width: 100%;
+        padding-bottom: 1vmin;
+    }
+    .busqueda .busqueda-general #advanced-search-button{
+        width: 100%;
+        padding-top: 1vmin;
+    }
+    .busqueda .busqueda-avanzada .filtros{
+        flex-direction: column;
+    }
+    .busqueda .busqueda-avanzada .filtros .modalidad{
+        width: 100%;
+        padding: 1vmin 2vmin 0.5vmin 2vmin;
+    }
+    .busqueda .busqueda-avanzada .filtros .grupo-investigacion{
+        width: 100%;
+        padding: 0.5vmin 2vmin 0.5vmin 2vmin;
+    }
+    .busqueda .busqueda-avanzada .filtros .mencion-honor{
+        width: 100%;
+        padding: 0.5vmin 2vmin 0.5vmin 2vmin;
+    }
+    .busqueda .busqueda-avanzada .filtros .buscar-por-ano{
+        width: 100%;
+        padding: 0.5vmin 2vmin 0.5vmin 2vmin;
+    }
+
+    .busqueda .busqueda-avanzada .filtros .periodo{
+        width: 100%;
+        padding: 0.5vmin 2vmin 1vmin 2vmin;
+    }
+
+    .busqueda .busqueda-avanzada .botones .buscar{
+        width: 50%;
+        margin: 0 2vmin 0 2vmin;
+    }
+    .busqueda .busqueda-avanzada .botones .limpiar{
+        width: 50%;
+        margin: 0 2vmin 0 2vmin;
+    }
+
+    table{
+        width: 100%;
+    }
+
+    table thead{
+        display: none;
     }
 }
 
@@ -120,11 +396,7 @@ header .titulo h3{
   margin-bottom: 0.75em;
 }
 
-.btn-dd{
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 .footer{
   background-color: #BDBDBD;
