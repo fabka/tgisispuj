@@ -165,11 +165,11 @@ header .titulo h2{
     width: 100%;
 }
 
-table{
+.tabla-principal{
     width: 90%;
 }
 
-table thead{
+.tabla-principal thead{
     background-color: #7290ae;
     color: #fff;
     font-family: "calibri", sans-serif;
@@ -177,36 +177,36 @@ table thead{
 
 }
 
-table thead th{
+.tabla-principal thead th{
     height: 9vmin;
     font-size: 4vmin;
     font-weight: lighter;
 }
 
-table thead .nombre{
+.tabla-principal thead .nombre{
     width: 30%;
     padding-left: 2vmin;
 }
 
-table thead .autor{
+.tabla-principal thead .autor{
     width: 20%;
     padding-left: 2vmin;
 }
 
-table thead .director{
+.tabla-principal thead .director{
     width: 20%;
     padding-left: 2vmin;
 }
 
-table thead .detalles{
+.tabla-principal thead .detalles{
     width: 15%;
     padding-left: 2vmin;
 }
 
-table thead .website{
+.tabla-principal thead .website{
     width: 15%;
     padding-left: 2vmin;
-    border-left: 1vmin;
+    border-left: 0.5vmin;
     border-top: 0px;
     border-bottom: 0px;
     border-right: 0px;
@@ -214,42 +214,62 @@ table thead .website{
     border-color: #fff;
 }
 
-table tbody{
+.tabla-principal tbody{
 
 }
 
-table tbody tr:nth-child(odd) {
+.tabla-principal tbody tr:nth-child(odd) {
     background-color: #FAFAFA;
 }
 
-table tbody tr:nth-child(even) {
+.tabla-principal tbody tr:nth-child(even) {
     background-color: #ffff89;
 }
 
-table tbody tr .detalles{
-    font-size: 5vmin;
-    font-weight: bold;
+.tabla-principal tbody tr .nombre{
+    padding: 2vmin 2vmin 2vmin 2vmin;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
-table tbody tr .detalles button{
+.tabla-principal tbody tr .autor{
+    padding: 2vmin 2vmin 2vmin 2vmin;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.tabla-principal tbody tr .director{
+    padding: 2vmin 2vmin 2vmin 2vmin;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.tabla-principal tbody tr .detalles{
+    font-size: 5vmin;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tabla-principal tbody tr .detalles button{
     width: 100%;
     height: 100%;
     padding: 0;
     border: 0;
 }
 
-table tbody tr:nth-child(even) .detalles button{
+.tabla-principal tbody tr:nth-child(even) .detalles button{
     background: #F0F081;
 }
 
-table tbody tr:nth-child(odd) .detalles button{
+.tabla-principal tbody tr:nth-child(odd) .detalles button{
     background: #F1F1F1;
 }
 
-table tbody tr .website{
+.tabla-principal tbody tr .website{
+    text-align: center;
     font-size: 5vmin;
     font-weight: bold;
-    border-left: 1vmin;
+    border-left: 0.5vmin;
     border-top: 0px;
     border-bottom: 0px;
     border-right: 0px;
@@ -257,49 +277,31 @@ table tbody tr .website{
     border-color: #fff;
 }
 
-table tbody tr:nth-child(even) .website {
+.tabla-principal tbody tr:nth-child(even) .website {
     background-color: #F0F081;
 }
 
-table tbody tr:nth-child(odd) .website {
+.tabla-principal tbody tr:nth-child(odd) .website {
     background-color: #F1F1F1;
 }
 
-table tbody tr .website button{
+.tabla-principal tbody tr .website button{
     width: 100%;
     height: 100%;
     padding: 0;
     border: 0;
 }
 
-table tbody tr:nth-child(even) .website button{
+.tabla-principal tbody tr:nth-child(even) .website button{
     background: #F0F081;
 }
 
-table tbody tr:nth-child(odd) .website button{
+.tabla-principal tbody tr:nth-child(odd) .website button{
     background: #F1F1F1;
 }
 
-table tbody tr .nombre{
-    padding: 2vmin 2vmin 2vmin 2vmin;
-
-}
-
-table tbody tr .autor{
-    padding: 2vmin 2vmin 2vmin 2vmin;
-}
-
-table tbody tr .director{
-    padding: 2vmin 2vmin 2vmin 2vmin;
-}
-
-table tbody tr .detalles{
-    text-align: center;
-    background-color: #
-}
-
-table tbody tr .website{
-    text-align: center;
+.bloque-detalles{
+    background-color: #F0F081;
 }
 
 @media only screen and (max-width: 768px) {
@@ -376,12 +378,61 @@ table tbody tr .website{
         margin: 0 2vmin 0 2vmin;
     }
 
-    table{
+    .tabla-principal{
         width: 100%;
     }
 
-    table thead{
+    .tabla-principal thead{
         display: none;
+    }
+
+    .tabla-principal tbody tr td{
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+    }
+
+    .tabla-principal tbody tr td{
+        display: block;
+    }
+
+    .tabla-principal tbody tr .nombre{
+        margin: 2vmax 2vmin 0 3vmin;
+    }
+
+    .tabla-principal tbody tr .autor{
+        margin: 0 2vmin 0 3vmin;
+    }
+
+
+    .tabla-principal tbody tr .director{
+        margin: 0 2vmin 3vmin 3vmin;
+    }
+
+    .tabla-principal tbody tr .nombre::before{
+        content: attr(data-th)": ";
+        font-weight: bold;
+    }
+    .tabla-principal tbody tr .autor::before{
+        content: attr(data-th)": ";
+        font-weight: bold;
+    }
+    .tabla-principal tbody tr .director::before{
+        content: attr(data-th)": ";
+        font-weight: bold;
+    }
+    .tabla-principal tbody tr .detalles{
+        height: 10vmax;
+        margin-bottom: 1vmax;
+    }
+    .tabla-principal tbody tr .website{
+        height: 10vmax;
+        margin-top: 1vmax;
+        vertical-align: middle;
     }
 }
 
