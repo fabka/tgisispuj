@@ -26,7 +26,7 @@
                 <span class="input-group-addon">Buscar</span>
                 <input type="text" id="search-bar" class="form-control text-center search-bar" placeholder="Buscar en la tabla...">
             </div>
-            <button id="advanced-search-button" type="button" class="btn btn-default btn-md btn-dd">
+            <button id="busqueda-avanzada-btn" type="button" class="btn btn-default btn-dd">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Búsqueda avanzada
             </button>
         </div>
@@ -96,8 +96,8 @@
                 <th class="nombre">Nombre</th>
                 <th class="autor">Autor</th>
                 <th class="director"> Director</th>
-                <th class="detalles">Detalles</th>
                 <th class="website">Website</th>
+                <th class="detalles">Detalles</th>
             </tr>
         </thead>
         <tbody>
@@ -105,42 +105,44 @@
                 <td data-th="Nombre" class="nombre">Sistema de localizacion de centros de atención de emergencias para Bogotá</td>
                 <td data-th="Autor" class="autor">Erish Perez Andres Reyes Gomez</td>
                 <td data-th="Director" class="director">Javier Francisco López Parra</td>
+                <td class="website"><button class="btn-website" type="button" name="website" disabled>&nbsp;</button></td>
                 <td class="detalles"><button class="btn-detalles" type="button" name="detalles">+</button></td>
-                <td class="website"><button class="btn-website" type="button" name="website" disabled>-</button></td>
             </tr>
             <tr class="detalles">
                 <td colspan="4">
-                    <div class="col-xs-12 col-md-4 primero">
-                        <table class="tabla-detalles">
-                            <tr>
-                                <td class="col-titulo">Código</td>
-                                <td>CIS1510AP01</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Año</td>
-                                <td>2015</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Semestre académico</td>
-                                <td>3</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col-xs-12 col-md-4 segundo">
-                        <table class="tabla-detalles">
-                            <tr>
-                                <td class="col-titulo">Grupo de investigación</td>
-                                <td>TAKINA</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Modalidad</td>
-                                <td>investigación</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Mención de honor</td>
-                                <td>Sí</td>
-                            </tr>
-                        </table>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4 primero">
+                            <table class="tabla-detalles">
+                                <tr>
+                                    <td class="col-titulo">Código</td>
+                                    <td>CIS1510AP01</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Año</td>
+                                    <td>2015</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Semestre académico</td>
+                                    <td>3</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-12 col-md-4 segundo">
+                            <table class="tabla-detalles">
+                                <tr>
+                                    <td class="col-titulo">Grupo de investigación</td>
+                                    <td>TAKINA</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Modalidad</td>
+                                    <td>investigación</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Mención de honor</td>
+                                    <td>Sí</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </td>
                 <td class="website"></td>
@@ -149,42 +151,44 @@
                 <td data-th="Nombre" class="nombre">Sistema de localizacion de centros de atención de emergencias para Bogotá</td>
                 <td data-th="Autor" class="autor">Erish Perez Andres Reyes Gomez</td>
                 <td data-th="Director" class="director">Javier Francisco López Parra</td>
+                <td class="website"><button class="btn-website" type="button" name="website" disabled>&nbsp;</button></td>
                 <td class="detalles"><button class="btn-detalles" type="button" name="detalles">+</button></td>
-                <td class="website"><button class="btn-website" type="button" name="website" disabled>-</button></td>
             </tr>
             <tr class="detalles">
                 <td colspan="4">
-                    <div class="col-xs-12 col-md-4 primero">
-                        <table class="tabla-detalles">
-                            <tr>
-                                <td class="col-titulo">Código</td>
-                                <td>CIS1510AP01</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Año</td>
-                                <td>2015</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Semestre académico</td>
-                                <td>3</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col-xs-12 col-md-4 segundo">
-                        <table class="tabla-detalles">
-                            <tr>
-                                <td class="col-titulo">Grupo de investigación</td>
-                                <td>TAKINA</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Modalidad</td>
-                                <td>investigación</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Mención de honor</td>
-                                <td>Sí</td>
-                            </tr>
-                        </table>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4 primero">
+                            <table class="tabla-detalles">
+                                <tr>
+                                    <td class="col-titulo">Código</td>
+                                    <td>CIS1510AP01</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Año</td>
+                                    <td>2015</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Semestre académico</td>
+                                    <td>3</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-12 col-md-4 segundo">
+                            <table class="tabla-detalles">
+                                <tr>
+                                    <td class="col-titulo">Grupo de investigación</td>
+                                    <td>TAKINA</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Modalidad</td>
+                                    <td>investigación</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Mención de honor</td>
+                                    <td>Sí</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </td>
                 <td class="website"></td>
@@ -193,42 +197,44 @@
                 <td data-th="Nombre" class="nombre">Sistema de localizacion de centros de atención de emergencias para Bogotá</td>
                 <td data-th="Autor" class="autor">Erish Perez Andres Reyes Gomez</td>
                 <td data-th="Director" class="director">Javier Francisco López Parra</td>
-                <td class="detalles"><button class="btn-detalles" type="button" name="detalles">+</button></td>
                 <td class="website"><button class="btn-website" type="button" name="website"><img src="img/globe.png" alt="tierra" /></button></td>
+                <td class="detalles"><button class="btn-detalles" type="button" name="detalles">+</button></td>
             </tr>
             <tr class="detalles">
                 <td colspan="4">
-                    <div class="col-xs-12 col-md-4 primero">
-                        <table class="tabla-detalles">
-                            <tr>
-                                <td class="col-titulo">Código</td>
-                                <td>CIS1510AP01</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Año</td>
-                                <td>2015</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Semestre académico</td>
-                                <td>3</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col-xs-12 col-md-4 segundo">
-                        <table class="tabla-detalles">
-                            <tr>
-                                <td class="col-titulo">Grupo de investigación</td>
-                                <td>TAKINA</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Modalidad</td>
-                                <td>investigación</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Mención de honor</td>
-                                <td>Sí</td>
-                            </tr>
-                        </table>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4 primero">
+                            <table class="tabla-detalles">
+                                <tr>
+                                    <td class="col-titulo">Código</td>
+                                    <td>CIS1510AP01</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Año</td>
+                                    <td>2015</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Semestre académico</td>
+                                    <td>3</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-12 col-md-4 segundo">
+                            <table class="tabla-detalles">
+                                <tr>
+                                    <td class="col-titulo">Grupo de investigación</td>
+                                    <td>TAKINA</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Modalidad</td>
+                                    <td>investigación</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Mención de honor</td>
+                                    <td>Sí</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </td>
                 <td class="website"></td>
@@ -237,42 +243,44 @@
                 <td data-th="Nombre" class="nombre">Sistema de localizacion de centros de atención de emergencias para Bogotá</td>
                 <td data-th="Autor" class="autor">Erish Perez Andres Reyes Gomez</td>
                 <td data-th="Director" class="director">Javier Francisco López Parra</td>
-                <td class="detalles"><button class="btn-detalles" type="button" name="detalles">+</button></td>
                 <td class="website"><button class="btn-website" type="button" name="website"><img src="img/globe.png" alt="tierra" /></button></td>
+                <td class="detalles"><button class="btn-detalles" type="button" name="detalles">+</button></td>
             </tr>
             <tr class="detalles">
                 <td colspan="4">
-                    <div class="col-xs-12 col-md-4 primero">
-                        <table class="tabla-detalles">
-                            <tr>
-                                <td class="col-titulo">Código</td>
-                                <td>CIS1510AP01</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Año</td>
-                                <td>2015</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Semestre académico</td>
-                                <td>3</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col-xs-12 col-md-4 segundo">
-                        <table class="tabla-detalles">
-                            <tr>
-                                <td class="col-titulo">Grupo de investigación</td>
-                                <td>TAKINA</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Modalidad</td>
-                                <td>investigación</td>
-                            </tr>
-                            <tr>
-                                <td class="col-titulo">Mención de honor</td>
-                                <td>Sí</td>
-                            </tr>
-                        </table>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4 primero">
+                            <table class="tabla-detalles">
+                                <tr>
+                                    <td class="col-titulo">Código</td>
+                                    <td>CIS1510AP01</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Año</td>
+                                    <td>2015</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Semestre académico</td>
+                                    <td>3</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-12 col-md-4 segundo">
+                            <table class="tabla-detalles">
+                                <tr>
+                                    <td class="col-titulo">Grupo de investigación</td>
+                                    <td>TAKINA</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Modalidad</td>
+                                    <td>investigación</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-titulo">Mención de honor</td>
+                                    <td>Sí</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </td>
                 <td class="website"></td>
@@ -310,7 +318,7 @@
         </div>
       </div>
     </div>
-    <script src = "js/jquery-1.11.3.min.js"></script>
+    <script src = "js/jquery-2.2.0.min.js"></script>
     <script src = "bootstrap/js/bootstrap.min.js"></script>
     <script src = "js/tgisispuj.js"></script>
   </body>
