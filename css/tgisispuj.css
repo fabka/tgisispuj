@@ -169,20 +169,61 @@ header .titulo h2{
     width: 90%;
 }
 
+.test{
+    border: solid 1px;
+    width: 90%
+}
+
+.test tr{
+    border: solid 1px;
+}
+
+.test tr td{
+    border: solid 1px;
+}
+
+.test tr .nombre{
+    width: 30%;
+}
+
+.test tr .autor{
+    width: 20%;
+}
+
+.test tr .director{
+    width: 20%;
+}
+
+.test tr .detalles{
+    width: 15%;
+}
+
+.test tr .website{
+    width: 15%;
+}
+
+.test tr .empty{
+    width: 10%;
+}
+
+.test tr .columna-1{
+    width: 15%;
+}
+
+.test tr .columna-2{
+    width: 15%;
+}
 .tabla-principal thead{
     background-color: #7290ae;
     color: #fff;
     font-family: "calibri", sans-serif;
     font-style: normal;
-
 }
-
 .tabla-principal thead th{
     height: 9vmin;
     font-size: 4vmin;
     font-weight: lighter;
 }
-
 .tabla-principal thead .nombre{
     width: 30%;
     padding-left: 2vmin;
@@ -218,11 +259,28 @@ header .titulo h2{
 
 }
 
-.tabla-principal tbody tr:nth-child(odd) {
+.tabla-principal tbody tr:nth-child(4n-3){
     background-color: #FAFAFA;
 }
-
-.tabla-principal tbody tr:nth-child(even) {
+.tabla-principal tbody .detalles:nth-child(4n-2){
+    background-color: #FAFAFA;
+}
+.tabla-principal tbody .detalles:nth-child(4n-2) tr{
+    background-color: #FAFAFA;
+}
+.tabla-principal tbody .detalles:nth-child(4n-2) tr td{
+    background-color: #FAFAFA;
+}
+.tabla-principal tbody tr:nth-child(4n-1){
+    background-color: #ffff89;
+}
+.tabla-principal tbody .detalles:nth-child(4n){
+    background-color: #ffff89;
+}
+.tabla-principal tbody .detalles:nth-child(4n) tr{
+    background-color: #ffff89;
+}
+.tabla-principal tbody .detalles:nth-child(4n) tr td{
     background-color: #ffff89;
 }
 
@@ -257,11 +315,17 @@ header .titulo h2{
     border: 0;
 }
 
-.tabla-principal tbody tr:nth-child(even) .detalles button{
+.tabla-principal tbody tr:nth-child(4n) .detalles button{
     background: #F0F081;
 }
 
-.tabla-principal tbody tr:nth-child(odd) .detalles button{
+.tabla-principal tbody tr:nth-child(4n-1) .detalles button{
+    background: #F0F081;
+}
+.tabla-principal tbody tr:nth-child(4n-2) .detalles button{
+    background: #F1F1F1;
+}
+.tabla-principal tbody tr:nth-child(4n-3) .detalles button{
     background: #F1F1F1;
 }
 
@@ -277,14 +341,6 @@ header .titulo h2{
     border-color: #fff;
 }
 
-.tabla-principal tbody tr:nth-child(even) .website {
-    background-color: #F0F081;
-}
-
-.tabla-principal tbody tr:nth-child(odd) .website {
-    background-color: #F1F1F1;
-}
-
 .tabla-principal tbody tr .website button{
     width: 100%;
     height: 100%;
@@ -292,19 +348,31 @@ header .titulo h2{
     border: 0;
 }
 
-.tabla-principal tbody tr:nth-child(even) .website button{
+.tabla-principal tbody tr:nth-child(4n) .website button{
     background: #F0F081;
 }
-
-.tabla-principal tbody tr:nth-child(odd) .website button{
+.tabla-principal tbody tr:nth-child(4n-1) .website button{
+    background: #F0F081;
+}
+.tabla-principal tbody tr:nth-child(4n-2) .website button{
+    background: #F1F1F1;
+}
+.tabla-principal tbody tr:nth-child(4n-3) .website button{
     background: #F1F1F1;
 }
 
-.bloque-detalles{
-    background-color: #F0F081;
+.tabla-principal tbody .detalles .primero{
+    border-left: solid 2vmin #7290ae;
+    margin-left: 2vmin;
 }
-
+.tabla-principal tbody .detalles tr .col-titulo{
+    font-weight: bold;
+}
+.tabla-principal tbody .detalles tr td{
+    padding-left: 1vmin;
+}
 @media only screen and (max-width: 768px) {
+
     header {
         flex-flow: column nowrap;
     }
@@ -403,16 +471,12 @@ header .titulo h2{
     .tabla-principal tbody tr .nombre{
         margin: 2vmax 2vmin 0 3vmin;
     }
-
     .tabla-principal tbody tr .autor{
         margin: 0 2vmin 0 3vmin;
     }
-
-
     .tabla-principal tbody tr .director{
         margin: 0 2vmin 3vmin 3vmin;
     }
-
     .tabla-principal tbody tr .nombre::before{
         content: attr(data-th)": ";
         font-weight: bold;
@@ -433,6 +497,19 @@ header .titulo h2{
         height: 10vmax;
         margin-top: 1vmax;
         vertical-align: middle;
+    }
+    .tabla-detalles tbody tr td{
+        display: inline;
+    }
+    .tabla-principal tbody .detalles .primero{
+        border-left: solid 3vmax #7290ae;
+        margin-left: 2vmin;
+        margin-top: 2vmin;
+    }
+    .tabla-principal tbody .detalles .segundo{
+        border-left: solid 3vmax #7290ae;
+        margin-left: 2vmin;
+        margin-bottom: 2vmin;
     }
 }
 

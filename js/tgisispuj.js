@@ -153,6 +153,10 @@ $("#advanced-search-button").click(function() {
   $(".advanced-search").slideToggle("slow");
 });
 
+$(".test").click(function() {
+  $(this).find(".bloque-detalles").slideToggle("slow");
+});
+
 //Búsquda general
 $("#search-bar").keyup(function(){
     _this = this;
@@ -163,6 +167,10 @@ $("#search-bar").keyup(function(){
         else
            $(this).show();
     });
+});
+
+$(".btn-detalles").click(function() {
+    $(this).nextAll('.detalles').slideToggle();
 });
 
 $(".cabeza .secondary").hide();
