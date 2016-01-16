@@ -30,7 +30,7 @@ header .logo{
     max-width: 50%;
 }
 header .logo img{
-    max-height: 15vmin;
+    max-height: 30vmin;
     max-width: 100%;
 }
 
@@ -372,7 +372,35 @@ header .titulo h2{
 .tabla-principal tbody .detalles tr td{
     padding-left: 1vmin;
 }
-
+.footer{
+    background-color: #FAFAFA;
+    padding-top: 2vmax;
+    padding-bottom: 2vmax;
+    width: 90vw;
+}
+.footer .imagen{
+    min-height: 12vmax;
+}
+.footer .imagen img{
+    height: 12vmax;
+    margin: 0 auto;
+    width: auto;
+}
+.footer .contacto{
+    margin: 0.25vmin 0 0.25vmin 0;
+    padding: 1vmin 1vmin 1vmin 2vmin;
+}
+.footer .contacto table tbody tr td{
+    padding: 5px 0 5px 0;
+}
+.footer .contacto table tbody tr td img{
+    margin-right: 10px;
+}
+.footer a{
+    margin-top: 5vmin;
+    white-space: normal;
+    width: 100%;
+}
 @media only screen and (max-width: 768px) {
 
     header {
@@ -383,8 +411,9 @@ header .titulo h2{
         min-width: 80%;
     }
     header .logo img{
-        max-height: none;
-        height: 25vmin;
+        min-height: 20vmin;
+        height: auto;
+        width: auto;
     }
     header .titulo {
         text-align: center;
@@ -519,5 +548,31 @@ header .titulo h2{
     }
     .tabla-principal tbody .detalles .website{
         display: none;
+    }
+    .footer{
+        width: 100vw;
+        max-width: 100%;
+        padding-top: 2vmax;
+    }
+    .footer img{
+        margin-top: 1vmin;
+        margin-bottom: 1vmin;
+        max-height: 20vmax;
+    }
+    .footer .contactos{
+        margin-top: 2vmax ;
+        margin-bottom: 2vmax;
+    }
+    .footer .contacto table{
+        width: 100%;
+        margin-top: 1vmin;
+        margin-bottom: 1vmin;
+    }
+    .footer .contacto table tbody tr td{
+        width: 100%;
+    }
+    .footer a{
+        width: 100%;
+        margin-bottom: 2vmax;
     }
 }
