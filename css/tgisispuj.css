@@ -532,10 +532,10 @@ header .titulo h2{
         margin-top: 4vmin;
     }
     .tabla-principal tbody .detalles .row .primero .col-titulo{
-        width: 30vmin;
+        width: 45vmin;
     }
     .tabla-principal tbody .detalles .row .segundo .col-titulo{
-        width: 30vmin;
+        width: 45vmin;
     }
     .tabla-principal tbody .detalles .segundo{
         border-left: solid 3vmax #7290ae;
