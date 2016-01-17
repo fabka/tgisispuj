@@ -554,14 +554,16 @@ header .titulo h2{
         max-width: 100%;
         padding-top: 2vmax;
     }
-    .footer img{
+    .footer .imagen img{
         margin-top: 1vmin;
         margin-bottom: 1vmin;
+        height: auto;
         max-height: 20vmax;
     }
     .footer .contactos{
         margin-top: 2vmax ;
         margin-bottom: 2vmax;
+        text-align: center;
     }
     .footer .contacto table{
         width: 100%;
