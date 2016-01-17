@@ -572,6 +572,7 @@ header .titulo h2{
     }
     .footer .contacto table tbody tr td{
         width: 100%;
+        text-align: center;
     }
     .footer a{
         width: 100%;
