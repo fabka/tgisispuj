@@ -1,3 +1,11 @@
+@-moz-document url-prefix() {
+    header .logo img{
+        height: 15vmin;
+    }
+    .footer .contactos .contactos-table tbody tr .github a img{
+        height: 10%;
+    }
+}
 body{
     display: -webkit-box;
     display: -moz-box;
@@ -387,7 +395,6 @@ header .titulo h2{
 }
 .footer .contactos .contactos-table tbody tr .github a img{
     max-height: 70%;
-    height: auto;
     width: auto;
 }
 
