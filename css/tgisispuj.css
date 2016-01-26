@@ -547,6 +547,8 @@ header .titulo h2{
     }
     .footer .imagenes .github a{
         height: 10vmax;
+        width: 100%;
+        margin: 0;
     }
     .footer .imagenes .github a img{
         height: 8vmax;
