@@ -61,7 +61,6 @@ header .titulo h2{
     margin: 0;
     font-size: 3vmin;
 }
-
 .busqueda{
     background-color: #FAFAFA;
     margin: auto;
@@ -337,67 +336,58 @@ header .titulo h2{
 }
 .footer{
     background-color: #FAFAFA;
-    padding: 2vmax 0 0 0;
+    padding: 0 0 0 0;
     width: 90%;
-    border-bottom: 1vmin solid #7290ae;
 }
-.footer .row{
-    margin: 0;
+.footer .imagenes{
+  width: 100%;
 }
-.footer .imagen img{
-    min-height: 4vmax;
-    height: auto;
-    max-height: 6vmax;
-    margin: 0 auto;
-    width: auto;
+.footer .imagenes{
+  border-bottom: 1vmin solid #7290ae;
 }
-.footer .contactos{
-    width: 90%;
-    margin: 2vmin auto 0 auto;
-}
-.footer .contactos .contactos-table{
-    width: 100%;
-}
-.footer .contactos .contactos-table tbody{
-    padding: 0;
-}
-.footer .contactos .contactos-table tbody tr{
-    padding: 0;
-}
-.footer .contactos .contactos-table tbody tr .contacto{
-    width: 40%;
-    margin: 0.25vmin auto 0.25vmin 0;
-    padding: 1vmin 1vmin 1vmin 3%;
-}
-.footer .contactos .contactos-table tbody tr .contacto table tbody tr td{
-    padding: 5px 0 5px 0;
-}
-.footer .contactos .contactos-table tbody tr .github{
+.footer .imagenes .github{
     width: 20%;
     vertical-align: bottom;
 }
-.footer .contactos .contactos-table tbody tr .github a{
+.footer .imagenes .github a{
     background: #7290ae;
     color: #FFF;
-    font-size: 175%;
+    font-size: 125%;
     font-family: "calibri", sans-serif;
     font-weight: lighter;
-    vertical-align: middle;
-    padding-top: 3%;
-    height: 100%;
-    width: 100%;
+    height: 11vmin;
+    width: 90%;
+    margin-left: 10%;
     border: 0;
     border-radius: 0;
 }
-.footer .contactos .contactos-table tbody tr .github a:hover{
+.footer .imagenes .github a:hover{
     background: #6E8AA6;
     color: #FFF;
 }
-.footer .contactos .contactos-table tbody tr .github a img{
-    max-height: 70%;
+.footer .imagenes .github a img{
+    max-height: 8vmin;
+    padding-top: 1vmin;
     width: auto;
 }
-
+.footer .imagenes .imagen{
+    width: 40%;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
+}
+.footer .imagenes .imagen img{
+    min-height: 4vmax;
+    height: auto;
+    max-height: 5vmax;
+    margin: 0 auto;
+    width: auto;
+}
+.footer .creditos td{
+    width: 80%;
+    text-align: center;
+    padding-top: 0.5vmax;
+    padding-bottom: 0.5vmax;
+}
 @media only screen and (max-width: 768px) {
 
     header {
@@ -547,63 +537,28 @@ header .titulo h2{
         display: none;
     }
     .footer{
-        width: 100vw;
-        max-width: 100%;
-        padding-top: 2vmax;
+        width: 100%;
+    }
+    .footer tr td{
+        display: block;
+    }
+    .footer .imagenes .github{
+        width: 100%;
+    }
+    .footer .imagenes .github a{
+        height: 10vmax;
+    }
+    .footer .imagenes .github a img{
+        height: 8vmax;
+        padding: 2vmax 0 0 0;
     }
     .footer .imagenes .imagen{
+        width: 100%;
     }
     .footer .imagenes .imagen img{
         margin-top: 2vmin;
         margin-bottom: 2vmin;
-        min-height: 10vmax;
-        width: auto;
-    }
-    .footer .contactos{
-        margin-top: 2vmax ;
-        margin-bottom: 2vmax;
-        text-align: center;
-        margin: 0.25vmin auto 0.25vmin 0;
-        width: 100%;
-    }
-    .footer .contactos .contactos-table{
-        width: 100%;
-    }
-    .footer .contactos .contactos-table tbody tr td{
-        display: block;
-    }
-    .footer .contactos .contactos-table tbody tr .contacto{
-        width: 100%;
-    }
-    .footer .contactos .contactos-table tbody tr .contacto table{
-        margin: auto;
-    }
-    .footer .contactos .contactos-table tbody tr .contacto table tbody tr td{
-        padding: 5px 0 5px 0;
-    }
-    .footer .contactos .contactos-table tbody tr .github{
-        margin: auto;
-        width: 100%;
-    }
-    .footer .contactos .contactos-table tbody tr .github a{
-        background: #7290ae;
-        color: #FFF;
-        font-size: 175%;
-        font-family: "calibri", sans-serif;
-        font-weight: lighter;
-        padding-top: 1vmax;
-        padding-bottom: 1vmax;
-        height: 100%;
-        width: 50%;
-        border: 0;
-        border-radius: 0;
-    }
-    .footer .contactos .contactos-table tbody tr .github a:hover{
-        background: #6E8AA6;
-        color: #FFF;
-    }
-    .footer .contactos .contactos-table tbody tr .github a img{
-        height: 5vmax;
+        max-height: 10vmax;
         width: auto;
     }
 }
