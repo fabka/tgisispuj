@@ -1,0 +1,10 @@
+db:
+  image: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+django:
+    build: ./Django
+    ports:
+     - 80:8000
+    links:
+      - db
