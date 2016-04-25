@@ -77,16 +77,15 @@ WSGI_APPLICATION = 'tgisispuj_be.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
+	
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tgisispuj',
-        'ENGINE': 'mysql.connector.django',
         'USER': 'root',
         'PASSWORD': 'root',
-        'OPTIONS': {
-          'autocommit': True,
-        },
+        'HOST': 'db',
+        'PORT': '3306',
     }
 }
 
