@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'tgisispuj',
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': 'db',
+        'HOST': 'tgisispujdb',
         'PORT': '3306',
     }
 }
