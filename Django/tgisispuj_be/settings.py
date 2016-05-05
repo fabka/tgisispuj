@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ctzw5*p7(086fu!w7q65ej^rbbe1&b#vni_l*1cil71)*rhbk0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'tgisispuj_be.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-	
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -130,4 +130,3 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
-
