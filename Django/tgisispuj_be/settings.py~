@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ctzw5*p7(086fu!w7q65ej^rbbe1&b#vni_l*1cil71)*rhbk0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tgisispuj',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': os.environ['TGISISPUJDB_ENV_MYSQL_ROOT_PASSWORD'],
         'HOST': 'tgisispujdb',
         'PORT': '3306',
     }

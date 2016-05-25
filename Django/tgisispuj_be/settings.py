@@ -82,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tgisispuj',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': os.environ['TGISISPUJDB_ENV_MYSQL_USER'],
+        'PASSWORD': os.environ['TGISISPUJDB_ENV_MYSQL_ROOT_PASSWORD'],
         'HOST': 'tgisispujdb',
         'PORT': '3306',
     }
