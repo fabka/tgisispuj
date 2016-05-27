@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'tgisispuj_be.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tgisispuj',
-        'USER': os.environ['TGISISPUJDB_ENV_MYSQL_USER'],
-        'PASSWORD': os.environ['TGISISPUJDB_ENV_MYSQL_ROOT_PASSWORD'],
+        'NAME': os.getenv('TGISISPUJDB_ENV_MYSQL_DATABASE'),
+        'USER': os.getenv('TGISISPUJDB_ENV_MYSQL_USER'),
+        'PASSWORD': os.getenv('TGISISPUJDB_ENV_MYSQL_ROOT_PASSWORD'),
         'HOST': 'tgisispujdb',
-        'PORT': '3306',
+        'PORT': int(os.getenv('TGISISPUJDB_PORT_3306_TCP_PORT')),
     }
 }
 
@@ -129,4 +129,7 @@ STATICFILES_DIRS = [
 ]
 MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
-STATIC_URL = '/static/'
+
+STATIC_URL = os.getenv('STATIC_URL')
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticos')
