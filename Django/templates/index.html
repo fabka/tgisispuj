@@ -11,7 +11,7 @@
     <body>
         <header><!-- Logo y Tíulo -->
             <div class="logo">
-                <img src="/static/img/puj_horizontal.png" alt="Logo Javeriana" >
+                <img src="{% static "img/puj_horizontal.png"  %}" alt="Logo Javeriana" >
             </div>
             <div class="titulo">
                 <h1>Trabajos de Grado</h1>
@@ -133,16 +133,16 @@
         <table class="footer">
             <tr class="imagenes">
                 <td class="imagen">
-                  <img class="img-responsive"src="/static/img/puj_horizontal.png" alt="Logo javeriana"/>
+                  <img class="img-responsive"src="{% static "img/puj_horizontal.png" %}" alt="Logo javeriana"/>
                 </td>
                 <td class="imagen">
-                  <img class="img-responsive" src="/static/img/isis_horizontal.png" alt="Logo ingeniería de sistemas" />
+                  <img class="img-responsive" src="{% static "img/isis_horizontal.png" %}" alt="Logo ingeniería de sistemas" />
                 </td>
                 <td class="github">
-                    <a id="github-button" class="btn btn-default" role="button"><img src="/static/img/octocat.png" alt="github.com/fabka/tgisispuj" /></a>
+                    <a id="github-button" class="btn btn-default" role="button"><img src="{% static "img/octocat.png" %}" alt="github.com/fabka/tgisispuj" /></a>
                 </td>
                 <td class="admin">
-                    <a id="admin-button" class="btn btn-default" role="button"><img src="/static/img/admin.png" alt="github.com/fabka/tgisispuj" /></a>
+                    <a id="admin-button" class="btn btn-default" role="button"><img src="{% static "img/admin.png" %}" alt="github.com/fabka/tgisispuj" /></a>
                 </td>
             </tr>
             <tr class="creditos">
