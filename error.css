@@ -1,0 +1,50 @@
+html, body{
+            margin: 0;
+            padding:0;
+            position:absolute;/* this is very important*/
+            bottom:0;
+            top:0;
+            right:0;
+            left:0;
+            color:#0162A3;
+            font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+            background-color:#EEE;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            align-content: center;
+            flex-direction: row;
+            
+        }
+        
+        .error{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            align-content: center;
+            height: 100%;
+            height:80%;
+        }
+        
+        .mensaje{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            align-content: center;
+        }
+        
+        h1{
+            font-size: 20vh;
+            margin-top:0;
+            margin-bottom:0;
+            margin-left:3vw;
+        }
+        h2{
+            font-size: 5vh;
+            margin-top:0;
+            margin-bottom:0;
+            margin-left:3vw;
+        }
