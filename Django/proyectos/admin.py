@@ -4,7 +4,7 @@ from .models import Proyecto, Director, Modalidad, TituloAplicado, MencionHonor,
 
 @admin.register(Proyecto)
 class Administrador( admin.ModelAdmin ):
-    list_filter = ('nombre',)
+    list_filter = ('codigo',)
     list_display = ('codigo','nombre')
     
 @admin.register(Director)
@@ -34,5 +34,5 @@ class Administrador( admin.ModelAdmin ):
 
 @admin.register(PeriodoAcademico)
 class Administrador( admin.ModelAdmin ):
-    list_filter = ('anio','semestre')
+    list_filter = ('anio',)
     list_display = ('anio','semestre')

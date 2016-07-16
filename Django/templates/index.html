@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Trabajos de Grado de la facultad de Ingeniería de Sistemas. Pontificia Universidad Javeriana</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-   {% load staticfiles %}
-  <link rel="stylesheet" href="{% static "css/tgisispuj.css" %}"/>
+  {% load staticfiles %}
+  <link rel="shortcut icon" type="image/png" href="{% static "favicon.ico" %}"/>
+  <link rel="stylesheet" href="{% static "tgisispuj.css" %}"/>
 </head>
-    <body>
+  <body>
         <header><!-- Logo y Tíulo -->
             <div class="logo">
-                <img src="{% static "img/puj_horizontal.png"  %}" alt="Logo Javeriana" >
+                <img src="{% static "puj_horizontal.png" %}" alt="Logo Javeriana" >
             </div>
             <div class="titulo">
-                <h1>Trabajos de Grado</h1>
+                <h1>Trabajos de grado</h1>
                 <h2>Ingeniería de Sistemas</h2>
                 <h2>Facultad de Ingeniería</h2>
             </div>
@@ -33,7 +34,7 @@
                 <div class="filtros">
                     <div class="fila-1">
                         <div class="btn-group btn-dd component modalidad">
-                          <button id='modality-button' type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
+                           <button id='modality-button' type="button" class="btn btn-default dropdown-toggle btn-dd" data-toggle="dropdown">
                             Modalidad <span class="caret"></span>
                           </button>
                           <ul class="dropdown-menu">
@@ -92,19 +93,19 @@
                 </div>
                 <div class="botones">
                     <div class="limpiar">
-                        <button id="search-button" type="button" class="btn btn-default btn-md btn-dd">
+                        <button id="search-button" type="button" class="btn btn-default btn-md btn-dd" ng-click="buscar()">
                           <span class="glyphicon glyphicon-search"></span> Buscar
                         </button>
                     </div>
                     <div class="buscar">
-                        <button id="clear-button" type="button" class="btn btn-default btn-md btn-dd">
+                        <button id="clear-button" type="button" class="btn btn-default btn-md btn-dd" >
                           <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Limpiar
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <table class="tabla-principal">
             <thead class="encabezado-fijo">
                 <tr>
@@ -133,24 +134,25 @@
         <table class="footer">
             <tr class="imagenes">
                 <td class="imagen">
-                  <img class="img-responsive"src="{% static "img/puj_horizontal.png" %}" alt="Logo javeriana"/>
+                  <img class="img-responsive"src="{% static "puj_horizontal.png" %}" alt="Logo javeriana"/>
                 </td>
                 <td class="imagen">
-                  <img class="img-responsive" src="{% static "img/isis_horizontal.png" %}" alt="Logo ingeniería de sistemas" />
+                  <img class="img-responsive" src="{% static "isis_horizontal.png" %}" alt="Logo ingeniería de sistemas" />
                 </td>
                 <td class="github">
-                    <a id="github-button" class="btn btn-default" role="button"><img src="{% static "img/octocat.png" %}" alt="github.com/fabka/tgisispuj" /></a>
+                    <a href="https://github.com/fabka/tgisispuj" id="github-button" class="btn btn-default" role="button"><img src="{% static "octocat.png" %}" alt="github.com/fabka/tgisispuj" /></a>
                 </td>
                 <td class="admin">
-                    <a id="admin-button" class="btn btn-default" role="button"><img src="{% static "img/admin.png" %}" alt="github.com/fabka/tgisispuj" /></a>
+                    <a href="/admin" id="admin-button" class="btn btn-default" role="button"><img src="{% static "admin.png" %}" alt="pegasus.javeriana.edu.co/admin" /></a>
                 </td>
             </tr>
             <tr class="creditos">
               <td colspan="3">Desarrollo y soporte: Fabián Merchán - merchanf@javeriana.edu.co, Supervisión: Ing. Luisa F. Barrera - luisa.barrera@javeriana.edu.co</td>
             </tr>
         </table>
-        <script src = "/static/js/jquery-2.2.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
-        <script src = "/static/js/tgisispuj.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src = "{% static "tgisispuj-jquery.js" %}"></script>
     </body>
 </html>

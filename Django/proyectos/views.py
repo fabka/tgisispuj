@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render_to_response
 from django.template import loader
+from django.template import RequestContext
 from django.core import serializers
+
+
 from .models import Proyecto
 from .models import Director
 from .models import TituloAplicado
@@ -28,41 +31,42 @@ def proyectos(request):
         'periodosAcademicos' : periodosAcademicos,
         'modalidades'  : modalidades,
         'mencionesHonor' : mencionesHonor,
-        'gruposInvestigacion' : gruposInvestigacion
+        'gruposInvestigacion' : gruposInvestigacion,
     }
+
     return HttpResponse(template.render(context, request))
-        
+
 def api(request):
-    
+
     modalidad_nombre = ''
     mencionHonor_nombre = ''
     grupoInvestigacion_nombre = ''
-    
+
     proyectos = Proyecto.objects.all().order_by('periodoAcademico__anio', 'periodoAcademico__semestre', 'nombre')
     list = [] #create list
     for p in proyectos: #populate list
-        
+
         if p.modalidad is None:
             modalidad_nombre = ''
         else:
             modalidad_nombre = p.modalidad.nombre
-            
+
         if p.mencionHonor is None:
             mencionHonor_nombre = ''
         else:
             mencionHonor_nombre = p.mencionHonor.nombre
-        
+
         if p.grupoInvestigacion is None:
             grupoInvestigacion_nombre = ''
         else:
             grupoInvestigacion_nombre = p.grupoInvestigacion.nombre
-            
+
         if not p.periodoAcademico.semestre:
             periodoAcademico = p.periodoAcademico.anio
         else:
             periodoAcademico = p.periodoAcademico.anio + '-' + p.periodoAcademico.semestre
-        
-        list.append({'nombre':p.nombre, 
+
+        list.append({'nombre':p.nombre,
             'autor':p.autor,
             'director': p.director.nombre,
             'paginaWeb':p.paginaWeb,
@@ -72,11 +76,12 @@ def api(request):
             'modalidad': modalidad_nombre,
             'mencionHonor':mencionHonor_nombre,
             'grupoInvestigacion':grupoInvestigacion_nombre })
-            
+
     data = json.dumps(list)
     return HttpResponse(data, content_type='application/json')
-    
+
 def busqueda(request):
+
     qObjects = Q()
     qGeneral = Q()
     if request.method == 'GET':
@@ -88,8 +93,8 @@ def busqueda(request):
         semestre = request.GET.get('semestre', '')
         tituloAplicado = request.GET.get('tituloAplicado', '')
     if general:
-        qGeneral = qGeneral | Q(nombre__contains=general) 
-        qGeneral = qGeneral | Q(autor__contains=general) 
+        qGeneral = qGeneral | Q(nombre__contains=general)
+        qGeneral = qGeneral | Q(autor__contains=general)
         qGeneral = qGeneral | Q(director__nombre__contains=general)
         qObjects = qObjects & qGeneral
     if modalidad:
@@ -105,33 +110,31 @@ def busqueda(request):
     if tituloAplicado:
         qObjects = qObjects & Q(tituloAplicado__nombre=tituloAplicado)
     proyectos = Proyecto.objects.all().filter( qObjects ).order_by('periodoAcademico__anio', 'periodoAcademico__semestre', 'nombre');
-        
+
     list = [] #create list
     if proyectos:
         for p in proyectos: #populate list
-            
+
             if p.modalidad is None:
                 modalidad_nombre = ''
             else:
                 modalidad_nombre = p.modalidad.nombre
-                
+
             if p.mencionHonor is None:
                 mencionHonor_nombre = ''
             else:
                 mencionHonor_nombre = p.mencionHonor.nombre
-            
+
             if p.grupoInvestigacion is None:
                 grupoInvestigacion_nombre = ''
             else:
                 grupoInvestigacion_nombre = p.grupoInvestigacion.nombre
-                
+
             if not p.periodoAcademico.semestre:
                 periodoAcademico = p.periodoAcademico.anio
             else:
                 periodoAcademico = p.periodoAcademico.anio + '-' + p.periodoAcademico.semestre
-            
-            print(p.PaginaWeb)
-            list.append({'nombre':p.nombre, 
+            list.append({'nombre':p.nombre,
                 'autor':p.autor,
                 'director': p.director.nombre,
                 'paginaWeb':p.paginaWeb,
@@ -141,6 +144,36 @@ def busqueda(request):
                 'modalidad': modalidad_nombre,
                 'mencionHonor':mencionHonor_nombre,
                 'grupoInvestigacion':grupoInvestigacion_nombre })
-            
     data = json.dumps(list)
-    return HttpResponse(data, content_type='application/json')
+    return HttpResponse(data, content_type='application/json');
+
+def handler400(request):
+    response = render_to_response('400.html', {}, context_instance=RequestContext(request))
+    response.status_code = 400
+    return response
+
+def handler403(request):
+    response = render_to_response('401.html', {}, context_instance=RequestContext(request))
+    response.status_code = 401
+    return response
+
+def handler403(request):
+    response = render_to_response('403.html', {}, context_instance=RequestContext(request))
+    response.status_code = 403
+    return response
+
+def handler404(request):
+    response = render_to_response('404.html', {}, context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
+
+
+def handler500(request):
+    response = render_to_response('500.html', {}, context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
+
+def handler503(request):
+    response = render_to_response('500.html', {}, context_instance=RequestContext(request))
+    response.status_code = 503
+    return response

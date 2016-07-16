@@ -3,17 +3,19 @@ from django.core import serializers
 from django.core.serializers.python import Serializer
 from django.db import models
 import json
+from django.core.serializers.json import DjangoJSONEncoder
+
 
 """
-    Entidad que contiene el registro de todos los profesores que han sido 
+    Entidad que contiene el registro de todos los profesores que han sido
     directores de trabajos de grado
 """
 class Director(models.Model):
     nombre = models.CharField(max_length=255)
-    
+
     def __unicode__(self):
         return "%s" % self.nombre
-        
+
     class Meta:
         verbose_name_plural = "Directores"
         unique_together = (("nombre"),)
@@ -24,10 +26,10 @@ class Director(models.Model):
 """
 class GrupoInvestigacion(models.Model):
     nombre = models.CharField(max_length=255)
-    
+
     def __unicode__(self):
         return "%s" % self.nombre
-        
+
     class Meta:
         verbose_name_plural = "Grupos de investigaci\u00F3n"
 
@@ -36,7 +38,7 @@ class GrupoInvestigacion(models.Model):
 """
 class MencionHonor(models.Model):
     nombre = models.CharField(max_length=255)
-    
+
     def __unicode__(self):
         return "%s" % self.nombre
 
@@ -48,10 +50,10 @@ class MencionHonor(models.Model):
 """
 class Modalidad(models.Model):
     nombre = models.CharField(max_length=255)
-    
+
     def __unicode__(self):
         return "%s" % self.nombre
-    
+
     class Meta:
         verbose_name_plural = "Modalidades"
 
@@ -60,10 +62,10 @@ class Modalidad(models.Model):
 """
 class TituloAplicado(models.Model):
     nombre = models.CharField(max_length=255)
-    
+
     def __unicode__(self):
         return "%s" % self.nombre
-        
+
     class Meta:
         verbose_name_plural = "T\u00EDtulo aplicado"
 
@@ -73,17 +75,15 @@ class TituloAplicado(models.Model):
 class PeriodoAcademico(models.Model):
     anio = models.CharField(max_length=255, verbose_name="A\u00F1o")
     semestre = models.CharField(max_length=255, null=True, blank=True)
-    
+
     class Meta:
         unique_together = (("anio","semestre"),)
         verbose_name_plural = "Periodos acad\u00E9micos"
-        
+
     def __unicode__(self):
         if not self.semestre :
             return "%s" % (self.anio)
         return "%s - %s" % (self.anio, self.semestre)
-        
-
 
 """
     Esta es la clase que representa la tabla de trabajos de grado completa
@@ -99,15 +99,15 @@ class Proyecto(models.Model):
     modalidad = models.ForeignKey(Modalidad, null=True, blank=True)
     mencionHonor = models.ForeignKey(MencionHonor, null=True, blank=True)
     grupoInvestigacion = models.ForeignKey(GrupoInvestigacion, null=True, blank=True)
-    
+
     def __unicode__(self):
         return "%s - %s" % (self.id, self.nombre)
-        
+
     def get_form(self, request, obj=None, **kwargs):
         self.exclude = ("paginaWeb", )
         proyecto = super(Proyecto, self).get_form(request, obj, **kwargs)
         return proyecto
-    
+
     def save(self, *args, **kwargs):
         self.codigo = self.codigo.replace(" ", "")
         if self.codigo == "":
@@ -118,7 +118,7 @@ class Proyecto(models.Model):
         else:
             self.paginaWeb = "http://pegasus.javeriana.edu.co/~{0}/".format(self.codigo)
         super(Proyecto, self).save(*args, **kwargs)
-    
+
     class Meta:
         unique_together = (("codigo"),)
         verbose_name_plural = "Proyectos"
