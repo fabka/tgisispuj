@@ -32,7 +32,7 @@ La aplicación cuenta con los siguientes filtros:
 - **mencionHonor:** Indica si el trabajo de grado obtuvo reconocimiento. (Sí, no, por definir)*
 - **anio:** Año de presentación del trabajo de grado. (desde 2004)
 - **semestre:** Periodo académico en el cual se presentó el trabajo de grado (1 o 3)
-- **tituloAplicado:** Indica a que título está optando el autor del trabajo de grado.
+- **tituloAplicado:** Indica a que título está optando el autor del trabajo de grado (Pregrado o maestría)*.
 
 \*Valores sujetos a cambios.
 
