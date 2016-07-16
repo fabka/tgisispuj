@@ -17,6 +17,10 @@ from django.db.models import Count
 from django.db.models import Q
 import json
 
+'''
+    Carga los datos proporcionados en el administrador de Django, para que puedan ser presentados en
+    el html.
+'''
 def proyectos(request):
     proyectos = Proyecto.objects.all()
     titulosAplicados = TituloAplicado.objects.all()
@@ -36,6 +40,9 @@ def proyectos(request):
 
     return HttpResponse(template.render(context, request))
 
+'''
+    Esta funcion entrega todos los trabajos de grado disponibles sin ningun filtro
+'''
 def api(request):
 
     modalidad_nombre = ''
@@ -80,6 +87,9 @@ def api(request):
     data = json.dumps(list)
     return HttpResponse(data, content_type='application/json')
 
+'''
+    Esta funcion analiza las peticiones y devuelve los trabajos de grado con los filtros que se hayan solicitado.
+'''
 def busqueda(request):
 
     qObjects = Q()
@@ -147,32 +157,49 @@ def busqueda(request):
     data = json.dumps(list)
     return HttpResponse(data, content_type='application/json');
 
+'''
+    Manejo de una respuesta HTTP 400
+'''
 def handler400(request):
     response = render_to_response('400.html', {}, context_instance=RequestContext(request))
     response.status_code = 400
     return response
 
+'''
+    Manejo de una respuesta HTTP 401
+'''
 def handler403(request):
     response = render_to_response('401.html', {}, context_instance=RequestContext(request))
     response.status_code = 401
     return response
 
+'''
+    Manejo de una respuesta HTTP 403
+'''
 def handler403(request):
     response = render_to_response('403.html', {}, context_instance=RequestContext(request))
     response.status_code = 403
     return response
 
+'''
+    Manejo de una respuesta HTTP 404
+'''
 def handler404(request):
     response = render_to_response('404.html', {}, context_instance=RequestContext(request))
     response.status_code = 404
     return response
 
-
+'''
+    Manejo de una respuesta HTTP 500
+'''
 def handler500(request):
     response = render_to_response('500.html', {}, context_instance=RequestContext(request))
     response.status_code = 500
     return response
 
+'''
+    Manejo de una respuesta HTTP 503
+'''
 def handler503(request):
     response = render_to_response('500.html', {}, context_instance=RequestContext(request))
     response.status_code = 503
