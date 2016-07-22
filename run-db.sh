@@ -1,9 +1,7 @@
 DB_ROOT_PSWD=$(openssl rand -base64 7)
 DB_NAME="tgisispujdb"
 DB_USER="tgisispujdb"
-STATIC_URL="http://pegasus.javeriana.edu.co/static/"
 DB_USER_PSWD=$(openssl rand -base64 7)
-
 
 docker build -t tgisispujdb ./MySQL
 docker run --name tgisispujdb \
@@ -14,10 +12,3 @@ docker run --name tgisispujdb \
     -e MYSQL_DATABASE=$DB_NAME \
     -d tgisispujdb
 
-
-docker build -t tgisispuj ./Django
-docker run --name tgisispuj \
-	-e STATIC_URL=$STATIC_URL \
-	-p 80:8000 \
-	--link tgisispujdb:tgisispujdb \
-	-d tgisispuj
