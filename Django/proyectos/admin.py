@@ -18,7 +18,7 @@ class Administrador( admin.ModelAdmin ):
     list_display = ('codigo','nombre')
 
 '''
-    Indica los directores de trabajo de grado disponibles. Muestra el nombre y se filtra también por nombre
+    Indica los directores de trabajo de grado disponibles. Muestra el nombre y se filtra tambien por nombre
 ''' 
 @admin.register(Director)
 class Administrador( admin.ModelAdmin ):
