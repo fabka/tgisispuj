@@ -74,7 +74,16 @@ public class Tgisispuj {
             String[] temp = s.split(";");
             lss.add(s.split(";"));
         }
+        //imprimirTG(lss);
         return lss;
+    }
+    
+    public static void imprimirTG ( List<String[]> lista ){
+        for(String[] array: lista){
+            for( String s: array){
+                System.out.println(s);
+            }
+        }
     }
     
     /*
@@ -159,7 +168,7 @@ public class Tgisispuj {
 
             Writer out = new BufferedWriter(new OutputStreamWriter(
                     new FileOutputStream(fileDir), "UTF8"));
-
+            
             for( String[] s: lss ){
                 out.append(Tgisispuj.organizeVariables(s)).append("\r");
             }
