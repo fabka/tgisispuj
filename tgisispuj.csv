@@ -285,7 +285,7 @@ SiPROSOFI: Sistema de Información para la Gestión de Proyectos Sociales construi
 Sistema de Monitoreo del Estado Vial - SiMEV;Diego Andrés Casas Avellaneda ;Javier Francisco López Parra;2012;3;pegasus.javeriana.edu.co/~CIS1230IS03;Istar;CIS1230IS03;-;Si
 Soluciones móviles para el sector restaurantero de Bogotá;Diana Rocio Florián Guzman / Andres Felipe Paez Jaramillo   ;Juan Pablo Garzón Ruiz;2012;3;pegasus.javeriana.edu.co/~CIS1230Si01;SIDre;CIS1230Si01;-;No
 ATENEA MODELO TECNoLÓGICO PARA APOYAR LA INTELIGENCIA COMPETITIVA EN LA EMPRESA CODENSA S.A. ESP;BejaraNo, Katerin Lorena  y Rodríguez, Alisson Fabiana ;Julio Ernesto Carreño Vargas ;2013;1;pegasus.javeriana.edu.co/~CIS1310IS09;ISTAR;CIS1310IS09;-;No
-CLUBMAT: GESTOR DE CLUBES DE MATEMÁTICAS CONSTRUIDO CON TECNOLOGÍAS JAVA EE 6 Y JAVAFX 2;ANDRÉS EDUARDO SÁNCHEZ MENDIETA;Maria Consuelo Franky de Toro;2013;1;pegasus.javeriana.edu.co/~CIS1310IS11/;SIDre;CIS1310IS11;-;No
+CLUBMAT: GESTOR DE CLUBES DE MATEMÁTICAS CONSTRUIDO CON TECNOLOGÍAS JAVA EE 6 Y JAVAFX 2;Andrés Eduardo Sánchez Mendieta;Maria Consuelo Franky de Toro;2013;1;pegasus.javeriana.edu.co/~CIS1310IS11/;SIDre;CIS1310IS11;-;No
 CreaDevManager - BBTK Project Manager;Daniel Felipe González Obando;Maciej Orkisz;2013;1;pegasus.javeriana.edu.co/~CIS1230TK01;TAKINA;CIS1230TK01;-;-
 Enriquecimiento del Sistema de Egresados de la Facultad de Ingeniería de la Pontificia UniverSidad Javeriana;Correa Cogua, Lina Maria y Castelblanco, Katherin;Alexandra Pomares Quimbaya;2013;1;pegasus.javeriana.edu.co/~CIS1310IS01;ISTAR;CIS1310IS01;-;No
 Guía metodológica para la construcción de servicios cooperativos mediados por agentes, Sercoop;Valencia Parada,Daniel Steven;Blanca Elvira Oviedo Torres;2013;1;pegasus.javeriana.edu.co/~CIS1210SD03;SiDRe;CIS1210SD03;-;No
@@ -361,12 +361,28 @@ Cero Fila;Javier Ayala Angel;Efrain Ortiz Pabon;2015;3;pegasus.javeriana.edu.co/
 Prototipo de un Sistema de Información para la administración de Asociados, y Aportes de la Cooperativa “Coocredimar”.;Oscar Javier Rey Caro ;Maria Consuelo Franky;2015;3;pegasus.javeriana.edu.co/~CIS1530AP01;-;CIS1530AP01;Aplicación;No
 Personalización de servicios alimentarios en un campus universitario;Laura Daniela Chacón Hernández, Laura Vanessa López Castrillón y Laura Tatiana Gómez Reina;Angela Cristina Carrillo Ramos;2015;3;pegasus.javeriana.edu.co/~CIS1530AP02;-;CIS1530AP02;Aplicación;No
 Sistema para apoyar el aprendizaje de la Programación utilizando Gamification;Daniel Felipe Arias Ramirez y Daniel Serrano Reyes;Fabio Antonio Avellaneda Pachon;2015;3;pegasus.javeriana.edu.co/~CIS1530AP03;-;CIS1530AP03;Aplicación;No
-Arquitectura para observatorio nacional de oferta y disponibilidad de productos farmacéuticos; Renzo David Rojas Silva ;;2015;3;pegasus.javeriana.edu.co/~CIS1510AP06;-;CIS1530AP04;Aplicación;No
-ParkApp: Aplicación móvil para encontrar parqueaderos disponibles de forma adaptativa y en tiempo real.; Luis Carlos Chicaiza Rojas y Santiago Lizarazu Medina ;;2015;3;pegasus.javeriana.edu.co/~CIS1510AP07;-;CIS1530AP05;Aplicación;No
-Herramienta de modelado pulmonar;Rodolfo Verjel Alonso ;;2015;3;pegasus.javeriana.edu.co/~CIS1510AP08;-;CIS1530AP06;Aplicación;No
-Sistema de Información, Inventarios, Farmacia, Hospital, Logistica, Medicamentos, Software, Cadena de Abastecimiento farmaceutica;Jorge Luis Ruge Leiva y Camilo Andres Sierra Niño;;2015;3;pegasus.javeriana.edu.co/~CIS1510AP09;-;CIS1530AP07;Aplicación;No
-Prediction and Visualization of Physiological Signals in Incremental Exercise Testing;Andrea Carolina Rosales Africano;;2015;3;pegasus.javeriana.edu.co/~CIS1510AP10;-;CIS1530AP08;Aplicación;No
-SIAMP - Sistema de Información para Agencias de Medicina Prepagada;Luis Francisco Rojas Polanco ;;2015;3;pegasus.javeriana.edu.co/~CIS1510AP12;-;CIS1510AP02;Aplicación;No
-Know & Share;Yois Katherine Espíndola Buitrago ;;2015;3;pegasus.javeriana.edu.co/~CIS1510AP13;-;CIS1530IN01;Investigación;No
-SRAP;Jeffrey Nicolás Hooker Corredor y Esneyder Julian Sanchez Mendez;;2015;3;pegasus.javeriana.edu.co/~CIS1510AP14;-;CIS1530IN02;Investigación;No
-Grid accesible;Roberto Rafael García Escallón ;;2015;3;pegasus.javeriana.edu.co/~CIS1510AP15;-;CIS1530IN03;Investigación;No
+Arquitectura para observatorio nacional de oferta y disponibilidad de productos farmacéuticos; Renzo David Rojas Silva ;;2015;3;pegasus.javeriana.edu.co/~CIS1530AP04;-;CIS1530AP04;Aplicación;No
+ParkApp: Aplicación móvil para encontrar parqueaderos disponibles de forma adaptativa y en tiempo real.; Luis Carlos Chicaiza Rojas y Santiago Lizarazu Medina ;;2015;3;pegasus.javeriana.edu.co/~CIS1530AP05;-;CIS1530AP05;Aplicación;No
+Herramienta de modelado pulmonar;Rodolfo Verjel Alonso ;;2015;3;pegasus.javeriana.edu.co/~CIS1530AP06;-;CIS1530AP06;Aplicación;No
+Sistema de Información, Inventarios, Farmacia, Hospital, Logistica, Medicamentos, Software, Cadena de Abastecimiento farmaceutica;Jorge Luis Ruge Leiva y Camilo Andres Sierra Niño;;2015;3;pegasus.javeriana.edu.co/~CIS1530AP07;-;CIS1530AP07;Aplicación;No
+Prediction and Visualization of Physiological Signals in Incremental Exercise Testing;Andrea Carolina Rosales Africano;;2015;3;pegasus.javeriana.edu.co/~CIS1530AP08;-;CIS1530AP08;Aplicación;No
+SIAMP - Sistema de Información para Agencias de Medicina Prepagada;Luis Francisco Rojas Polanco ;;2015;3;pegasus.javeriana.edu.co/~CIS1510AP02;-;CIS1510AP02;Aplicación;No
+Know & Share;Yois Katherine Espíndola Buitrago ;;2015;3;pegasus.javeriana.edu.co/~CIS1530IN01;-;CIS1530IN01;Investigación;No
+SRAP;Jeffrey Nicolás Hooker Corredor y Esneyder Julian Sanchez Mendez;;2015;3;pegasus.javeriana.edu.co/~CIS1530IN02;-;CIS1530IN02;Investigación;No
+Grid accesible;Roberto Rafael García Escallón ;;2015;3;pegasus.javeriana.edu.co/~CIS1530IN03;-;CIS1530IN03;Investigación;No
+Anchurus GEN: Generador de código PHP a partir de los modelos ISML;Frank Sebastián Franco Hernández ;Jaime Pavlich Mariscal;2016;1;pegasus.javeriana.edu.co/~CIS1610AP01;ISTAR;CIS1610AP01;Aplicación;Por definir
+Reciclatón : video juego didáctico para la educación de niños sobre el tratamiento de residuos sólidos;Mónica Cristina Abreo Ariza y Juan Guillermo Cáceres Ruiz ;Javier Francisco Lopez;2016;1;pegasus.javeriana.edu.co/~CIS1610AP02;ISTAR;CIS1610AP02;Aplicación;Por definir
+Yanapay: Sistema de notificaciones y apoyo al rescate usando telefonía móvil;Maria Alejandra Bastidas Melo ;Luis Guillermo Torres;2016;1;pegasus.javeriana.edu.co/~CIS1610AO03;Ninguno;CIS1610AO03;Aplicación;Por definir
+B-ATTENTION 2.0: Software de guía psicoeducativa y de manejo neurocomportamental para niños con déficit de atención.;Manuel De Jesús Morón Márquez y Cesar Esteban Sacristan Rivera;Luis Guillermo Torres;2016;1;pegasus.javeriana.edu.co/~CIS1610AP04;ISTAR;CIS1610AP04;Aplicación;Por definir
+OCLING: Aplicación para apoyar la enseñaza de química organica en universidades;Daniel Oswaldo Melo Romero;Luisa Fda. Barrera León;2016;1;pegasus.javeriana.edu.co/~CIS1610AP05;ISTAR;CIS1610AP05;Aplicación;Por definir
+La Magia de las Palabras: App diseñada para el apoyo al desarrollo linguistico en niños;Juan Pablo Rodriguez Montoya y Gabriel Fuentes Amorocho ;Luisa Fda. Barrera León;2016;1;pegasus.javeriana.edu.co/~CIS1610AP06;ISTAR;CIS1610AP06;Aplicación;Por definir
+TurnOs: Sistema de asignación eficiente de turnos y cálculo de nómina para los empleados de una empresa prestadora de servicios temporales.;Daniel Ruge Martínez y Juan Sebastián Bustos García;Maria Consuelo Franky;2016;1;pegasus.javeriana.edu.co/~CIS1610AP08;Ninguno;CIS1610AP08;Aplicación;Por definir
+Herramienta de modelado pulmonar;Rodolfo Verjel Alonso;Gabriel Avila;2016;1;pegasus.javeriana.edu.co/~CIS1530AP06;-;CIS1530AP06;Aplicación;Por definir
+Propuesta de un plan de negocios para la creación de una empresa dedicada a prestar servicios de marketing para Mipymes del comercio minorista utilizando TIC;Guillermo Andres Murillo Castillo y Julian David Baquero Moreno ;Vladimir Guzman;2016;1;pegasus.javeriana.edu.co/~CIS1610EM01;Ninguno;CIS1610EM01;Emprendimiento;Por definir
+Colombia exporta fácil;Camilo Andres Valencia Osorio;Efrain Ortiz Pabon;2016;1;pegasus.javeriana.edu.co/~CIS1610EM02;Ninguno;CIS1610EM02;Emprendimiento;Por definir
+Guía metodológica Oracle HCM Cloud para Itis Support ;Felipe Andrés Jaramillo Rodríguez y Álvaro Eduardo Agudelo Gutierrez;Guillermo Cepeda;2016;1;pegasus.javeriana.edu.co/~CIS1610IN01;Ninguno;CIS1610IN01;Investigación;Por definir
+"Modelado y manipulación del pulmón mediante la interacción natural de usuario
+Modelado y manipulación del pulmón
+Mediante la interacción natural de usuario
+";Daniela Prada Sánchez y Juan Sebastián Ulloa Monroy ;Leonardo Florez Valencia;2016;1;pegasus.javeriana.edu.co/~CIS1610IN02;BASPI;CIS1610IN02;Investigación;Por definir
+AKLAS: dispositivo de orientación para invidentes basado en el principio de ecolocalización;Omar Andres Gonzalez Mayorga y Andrés Ricardo Scarpetta Rugeles;Luis Guillermo Torres;2016;1;pegasus.javeriana.edu.co/~CIS1610IN03;SIDRE;CIS1610IN03;Investigación;Por definir
