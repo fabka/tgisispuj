@@ -1,9 +1,8 @@
-#!/bin/sh
 DB_ROOT_PSWD=$(openssl rand -base64 7)
 DB_NAME="tgisispujdb"
 DB_USER="tgisispujdb"
 DB_USER_PSWD=$(openssl rand -base64 7)
-STATIC_URL="http://pegasus.javeriana.edu.co/static/"
+printenv
 
 docker build -t tgisispujdb ./MySQL
 docker run --name tgisispujdb \
@@ -16,10 +15,11 @@ docker run --name tgisispujdb \
 
 #Tomado de https://github.com/vishnubob/wait-for-it
 ./wait-for-it.sh \
-	-h 127.0.0.1 \
+	-h MYSQL_HOST \
 	-p 3306 \
 	-t 30
 
+STATIC_URL="http://pegasus.javeriana.edu.co/static/"
 docker build -t tgisispuj ./Python
 docker run --name tgisispuj \
 	--link tgisispujdb:tgisispujdb \
