@@ -1,3 +1,4 @@
+#!/bin/sh
 DB_ROOT_PSWD=$(openssl rand -base64 7)
 DB_NAME="tgisispujdb"
 DB_USER="tgisispujdb"
