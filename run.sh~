@@ -26,7 +26,7 @@ docker run --name $NOMBRE_CONTENEDOR_BD \
 STATIC_URL="http://pegasus.javeriana.edu.co/static/"
 docker build -t tgisispuj ./Python
 docker run --name tgisispuj \
-	--link $NOMBRE_CONTENEDOR_BD:$NOMBRE_CONTENEDOR_BD \
+	--link $NOMBRE_CONTENEDOR_BD:db \
 	-e STATIC_URL=$STATIC_URL \
 	-p 80:80 \
 	-d $NOMBRE_CONTENEDOR
