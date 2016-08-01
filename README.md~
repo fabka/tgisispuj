@@ -24,10 +24,8 @@ Para correr el proyecto solo es necesario tener instalado [docker](https://docke
 #Importante
 Se debe programar un backup de los datos exportando el dump desde la base de datos, aunque se programe la recuperación de datos cada cierto tiempo, es recomendable que se actualice el backup cada vez que los contenedores se vayan a apagar. Este backup se realiza ejecutando el siguiente comando:
 ```
-sudo docker exec -i tgisispujdb bash -c 'mysqldump -p"$MYSQL_ROOT_PASSWORD" tgisispujdb' > $RUTA_DIRECTORIO_BACKUPS
+sudo docker exec -i tgisispujdb bash -c 'mysqldump -p"$MYSQL_ROOT_PASSWORD" tgisispujdb' > tgisispuj_$(date +%Y%m%d%H%M).sql
 ```
-Donde $RUTA_DIRECTORIO_BACKUPS es el directorio escogido para almacenar las copias de respaldo de la base de datos.
-
 #Datos y peticiones al servidor
 Los datos mostrados en la página web corresponden a los trabajos de grado de pregrado y maestría del departamento de Ingeniería de sistemas de la Pontificia Uiversidad Javeriana. Ademas de la tabla, la información de los trabajos de grado se puede obtener a través de **_http://pegasus.javeriana.edu.co/api_**.
 ##Filtros
