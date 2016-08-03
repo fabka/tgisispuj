@@ -10,9 +10,7 @@ var regex = '';
 var encabezado = $('.tabla-principal .encabezado');
 var encabezadoFijo = $('.tabla-principal .encabezado-fijo');
 var stickyThead = encabezado.offset().top;
-var api_url = 'http://tgisispuj-be-fabka.c9users.io/api/';
-var static_url = 'http://tgisispuj-cdn-fabka.c9users.io/';
-
+var static_url = 'http://pegasus.javeriana.edu.co/static/';
 /**
  * Fixed header
 */
@@ -56,7 +54,7 @@ $(document).keypress(function(e) {
 */
 function constructor() {
 	$.ajax({
-		url : '/api',
+		url : './api',
 		success : function(data) {
 			addProyectos(data);
 		},
@@ -68,7 +66,7 @@ function constructor() {
 
 function busqueda(){
     anio = $("#search-by-year-bar").val();
-    var url = '/api/busqueda?general='+general+'&modalidad='+modalidad+'&grupoInvestigacion='+grupoInvestigacion+'&mencionHonor='+mencionHonor+'&anio='+anio+'&semestre='
+    var url = './api/busqueda?general='+general+'&modalidad='+modalidad+'&grupoInvestigacion='+grupoInvestigacion+'&mencionHonor='+mencionHonor+'&anio='+anio+'&semestre='
 		    +periodo+'&tituloAplicado='+tituloAplicado;
     $.ajax({
 		url : url,
