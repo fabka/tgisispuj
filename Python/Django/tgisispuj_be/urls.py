@@ -19,8 +19,8 @@ from django.contrib import admin
 from proyectos import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', views.proyectos, name="proyectos"),
-    url(r'^api/busqueda', views.busqueda, name="busqueda"),
-    url(r'^api', views.api, name="api"),
+    url(r'^portal/admin/', admin.site.urls),
+    url(r'^portal/$', views.proyectos, name="proyectos"),
+    url(r'^portal/api/busqueda', views.busqueda, name="busqueda"),
+    url(r'^portal/api', views.api, name="api"),
 ]

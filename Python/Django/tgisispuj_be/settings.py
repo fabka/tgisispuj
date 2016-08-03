@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'tgisispuj_be.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('TGISISPUJDB_ENV_MYSQL_DATABASE'),
-        'USER': 'root',
-        'PASSWORD': os.getenv('TGISISPUJDB_ENV_MYSQL_ROOT_PASSWORD'),
-        'HOST':  'tgisispujdb',
-        'PORT': os.getenv('TGISISPUJDB_PORT_3306_TCP_PORT')
+        'NAME': os.getenv('DB_ENV_MYSQL_DATABASE'),
+        'USER': os.getenv('DB_ENV_MYSQL_USER'),
+        'PASSWORD': os.getenv('DB_ENV_MYSQL_PASSWORD'),
+        'HOST':  os.getenv('DB_PORT_3306_TCP_ADDR'),
+        'PORT': os.getenv('DB_PORT_3306_TCP_PORT')
     }
 }
 #Con = MySQLdb.Connect(host="tgisispujdb", port=3306, user=os.getenv('TGISISPUJDB_ENV_MYSQL_USER'), passwd=os.getenv('TGISISPUJDB_ENV_MYSQL_ROOT_PASSWORD'), db=os.getenv('TGISISPUJDB_ENV_MYSQL_DATABASE'))
