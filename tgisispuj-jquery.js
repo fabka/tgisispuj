@@ -130,31 +130,46 @@ $('#busqueda-avanzada-btn').click(function() {
 //set modality button
 $(".modality-button-item").click(function() {
     modalidad = $(this).text();
-    $("#modality-button").text(modalidad);
+    $("#modality-button").text(modalidad+" ");
+    $("#modality-button").append($('<span>',{
+      'class':'caret',
+    }));
 });
 
 //set mencion de honor
 $(".honor-mention-button-item").click(function() {
     mencionHonor = $(this).text();
-    $("#honor-mention-button").text(mencionHonor);
+    $("#honor-mention-button").text(mencionHonor+" ");
+    $("#honor-mention-button").append($('<span>',{
+      'class':'caret',
+    }));
 });
 
 //obtener el periodo
 $(".period-button-item").click(function() {
   periodo = $(this).text();
-  $("#period-button").text(periodo);
+  $("#period-button").text(periodo+" ");
+  $("#period-button").append($('<span>',{
+      'class':'caret',
+    }));
 });
 
 // grupo de investigación
 $(".research-group-button-item").click(function() {
   grupoInvestigacion = $(this).text();
-  $("#research-group-button").text(grupoInvestigacion);
+  $("#research-group-button").text(grupoInvestigacion+" ");
+  $("#research-group-button").append($('<span>',{
+      'class':'caret',
+    }));
 });
 
 // titulo aplicado
 $(".titulo-aplicado-button-item").click(function() {
   tituloAplicado = $(this).text();
-  $(".titulo-aplicado-button").text(tituloAplicado);
+  $("#titulo-aplicado-button").text(tituloAplicado+" ");
+  $("#titulo-aplicado-button").append($('<span>',{
+      'class':'caret',
+    }));
 });
 
 $("#clear-button").click(function() {
