@@ -154,7 +154,7 @@ $(".research-group-button-item").click(function() {
 // titulo aplicado
 $(".titulo-aplicado-button-item").click(function() {
   tituloAplicado = $(this).text();
-  $(".titulo-aplicado-button").text(tituloAplicado);
+  $(".titulo-aplicado-button-item").text(tituloAplicado);
 });
 
 $("#clear-button").click(function() {
