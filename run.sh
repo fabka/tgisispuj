@@ -28,6 +28,6 @@ docker build -t tgisispuj ./Python
 docker run --name tgisispuj \
 	--link $NOMBRE_CONTENEDOR_BD:db \
 	-e STATIC_URL=$STATIC_URL \
-        -p 192.168.122.1:8084:80\
+        -p 0.0.0.0:80:80\
         -m 512M\
 	-d $NOMBRE_CONTENEDOR
