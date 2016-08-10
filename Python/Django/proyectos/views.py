@@ -104,6 +104,7 @@ def busqueda(request):
         tituloAplicado = request.GET.get('tituloAplicado', '')
     if general:
 	general = strip_accents(general)
+        print(general)
         qGeneral = qGeneral | Q(nombre__icontains=general)
         qGeneral = qGeneral | Q(autor__icontains=general)
         qGeneral = qGeneral | Q(director__nombre__icontains=general)
@@ -207,7 +208,7 @@ def handler503(request):
     return response
 
 '''
-   Función encargada de quitar los acentos de una cadena de caracteres.
+   Funcion encargada de quitar los acentos de una cadena de caracteres.
    tomada de http://stackoverflow.com/a/518232
 '''
 def strip_accents(s):

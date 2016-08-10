@@ -13,6 +13,7 @@ docker run --name $NOMBRE_CONTENEDOR_BD \
 	-e MYSQL_ROOT_PASSWORD=$DB_USER_ROOT_PSWD \
 	-e MYSQL_DATABASE=$NOMBRE_BD \
         -v /mnt/backUp/pegasus/last/portal:/docker-entrypoint-initdb.d:ro\
+        -m 512M\
 	-d mysql:5.5 
 
 #Tomado de https://github.com/vishnubob/wait-for-it
@@ -28,4 +29,5 @@ docker run --name tgisispuj \
 	--link $NOMBRE_CONTENEDOR_BD:db \
 	-e STATIC_URL=$STATIC_URL \
         -p 192.168.122.1:8084:80\
+        -m 512M\
 	-d $NOMBRE_CONTENEDOR
