@@ -16,6 +16,7 @@ from .models import GrupoInvestigacion
 from django.db.models import Count
 from django.db.models import Q
 import json
+import unicodedata
 
 '''
     Carga los datos proporcionados en el administrador de Django, para que puedan ser presentados en
@@ -103,7 +104,6 @@ def busqueda(request):
         semestre = request.GET.get('semestre', '')
         tituloAplicado = request.GET.get('tituloAplicado', '')
     if general:
-	general = strip_accents(general)
         print(general)
         qGeneral = qGeneral | Q(nombre__icontains=general)
         qGeneral = qGeneral | Q(autor__icontains=general)
@@ -212,5 +212,5 @@ def handler503(request):
    tomada de http://stackoverflow.com/a/518232
 '''
 def strip_accents(s):
-   return ''.join(c for c in unicodedata.normalize('NFD', s)
-                  if unicodedata.category(c) != 'Mn')
+    return ''.join(c for c in unicodedata.normalize('NFD', s)
+        if unicodedata.category(c) != 'Mn')
