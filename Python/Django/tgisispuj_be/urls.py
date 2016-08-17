@@ -17,10 +17,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from proyectos import views
+import os
+
+direccion_intermedia = os.getenv('MIDDLE_URL')
 
 urlpatterns = [
-    url(r'^portal/admin/', admin.site.urls),
-    url(r'^portal/$', views.proyectos, name="proyectos"),
-    url(r'^portal/api/busqueda', views.busqueda, name="busqueda"),
-    url(r'^portal/api', views.api, name="api"),
+    url(r'^'+direccion_intermedia+'/admin/', admin.site.urls),
+    url(r'^'+direccion_intermedia+'/$', views.proyectos, name="proyectos"),
+    url(r'^'+direccion_intermedia+'/api/busqueda', views.busqueda, name="busqueda"),
+    url(r'^'+direccion_intermedia+'/api', views.api, name="api"),
 ]

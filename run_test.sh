@@ -1,4 +1,5 @@
 #!/bin/sh
+MIDDLE_URL="portal" 
 NOMBRE_CONTENEDOR="tgisispuj"
 NOMBRE_CONTENEDOR_BD=$NOMBRE_CONTENEDOR"db"
 NOMBRE_BD=$NOMBRE_CONTENEDOR_BD
@@ -32,6 +33,7 @@ docker build -t tgisispuj ./Python
 docker run --name tgisispuj \
 	--link $NOMBRE_CONTENEDOR_BD:db \
 	-e STATIC_URL=$STATIC_URL \
+	-e MIDDLE_URL=$MIDDLE_URL \
         -p 0.0.0.0:80:80\
         -m 512M\
 	-d $NOMBRE_CONTENEDOR
