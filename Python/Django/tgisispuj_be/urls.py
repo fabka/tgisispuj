@@ -20,10 +20,12 @@ from proyectos import views
 import os
 
 direccion_intermedia = os.getenv('MIDDLE_URL')
+if direccion_intermedia:
+    direccion_intermedia=direccion_intermedia+'/'
 
 urlpatterns = [
-    url(r'^'+direccion_intermedia+'/admin/', admin.site.urls),
-    url(r'^'+direccion_intermedia+'/$', views.proyectos, name="proyectos"),
-    url(r'^'+direccion_intermedia+'/api/busqueda', views.busqueda, name="busqueda"),
-    url(r'^'+direccion_intermedia+'/api', views.api, name="api"),
+    url(r'^'+direccion_intermedia+'admin/', admin.site.urls),
+    url(r'^'+direccion_intermedia+'$', views.proyectos, name="proyectos"),
+    url(r'^'+direccion_intermedia+'api/busqueda', views.busqueda, name="busqueda"),
+    url(r'^'+direccion_intermedia+'api', views.api, name="api"),
 ]
