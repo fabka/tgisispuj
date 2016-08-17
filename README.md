@@ -5,13 +5,6 @@
 
 Especial agradecimiento a [@davidcalle9430](https://github.com/davidcalle9430) durante el desarrollo del proyecto. 
 
-# Aplicación para la gestión de trabajos de grado
-## Ingenieria de Sistemas, Pontificia universidad javeriana.
-**ES:** Aplicación web que gestiona la información de los trabajos de grado presentados al departamento de ingeniería de sistemas de la Pontificia Universidad Javeriana.
-**EN:** Web application for managing degree works of the Pontifical Xavierian University's Systems Engineering department.
-
-Especial agradecimiento a [@davidcalle9430](https://github.com/davidcalle9430) durante el desarrollo del proyecto. 
-
 #Resumen
 
 El backend del proyecto está realizado en Django conectado a una base de datos sql, el front end está hecho con **html5** **css3** y *javascript** utilizando **JQuery**. Las versiones necesarias para el buen funcionamiento se describen en el archivo **_/Django/requirements.txt_** sin embargo se muestran a continuación.
@@ -72,10 +65,10 @@ Encontraría los trabajos de grado realizados en el 2015 durante el tercer perio
 
 #Pruebas
 
-Se ha creado el branch (test) el cual está dedicado a pruebas del servidor. Por lo tanto el archivo ejecutable para ejecutar este proyecto es ./run_test.sh. La diferencia radica en el host usado (0.0.0.0) y una parte del script dedicada a poblar la base de datos con datos de prueba. 
+Se ha creado el branch (test) el cual está dedicado a pruebas del servidor. Por lo tanto el archivo ejecutable para ejecutar este proyecto es **./run_test.sh**. La diferencia radica en el host usado (0.0.0.0) y una parte del script dedicada a poblar la base de datos con datos de prueba. 
 
 ##Correr el proyecto
-Para correr el proyecto solo es necesario tener instalado [docker](https://docker.com). El proyecto se puede ejecutar desde el archivo **_/run.sh** que desde una consola de linux, sería:
+Para correr el proyecto solo es necesario tener instalado [docker](https://docker.com). El proyecto se puede ejecutar desde el archivo **_/run_test.sh** que desde una consola de linux, sería:
 ```
 ./run_test.sh
 ```
@@ -85,3 +78,15 @@ Si se quiere guardar una copia de la base de datos se debe ejecutar el siguiente
 ```
 sudo docker exec -i tgisispujdb bash -c 'mysqldump -p"$MYSQL_ROOT_PASSWORD" tgisispujdb' > MYSQL/dump.sql
 ```
+
+#Branches
+A continuación se describen los branches disponibles y su uso.
+
+##Art
+Este branch contiene todos los elementos tales como imagenes e iconos usados para la aplicación. Contiene algunos archivos .ai para ser usados en Illustrator.
+
+##Static
+Esta branch contiene todos los archivos estáticos los cuales actualmente se proveen desde [aqui](pegasus.javeriana.edu.co/static)
+
+##Pruebas
+Ya descrito anteriormente, este branch se usa para hacer pruebas, correción de errores, bugs y probar nuevas características.
