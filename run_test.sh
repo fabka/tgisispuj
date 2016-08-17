@@ -22,6 +22,10 @@ docker run --name $NOMBRE_CONTENEDOR_BD \
 	-p 3306 \
 	-t 90
 
+#Poblar la base de datos para pruebas
+docker cp MySQL/dump.sql tgisispujdb:/tmp/dump.sql
+sudo docker exec -i tgisispujdb bash -c 'mysql -u root -p$MYSQL_ROOT_PASSWORD tgisispujdb < /tmp/dump.sql'
+
 #Contenedor Django
 STATIC_URL="http://pegasus.javeriana.edu.co/static/"
 docker build -t tgisispuj ./Python
