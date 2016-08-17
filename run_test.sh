@@ -14,7 +14,7 @@ docker run --name $NOMBRE_CONTENEDOR_BD \
 	-e MYSQL_ROOT_PASSWORD=$DB_USER_ROOT_PSWD \
 	-e MYSQL_DATABASE=$NOMBRE_BD \
         -v /mnt/backUp/pegasus/last/portal:/docker-entrypoint-initdb.d:ro\
-	-m 512M\
+        -m 512M\
 	-d mysql:5.5 
 
 #Tomado de https://github.com/vishnubob/wait-for-it
@@ -23,6 +23,10 @@ docker run --name $NOMBRE_CONTENEDOR_BD \
 	-p 3306 \
 	-t 90
 
+#Poblar la base de datos para pruebas
+docker cp MySQL/dump.sql tgisispujdb:/tmp/dump.sql
+sudo docker exec -i tgisispujdb bash -c 'mysql -u root -p$MYSQL_ROOT_PASSWORD tgisispujdb < /tmp/dump.sql'
+
 #Contenedor Django
 STATIC_URL="http://pegasus.javeriana.edu.co/static/"
 docker build -t tgisispuj ./Python
@@ -30,6 +34,6 @@ docker run --name tgisispuj \
 	--link $NOMBRE_CONTENEDOR_BD:db \
 	-e STATIC_URL=$STATIC_URL \
 	-e MIDDLE_URL=$MIDDLE_URL \
-        -p 192.168.122.1:8084:80\
-	-m 512M\
+        -p 0.0.0.0:80:80\
+        -m 512M\
 	-d $NOMBRE_CONTENEDOR
