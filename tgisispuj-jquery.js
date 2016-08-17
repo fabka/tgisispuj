@@ -14,6 +14,12 @@ var static_url = 'http://pegasus.javeriana.edu.co/static/';
 /**
  * Fixed header
 */
+
+$.ajaxSetup({
+        scriptCharset: "iso-8859-9",
+        cache: false
+});
+
 $(function () {
     var theadWidth = encabezado.width();
     var nombre_th, autor_th, director_th, website_th, detalles_th;
@@ -64,12 +70,30 @@ function constructor() {
 	})
 }
 
+var entityMap = {
+    'á': 'a',
+    'é': 'e;',
+    'í': 'i',
+    'ó': 'o',
+    "ú": 'u',
+    'ñ': 'n'
+  };
+
+  function escapeHtml (string) {
+    return String(string).replace(/[áéíóúñ]/g, function fromEntityMap (s) {
+      return entityMap[s];
+    });
+  }
+
 function busqueda(){
-    anio = $("#search-by-year-bar").val();
-    var url = './api/busqueda?general='+general+'&modalidad='+modalidad+'&grupoInvestigacion='+grupoInvestigacion+'&mencionHonor='+mencionHonor+'&anio='+anio+'&semestre='
-		    +periodo+'&tituloAplicado='+tituloAplicado;
-    $.ajax({
-		url : url,
+    	anio = $("#search-by-year-bar").val();
+	var url = './api/busqueda?general='+general+'&modalidad='+modalidad+
+		'&grupoInvestigacion='+grupoInvestigacion+'&mencionHonor='+mencionHonor+
+		'&anio='+anio+'&semestre='+periodo+'&tituloAplicado='+tituloAplicado;
+	$.ajax({
+		url : escapeHtml(url),
+		contentType: "application/x-www-form-urlencoded;charset=ISO-8859-9",
+		dataType: 'json',
 		success : function(data) {
 			addProyectos(data);
 		},
