@@ -3,7 +3,7 @@
 **ES:** Aplicación web que gestiona la información de los trabajos de grado presentados al departamento de ingeniería de sistemas de la Pontificia Universidad Javeriana.
 **EN:** Web application for managing degree works of the Pontifical Xavierian University's Systems Engineering department.
 
-Especial agradecimiento a [@davidcalle9430](https://github.com/davidcalle9430) durante el desarrollo del proyecto. 
+Especial agradecimiento a [@davidfcalle](https://github.com/davidfcalle) durante el desarrollo del proyecto. 
 
 #Resumen
 
