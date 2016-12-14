@@ -19,6 +19,8 @@ from django.db.models import Q
 import json
 import unicodedata
 
+
+
 '''
     Carga los datos proporcionados en el administrador de Django, para que puedan ser presentados en
     el html.
@@ -43,60 +45,15 @@ def proyectos(request):
     return HttpResponse(template.render(context, request))
 
 '''
-    Esta funcion entrega todos los trabajos de grado disponibles sin ningun filtro
-'''
-def api(request):
-
-    modalidad_nombre = ''
-    mencionHonor_nombre = ''
-    grupoInvestigacion_nombre = ''
-
-    proyectos = Proyecto.objects.all().order_by('periodoAcademico__anio', 'periodoAcademico__semestre', 'nombre')
-    list = [] #create list
-    for p in proyectos: #populate list
-
-        if p.modalidad is None:
-            modalidad_nombre = ''
-        else:
-            modalidad_nombre = p.modalidad.nombre
-
-        if p.mencionHonor is None:
-            mencionHonor_nombre = ''
-        else:
-            mencionHonor_nombre = p.mencionHonor.nombre
-
-        if p.grupoInvestigacion is None:
-            grupoInvestigacion_nombre = ''
-        else:
-            grupoInvestigacion_nombre = p.grupoInvestigacion.nombre
-
-        if not p.periodoAcademico.semestre:
-            periodoAcademico = p.periodoAcademico.anio
-        else:
-            periodoAcademico = p.periodoAcademico.anio + '-' + p.periodoAcademico.semestre
-
-        list.append({'nombre':p.nombre,
-            'autor':p.autor,
-            'director': p.director.nombre,
-            'paginaWeb':p.paginaWeb,
-            'codigo': p.codigo,
-            'tituloAplicado': p.tituloAplicado.nombre,
-            'periodoAcademico':periodoAcademico,
-            'modalidad': modalidad_nombre,
-            'mencionHonor':mencionHonor_nombre,
-            'grupoInvestigacion':grupoInvestigacion_nombre })
-
-    data = json.dumps(list)
-    return HttpResponse(data, content_type='application/json')
-
-'''
     Esta funcion analiza las peticiones y devuelve los trabajos de grado con los filtros que se hayan solicitado.
 '''
-def busqueda(request):
-
+cantidad_proyectos = Proyecto.objects.all().count()
+def api(request):
     qObjects = Q()
     qGeneral = Q()
     if request.method == 'GET':
+        desde = request.GET.get('desde', '')
+        hasta = request.GET.get('hasta', '')
         general = request.GET.get('general', '')
         modalidad = request.GET.get('modalidad', '')
         grupoInvestigacion = request.GET.get('grupoInvestigacion', '')
@@ -104,6 +61,12 @@ def busqueda(request):
         anio = request.GET.get('anio', '')
         semestre = request.GET.get('semestre', '')
         tituloAplicado = request.GET.get('tituloAplicado', '')
+    if not desde:
+        if desde < 0 or desde > cantidad_proyectos or desde > hasta:
+            desde = 0
+    if not hasta:
+        if hasta < 0 or hasta > cantidad_proyectos or desde > hasta:
+            hasta = Proyecto.objects.all().count()
     if general:
         print(general)
         qGeneral = qGeneral | Q(nombre__icontains=general)
@@ -122,7 +85,7 @@ def busqueda(request):
         qObjects = qObjects & Q(periodoAcademico__semestre=semestre)
     if tituloAplicado:
         qObjects = qObjects & Q(tituloAplicado__nombre=tituloAplicado)
-    proyectos = Proyecto.objects.all().filter( qObjects ).order_by('periodoAcademico__anio', 'periodoAcademico__semestre', 'nombre');
+    proyectos = Proyecto.objects.all().filter( qObjects ).order_by('-periodoAcademico__anio', 'periodoAcademico__semestre', 'nombre')[desde:hasta];
 
     list = [] #create list
     if proyectos:
