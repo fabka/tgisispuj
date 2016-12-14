@@ -11,6 +11,7 @@ var encabezado = $('.tabla-principal .encabezado');
 var encabezadoFijo = $('.tabla-principal .encabezado-fijo');
 var stickyThead = encabezado.offset().top;
 var static_url = 'http://pegasus.javeriana.edu.co/static/';
+var proyectosPorSolicitud = 20;
 /**
  * Fixed header
 */
@@ -58,16 +59,33 @@ $(document).keypress(function(e) {
 /*
     funciones ajax
 */
+var callback;
 function constructor() {
-	$.ajax({
-		url : './api',
-		success : function(data) {
-			addTGs(data);
-		},
-		error : function(data) {
-			console.log("Error al recuperar los datos");
-		}
-	})
+    var hayProyectos = true;
+    var inicio = 0;
+    var final = proyectosPorSolicitud;
+    callback = function(data) {
+        addTGs(data);
+        console.log(final);
+        if(data.length == proyectosPorSolicitud){
+            getData(inicio, final, callback);
+            inicio = final + 1;
+            final += proyectosPorSolicitud + 1;
+        }
+    };
+    getData(inicio, final, callback);
+}
+
+function getData(inicio, final, callback){
+    $.ajax({
+        url : './api?desde='+inicio+'&hasta='+final,
+        success : function(data){
+            callback(data)
+        },
+        error : function(data) {
+            console.log("Error al recuperar los datos");
+        }
+    })
 }
 
 var entityMap = {
@@ -87,7 +105,7 @@ var entityMap = {
 
 function busqueda(){
     	anio = $("#search-by-year-bar").val();
-	var url = './api/busqueda?general='+general+'&modalidad='+modalidad+
+	var url = './api?general='+general+'&modalidad='+modalidad+
 		'&grupoInvestigacion='+grupoInvestigacion+'&mencionHonor='+mencionHonor+
 		'&anio='+anio+'&semestre='+periodo+'&tituloAplicado='+tituloAplicado;
 	$.ajax({
@@ -227,7 +245,6 @@ $(document).on('click', '.btn-detalles', function(e) {
     controlador tabla
 */
 function addTGs(proyectos){
-    $('table.tabla-principal tbody.cuerpo-principal').empty();
     for (var i=0; i<proyectos.length; i++) {
         addTG(proyectos[i].nombre,proyectos[i].autor,proyectos[i].director,
         proyectos[i].codigo, proyectos[i].paginaWeb, proyectos[i].periodoAcademico, proyectos[i].modalidad, 
@@ -245,6 +262,8 @@ function addTG(nombre, autor, director, codigo, website, periodoAcademico, modal
 }
 
 function crearFilaDetalles(codigo, periodoAcademico, modalidad, mencionHonor, tituloAplicado, grupoInvestigacion){
+   if(codigo == null)
+        codigo = '';
    return detalles = $(''+
       '<tr class="detalles">'+
           '<td colspan="4">'+

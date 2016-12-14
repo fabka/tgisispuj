@@ -496,14 +496,16 @@ header .titulo h2{
         width: 100%;
     }
     header .titulo h1{
-        font-size: 5vmin;
+        font-size: 3vmin;
     }
     header .titulo h2{
-        font-size: 5vmin;
+        font-size: 3vmin;
     }
     #subtitulo{
+        flex-direction: column;
         justify-content: center;
         align-items:center;
+        font-size: 5vmin;
     }
     #pipe{
         display: none;
