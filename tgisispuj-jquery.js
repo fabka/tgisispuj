@@ -62,7 +62,7 @@ function constructor() {
 	$.ajax({
 		url : './api',
 		success : function(data) {
-			addProyectos(data);
+			addTGs(data);
 		},
 		error : function(data) {
 			console.log("Error al recuperar los datos");
@@ -95,7 +95,7 @@ function busqueda(){
 		contentType: "application/x-www-form-urlencoded;charset=ISO-8859-9",
 		dataType: 'json',
 		success : function(data) {
-			addProyectos(data);
+			addTGs(data);
 		},
 		error : function(data) {
 			console.log("Error al recuperar los datos");
@@ -106,7 +106,6 @@ function busqueda(){
 /*
     Controladores de filtros
 */
-
 function clearAttributes(){
     
     constructor();
@@ -227,10 +226,10 @@ $(document).on('click', '.btn-detalles', function(e) {
 /*
     controlador tabla
 */
-function addProyectos(proyectos){
+function addTGs(proyectos){
     $('table.tabla-principal tbody.cuerpo-principal').empty();
     for (var i=0; i<proyectos.length; i++) {
-        addProyecto(proyectos[i].nombre,proyectos[i].autor,proyectos[i].director,
+        addTG(proyectos[i].nombre,proyectos[i].autor,proyectos[i].director,
         proyectos[i].codigo, proyectos[i].paginaWeb, proyectos[i].periodoAcademico, proyectos[i].modalidad, 
         proyectos[i].mencionHonor, proyectos[i].tituloAplicado, proyectos[i].grupoInvestigacion);
     }
@@ -238,7 +237,7 @@ function addProyectos(proyectos){
     $('.btn-detalles').text('+');
 }
 
-function addProyecto(nombre, autor, director, codigo, website, periodoAcademico, modalidad, mencionHonor, tituloAplicado, grupoInvestigacion){
+function addTG(nombre, autor, director, codigo, website, periodoAcademico, modalidad, mencionHonor, tituloAplicado, grupoInvestigacion){
     var principal = crearPrimeraFila(nombre, autor, director, codigo, website);
     var detalles = crearFilaDetalles(codigo, periodoAcademico, modalidad, mencionHonor, tituloAplicado, grupoInvestigacion);
     principal.appendTo($('table.tabla-principal tbody.cuerpo-principal'));
@@ -246,208 +245,74 @@ function addProyecto(nombre, autor, director, codigo, website, periodoAcademico,
 }
 
 function crearFilaDetalles(codigo, periodoAcademico, modalidad, mencionHonor, tituloAplicado, grupoInvestigacion){
-   var detalles_tr;
-   var tr_1,tr_2,tr_3,tr_4,tr_5,tr_6;
-   var td_11, td_12,td_21,td_22,td_31,td_32,td_41,td_42,td_51,td_52,td_61,td_62;
-   var table_1, table_2;
-   var div_1, div_21, div_22;
-   var td_main;
-   
-   /**
-    * Tabla 1
-    */
-   td_11 = $('<td>',{
-     'class':'col-titulo',
-     text:'Código:'
-   });
-   td_12 = $('<td>',{
-     text:codigo
-   });
-   tr_1 = $('<tr>');
-   tr_1.append(td_11);
-   tr_1.append(td_12);
-   
-   td_21 = $('<td>',{
-     'class':'col-titulo',
-     text:'Periodo Académico:'
-   });
-   td_22 = $('<td>',{
-     text:periodoAcademico
-   });
-   tr_2 = $('<tr>');
-   tr_2.append(td_21);
-   tr_2.append(td_22);
-   
-   td_31 = $('<td>',{
-     'class':'col-titulo',
-     text:'Título aplicado:'
-   });
-   td_32 = $('<td>',{
-     text:tituloAplicado
-   });
-   tr_3 = $('<tr>');
-   tr_3.append(td_31);
-   tr_3.append(td_32);
-   
-   table_1 = $('<table>',{
-     'class':'tabla-detalles'
-   });
-   table_1.append(tr_1);
-   table_1.append(tr_2);
-   table_1.append(tr_3);
-   
-   div_21 = $('<div>',{
-     'class':'col-xs-12 col-md-4 primero'
-   });
-   div_21.append(table_1);
-   
-   /**
-    * tabla 2
-    */
-   td_41 = $('<td>',{
-     'class':'col-titulo',
-     text:'Grupo de investigación:'
-   });
-   td_42 = $('<td>',{
-     text:grupoInvestigacion
-   });
-   tr_4 = $('<tr>');
-   tr_4.append(td_41);
-   tr_4.append(td_42);
-   
-   td_51 = $('<td>',{
-     'class':'col-titulo',
-     text:'Modalidad:'
-   });
-   td_52 = $('<td>',{
-     text:modalidad
-   });
-   tr_5 = $('<tr>');
-   tr_5.append(td_51);
-   tr_5.append(td_52);
-   
-   td_61 = $('<td>',{
-     'class':'col-titulo',
-     text:'Mención de honor:'
-   });
-   td_62 = $('<td>',{
-     text:mencionHonor
-   });
-   tr_6 = $('<tr>');
-   tr_6.append(td_61);
-   tr_6.append(td_62);
-   
-   table_2 = $('<table>',{
-     'class':'tabla-detalles'
-   });
-   table_2.append(tr_4);
-   table_2.append(tr_5);
-   table_2.append(tr_6);
-   
-   div_22 = $('<div>',{
-     'class':'col-xs-12 col-md-4 segundo'
-   });
-   div_22.append(table_2);
-   
-   //divs
-   div_1 = $('<div>',{
-     'class':'row detalles-div'
-   });
-   div_1.append(div_21);
-   div_1.append(div_22);
-   td_main = $('<td>',{
-     'colspan':'4'
-   });
-   td_main.append(div_1);
-   detalles_tr = $('<tr>',{
-     'class':'detalles'
-   });
-   detalles_tr.append(td_main);
-   detalles_tr.append($('<td>',{
-       'class':'website'
-   }));
-   return detalles_tr;
+   return detalles = $(''+
+      '<tr class="detalles">'+
+          '<td colspan="4">'+
+              '<div class="row detalles-div" style="display: block;">'+
+                  '<div class="col-xs-12 col-md-4 primero">'+
+                      '<table class="tabla-detalles">'+
+                          '<tbody>'+
+                              '<tr>'+
+                                  '<td class="col-titulo">Código:</td>'+
+                                  '<td>'+codigo+'</td>'+
+                              '</tr>'+
+                              '<tr>'+
+                                  '<td class="col-titulo">Periodo Académico:</td>'+
+                                  '<td>'+periodoAcademico+'</td></tr>'+
+                              '<tr>'+
+                                  '<td class="col-titulo">Título aplicado:</td>'+
+                                  '<td>'+tituloAplicado+'</td>'+
+                              '</tr>'+
+                          '</tbody>'+
+                      '</table>'+
+                  '</div>'+
+                  '<div class="col-xs-12 col-md-4 segundo">'+
+                      '<table class="tabla-detalles">'+
+                          '<tbody>'+
+                              '<tr>'+
+                                  '<td class="col-titulo">Grupo de investigación:</td>'+
+                                  '<td>'+grupoInvestigacion+'</td>'+
+                              '</tr>'+
+                              '<tr>'+
+                                  '<td class="col-titulo">Modalidad:</td>'+
+                                  '<td>'+modalidad+'</td>'+
+                              '</tr>'+
+                              '<tr>'+
+                                  '<td class="col-titulo">Mención de honor:</td>'+
+                                  '<td>'+mencionHonor+'</td>'+
+                              '</tr>'+
+                          '</tbody>'+
+                      '</table>'+
+                  '</div>'+
+              '</div>'+
+          '</td>'+
+      '<td class="website"></td>'+
+  '</tr>');   
 }
 
 function crearPrimeraFila(nombre, autor, director, codigo, website){
-  var website_boton, website_img, detalles_boton, paginaWeb, principal, detalles, nombre_td, detalles_td;
-    //nombre
-    nombre_td = $('<td>', {
-      'class': 'nombre',
-      'data-th': 'Nombre: ',
-      'text': nombre
-    });
-    
-    //autor
-    autor = $('<td>', {
-      class: 'autor',
-      'data-th': 'Autor: ',
-      text: autor
-    });
-    
-    //director
-    director = $('<td>', {
-      'class': 'director',
-      'data-th': 'Director: ',
-      'text': director
-    });
-    
-    //website
-    if (codigo != null || codigo == ''){
-    website_img = $('<img/>',{
-        'src': static_url+"globe.png",
-        'alt': "tierra"
-    });
-    website_boton = $('<a>',{
-        'class': 'btn btn-website',
-        'role': 'button',
-        'href' : website
-    });
-      website_boton.append(website_img);
-    }else{
-        if( website == null || website == ''){
-            website_img = $('<img/>',{
-             });
-            website_boton = $('<a>',{
-                'class': 'btn btn-website',
-                'role': 'button',
-                'disabled':'true'
-            });
-        }else{
-            website_img = $('<img/>',{
-                'src': static_url+"globe.png",
-                'alt': "tierra"
-            });
-            website_boton = $('<a>',{
-                'class': 'btn btn-website',
-                'role': 'button',
-                'href' : website
-            });
-        }
-        website_boton.append(website_img);
-    }
-    paginaWeb = $('<td>',{
-      'class': 'website'
-    });
-    paginaWeb.append(website_boton);
-    
-    //detalles
-    detalles_boton = $('<button>',{
-        'class': 'btn-detalles',
-        'type': 'button',
-        'name': 'detalles',
-        'text': '+'
-    });
-    detalles_td = $('<td>',{
-      'class': 'detalles'
-    });
-    detalles_td.append(detalles_boton);
-    
-    principal = $('<tr>');
-    principal.append(nombre_td);
-    principal.append(autor);
-    principal.append(director);
-    principal.append(paginaWeb);
-    principal.append(detalles_td);
-    return principal;
+  var website;
+  if(website != null && website != ''){
+      website = 
+        '<a class="btn btn-website" role="button" href="'+website+'">'+
+            '<img src="http://pegasus.javeriana.edu.co/static/globe.png" alt="tierra">'+
+        '</a>';
+  }else{
+      website = 
+        '<a class="btn btn-website" role="button" disabled="disabled">'+
+            '<img>'+
+        '</a>';
+  }
+  return $(''+
+    '<tr>'+
+      '<td class="nombre" data-th="Nombre: ">'+nombre+'</td>'+
+        '<td class="autor" data-th="Autor: ">'+autor+'</td>'+
+        '<td class="director" data-th="Director: ">'+director+'</td>'+
+        '<td class="website">'+
+            website +
+        ' </td>'+
+        '<td class="detalles">'+
+            '<button class="btn-detalles" type="button" name="detalles">+</button>'+
+        '</td>'+
+    '</tr>');
 }
