@@ -40,7 +40,7 @@ header .logo{
     width: 50%;
 }
 header .logo img{
-    max-height: 20vmin;
+    max-height: 15vmin;
     max-width: 100%;
 }
 
@@ -57,11 +57,35 @@ header .titulo{
 }
 header .titulo h1{
     margin: 0;
-    font-size: 3vmin;
+    font-size: 2vmin;
 }
 header .titulo h2{
     margin: 0;
-    font-size: 3vmin;
+    font-size: 2vmin;
+}
+
+#subtitulo{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row wrap;
+    font-family: "Times New Roman", Times, serif;
+    color: #0062A2;
+    margin-bottom: 2vmin;
+}
+
+#subtitulo h2{
+    margin: 0;
+    font-size: 4vmin;
+    color: #0062A2;
+}
+#pipe{
+    padding-left: 5vmin;
+    padding-right: 5vmin;
+    padding-left: 5vmin;
+    padding-right: 5vmin;
+    font-size: 4vmin;
 }
 .busqueda{
     background-color: #FAFAFA;
@@ -279,7 +303,7 @@ header .titulo h2{
     background-color: #ffff89;
 }
 .tabla-principal tbody tr .nombre{
-    padding: 2vh 2vmin 2vh 2vmin;
+    padding: 1vh 2vmin 1vh 2vmin;
     text-align: justify;
     text-justify: inter-word;
 }
@@ -476,6 +500,13 @@ header .titulo h2{
     }
     header .titulo h2{
         font-size: 5vmin;
+    }
+    #subtitulo{
+        justify-content: center;
+        align-items:center;
+    }
+    #pipe{
+        display: none;
     }
     .busqueda{
         width: 100%;
